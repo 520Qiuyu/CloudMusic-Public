@@ -32,7 +32,7 @@ System.set("user:react-dom", (()=>{const _=ReactDOM;('default' in _)||(_.default
 System.set("user:@ant-design/icons", (()=>{const _=icons;('default' in _)||(_.default=_);return _})());
 System.set("user:node-forge", (()=>{const _=forge;('default' in _)||(_.default=_);return _})());
 
-System.register("./__entry.js", ['./__monkey.entry-D122fOYS.js'], (function (exports, module) {
+System.register("./__entry.js", ['./__monkey.entry-msKzkR8h.js'], (function (exports, module) {
 	'use strict';
 	return {
 		setters: [null],
@@ -44,7 +44,7 @@ System.register("./__entry.js", ['./__monkey.entry-D122fOYS.js'], (function (exp
 	};
 }));
 
-System.register("./__monkey.entry-D122fOYS.js", ['react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./__monkey.entry-msKzkR8h.js", ['react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var forwardRef, useState, memo, useEffect, useMemo, useRef, useImperativeHandle, require$$0, useCallback, useLayoutEffect, message, Modal, Table, Upload, Button, Tag, Input, Typography, Form, Row, Col, DatePicker, InputNumber, Spin, Descriptions, Space, Image, Progress, Tabs, Pagination, Tooltip, ConfigProvider, Select, Checkbox, Card, Badge, Avatar, Empty, Radio, List, Switch, TimePicker, require$$0$1, forge, UploadOutlined, LinkOutlined, GithubOutlined, StarOutlined, ForkOutlined, EyeOutlined, InboxOutlined, PauseCircleOutlined, PlayCircleOutlined, SaveOutlined, DownloadOutlined, CloudUploadOutlined, InfoCircleOutlined, PauseCircleFilled, PlayCircleFilled, UserOutlined, CopyOutlined, CopyrightOutlined, FileOutlined, SortAscendingOutlined, DeleteOutlined, CommentOutlined, DatabaseOutlined, ClockCircleOutlined, PictureOutlined, CheckOutlined, CustomerServiceOutlined, CodeOutlined, OrderedListOutlined, SearchOutlined, HeartOutlined, CloudOutlined;
   return {
@@ -169,15 +169,15 @@ System.register("./__monkey.entry-D122fOYS.js", ['react', 'antd', 'react-dom', '
       function requireReactJsxRuntime_production_min() {
         if (hasRequiredReactJsxRuntime_production_min) return reactJsxRuntime_production_min;
         hasRequiredReactJsxRuntime_production_min = 1;
-        var f = require$$0, k = Symbol.for("react.element"), l = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, n = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, p = { key: true, ref: true, __self: true, __source: true };
-        function q(c, a, g) {
-          var b, d = {}, e = null, h = null;
-          void 0 !== g && (e = "" + g);
-          void 0 !== a.key && (e = "" + a.key);
-          void 0 !== a.ref && (h = a.ref);
-          for (b in a) m.call(a, b) && !p.hasOwnProperty(b) && (d[b] = a[b]);
-          if (c && c.defaultProps) for (b in a = c.defaultProps, a) void 0 === d[b] && (d[b] = a[b]);
-          return { $$typeof: k, type: c, key: e, ref: h, props: d, _owner: n.current };
+        var f = require$$0, k = Symbol.for("react.element"), l = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, n2 = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, p = { key: true, ref: true, __self: true, __source: true };
+        function q(c2, a2, g) {
+          var b, d = {}, e2 = null, h = null;
+          void 0 !== g && (e2 = "" + g);
+          void 0 !== a2.key && (e2 = "" + a2.key);
+          void 0 !== a2.ref && (h = a2.ref);
+          for (b in a2) m.call(a2, b) && !p.hasOwnProperty(b) && (d[b] = a2[b]);
+          if (c2 && c2.defaultProps) for (b in a2 = c2.defaultProps, a2) void 0 === d[b] && (d[b] = a2[b]);
+          return { $$typeof: k, type: c2, key: e2, ref: h, props: d, _owner: n2.current };
         }
         reactJsxRuntime_production_min.Fragment = l;
         reactJsxRuntime_production_min.jsx = q;
@@ -433,6 +433,7 @@ redirect: "follow"
         lyricist: "作词",
         lyrics: "歌词"
       };
+      const MP3_TAGS = FLAC_TAGS;
       const BASE_CDN_URL = "https://fastly.jsdelivr.net/gh/520Qiuyu/cdn@latest/artist/";
       const SONG_SORT_RULES = [
         {
@@ -544,28 +545,28 @@ offset
         hasRequiredCrypt = 1;
         (function() {
           var base64map = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", crypt$1 = {
-rotl: function(n, b) {
-              return n << b | n >>> 32 - b;
+rotl: function(n2, b) {
+              return n2 << b | n2 >>> 32 - b;
             },
-rotr: function(n, b) {
-              return n << 32 - b | n >>> b;
+rotr: function(n2, b) {
+              return n2 << 32 - b | n2 >>> b;
             },
-endian: function(n) {
-              if (n.constructor == Number) {
-                return crypt$1.rotl(n, 8) & 16711935 | crypt$1.rotl(n, 24) & 4278255360;
+endian: function(n2) {
+              if (n2.constructor == Number) {
+                return crypt$1.rotl(n2, 8) & 16711935 | crypt$1.rotl(n2, 24) & 4278255360;
               }
-              for (var i = 0; i < n.length; i++)
-                n[i] = crypt$1.endian(n[i]);
-              return n;
+              for (var i2 = 0; i2 < n2.length; i2++)
+                n2[i2] = crypt$1.endian(n2[i2]);
+              return n2;
             },
-randomBytes: function(n) {
-              for (var bytes = []; n > 0; n--)
+randomBytes: function(n2) {
+              for (var bytes = []; n2 > 0; n2--)
                 bytes.push(Math.floor(Math.random() * 256));
               return bytes;
             },
 bytesToWords: function(bytes) {
-              for (var words = [], i = 0, b = 0; i < bytes.length; i++, b += 8)
-                words[b >>> 5] |= bytes[i] << 24 - b % 32;
+              for (var words = [], i2 = 0, b = 0; i2 < bytes.length; i2++, b += 8)
+                words[b >>> 5] |= bytes[i2] << 24 - b % 32;
               return words;
             },
 wordsToBytes: function(words) {
@@ -574,22 +575,22 @@ wordsToBytes: function(words) {
               return bytes;
             },
 bytesToHex: function(bytes) {
-              for (var hex = [], i = 0; i < bytes.length; i++) {
-                hex.push((bytes[i] >>> 4).toString(16));
-                hex.push((bytes[i] & 15).toString(16));
+              for (var hex = [], i2 = 0; i2 < bytes.length; i2++) {
+                hex.push((bytes[i2] >>> 4).toString(16));
+                hex.push((bytes[i2] & 15).toString(16));
               }
               return hex.join("");
             },
 hexToBytes: function(hex) {
-              for (var bytes = [], c = 0; c < hex.length; c += 2)
-                bytes.push(parseInt(hex.substr(c, 2), 16));
+              for (var bytes = [], c2 = 0; c2 < hex.length; c2 += 2)
+                bytes.push(parseInt(hex.substr(c2, 2), 16));
               return bytes;
             },
 bytesToBase64: function(bytes) {
-              for (var base64 = [], i = 0; i < bytes.length; i += 3) {
-                var triplet = bytes[i] << 16 | bytes[i + 1] << 8 | bytes[i + 2];
+              for (var base64 = [], i2 = 0; i2 < bytes.length; i2 += 3) {
+                var triplet = bytes[i2] << 16 | bytes[i2 + 1] << 8 | bytes[i2 + 2];
                 for (var j = 0; j < 4; j++)
-                  if (i * 8 + j * 6 <= bytes.length * 8)
+                  if (i2 * 8 + j * 6 <= bytes.length * 8)
                     base64.push(base64map.charAt(triplet >>> 6 * (3 - j) & 63));
                   else
                     base64.push("=");
@@ -598,9 +599,9 @@ bytesToBase64: function(bytes) {
             },
 base64ToBytes: function(base64) {
               base64 = base64.replace(/[^A-Z0-9+\/]/ig, "");
-              for (var bytes = [], i = 0, imod4 = 0; i < base64.length; imod4 = ++i % 4) {
+              for (var bytes = [], i2 = 0, imod4 = 0; i2 < base64.length; imod4 = ++i2 % 4) {
                 if (imod4 == 0) continue;
-                bytes.push((base64map.indexOf(base64.charAt(i - 1)) & Math.pow(2, -2 * imod4 + 8) - 1) << imod4 * 2 | base64map.indexOf(base64.charAt(i)) >>> 6 - imod4 * 2);
+                bytes.push((base64map.indexOf(base64.charAt(i2 - 1)) & Math.pow(2, -2 * imod4 + 8) - 1) << imod4 * 2 | base64map.indexOf(base64.charAt(i2)) >>> 6 - imod4 * 2);
               }
               return bytes;
             }
@@ -625,13 +626,13 @@ bytesToString: function(bytes) {
           },
 bin: {
 stringToBytes: function(str) {
-              for (var bytes = [], i = 0; i < str.length; i++)
-                bytes.push(str.charCodeAt(i) & 255);
+              for (var bytes = [], i2 = 0; i2 < str.length; i2++)
+                bytes.push(str.charCodeAt(i2) & 255);
               return bytes;
             },
 bytesToString: function(bytes) {
-              for (var str = [], i = 0; i < bytes.length; i++)
-                str.push(String.fromCharCode(bytes[i]));
+              for (var str = [], i2 = 0; i2 < bytes.length; i2++)
+                str.push(String.fromCharCode(bytes[i2]));
               return str.join("");
             }
           }
@@ -676,101 +677,101 @@ bytesToString: function(bytes) {
               message2 = Array.prototype.slice.call(message2, 0);
             else if (!Array.isArray(message2) && message2.constructor !== Uint8Array)
               message2 = message2.toString();
-            var m = crypt2.bytesToWords(message2), l = message2.length * 8, a = 1732584193, b = -271733879, c = -1732584194, d = 271733878;
-            for (var i = 0; i < m.length; i++) {
-              m[i] = (m[i] << 8 | m[i] >>> 24) & 16711935 | (m[i] << 24 | m[i] >>> 8) & 4278255360;
+            var m = crypt2.bytesToWords(message2), l = message2.length * 8, a2 = 1732584193, b = -271733879, c2 = -1732584194, d = 271733878;
+            for (var i2 = 0; i2 < m.length; i2++) {
+              m[i2] = (m[i2] << 8 | m[i2] >>> 24) & 16711935 | (m[i2] << 24 | m[i2] >>> 8) & 4278255360;
             }
             m[l >>> 5] |= 128 << l % 32;
             m[(l + 64 >>> 9 << 4) + 14] = l;
             var FF = md52._ff, GG = md52._gg, HH = md52._hh, II = md52._ii;
-            for (var i = 0; i < m.length; i += 16) {
-              var aa = a, bb = b, cc = c, dd = d;
-              a = FF(a, b, c, d, m[i + 0], 7, -680876936);
-              d = FF(d, a, b, c, m[i + 1], 12, -389564586);
-              c = FF(c, d, a, b, m[i + 2], 17, 606105819);
-              b = FF(b, c, d, a, m[i + 3], 22, -1044525330);
-              a = FF(a, b, c, d, m[i + 4], 7, -176418897);
-              d = FF(d, a, b, c, m[i + 5], 12, 1200080426);
-              c = FF(c, d, a, b, m[i + 6], 17, -1473231341);
-              b = FF(b, c, d, a, m[i + 7], 22, -45705983);
-              a = FF(a, b, c, d, m[i + 8], 7, 1770035416);
-              d = FF(d, a, b, c, m[i + 9], 12, -1958414417);
-              c = FF(c, d, a, b, m[i + 10], 17, -42063);
-              b = FF(b, c, d, a, m[i + 11], 22, -1990404162);
-              a = FF(a, b, c, d, m[i + 12], 7, 1804603682);
-              d = FF(d, a, b, c, m[i + 13], 12, -40341101);
-              c = FF(c, d, a, b, m[i + 14], 17, -1502002290);
-              b = FF(b, c, d, a, m[i + 15], 22, 1236535329);
-              a = GG(a, b, c, d, m[i + 1], 5, -165796510);
-              d = GG(d, a, b, c, m[i + 6], 9, -1069501632);
-              c = GG(c, d, a, b, m[i + 11], 14, 643717713);
-              b = GG(b, c, d, a, m[i + 0], 20, -373897302);
-              a = GG(a, b, c, d, m[i + 5], 5, -701558691);
-              d = GG(d, a, b, c, m[i + 10], 9, 38016083);
-              c = GG(c, d, a, b, m[i + 15], 14, -660478335);
-              b = GG(b, c, d, a, m[i + 4], 20, -405537848);
-              a = GG(a, b, c, d, m[i + 9], 5, 568446438);
-              d = GG(d, a, b, c, m[i + 14], 9, -1019803690);
-              c = GG(c, d, a, b, m[i + 3], 14, -187363961);
-              b = GG(b, c, d, a, m[i + 8], 20, 1163531501);
-              a = GG(a, b, c, d, m[i + 13], 5, -1444681467);
-              d = GG(d, a, b, c, m[i + 2], 9, -51403784);
-              c = GG(c, d, a, b, m[i + 7], 14, 1735328473);
-              b = GG(b, c, d, a, m[i + 12], 20, -1926607734);
-              a = HH(a, b, c, d, m[i + 5], 4, -378558);
-              d = HH(d, a, b, c, m[i + 8], 11, -2022574463);
-              c = HH(c, d, a, b, m[i + 11], 16, 1839030562);
-              b = HH(b, c, d, a, m[i + 14], 23, -35309556);
-              a = HH(a, b, c, d, m[i + 1], 4, -1530992060);
-              d = HH(d, a, b, c, m[i + 4], 11, 1272893353);
-              c = HH(c, d, a, b, m[i + 7], 16, -155497632);
-              b = HH(b, c, d, a, m[i + 10], 23, -1094730640);
-              a = HH(a, b, c, d, m[i + 13], 4, 681279174);
-              d = HH(d, a, b, c, m[i + 0], 11, -358537222);
-              c = HH(c, d, a, b, m[i + 3], 16, -722521979);
-              b = HH(b, c, d, a, m[i + 6], 23, 76029189);
-              a = HH(a, b, c, d, m[i + 9], 4, -640364487);
-              d = HH(d, a, b, c, m[i + 12], 11, -421815835);
-              c = HH(c, d, a, b, m[i + 15], 16, 530742520);
-              b = HH(b, c, d, a, m[i + 2], 23, -995338651);
-              a = II(a, b, c, d, m[i + 0], 6, -198630844);
-              d = II(d, a, b, c, m[i + 7], 10, 1126891415);
-              c = II(c, d, a, b, m[i + 14], 15, -1416354905);
-              b = II(b, c, d, a, m[i + 5], 21, -57434055);
-              a = II(a, b, c, d, m[i + 12], 6, 1700485571);
-              d = II(d, a, b, c, m[i + 3], 10, -1894986606);
-              c = II(c, d, a, b, m[i + 10], 15, -1051523);
-              b = II(b, c, d, a, m[i + 1], 21, -2054922799);
-              a = II(a, b, c, d, m[i + 8], 6, 1873313359);
-              d = II(d, a, b, c, m[i + 15], 10, -30611744);
-              c = II(c, d, a, b, m[i + 6], 15, -1560198380);
-              b = II(b, c, d, a, m[i + 13], 21, 1309151649);
-              a = II(a, b, c, d, m[i + 4], 6, -145523070);
-              d = II(d, a, b, c, m[i + 11], 10, -1120210379);
-              c = II(c, d, a, b, m[i + 2], 15, 718787259);
-              b = II(b, c, d, a, m[i + 9], 21, -343485551);
-              a = a + aa >>> 0;
+            for (var i2 = 0; i2 < m.length; i2 += 16) {
+              var aa = a2, bb = b, cc = c2, dd = d;
+              a2 = FF(a2, b, c2, d, m[i2 + 0], 7, -680876936);
+              d = FF(d, a2, b, c2, m[i2 + 1], 12, -389564586);
+              c2 = FF(c2, d, a2, b, m[i2 + 2], 17, 606105819);
+              b = FF(b, c2, d, a2, m[i2 + 3], 22, -1044525330);
+              a2 = FF(a2, b, c2, d, m[i2 + 4], 7, -176418897);
+              d = FF(d, a2, b, c2, m[i2 + 5], 12, 1200080426);
+              c2 = FF(c2, d, a2, b, m[i2 + 6], 17, -1473231341);
+              b = FF(b, c2, d, a2, m[i2 + 7], 22, -45705983);
+              a2 = FF(a2, b, c2, d, m[i2 + 8], 7, 1770035416);
+              d = FF(d, a2, b, c2, m[i2 + 9], 12, -1958414417);
+              c2 = FF(c2, d, a2, b, m[i2 + 10], 17, -42063);
+              b = FF(b, c2, d, a2, m[i2 + 11], 22, -1990404162);
+              a2 = FF(a2, b, c2, d, m[i2 + 12], 7, 1804603682);
+              d = FF(d, a2, b, c2, m[i2 + 13], 12, -40341101);
+              c2 = FF(c2, d, a2, b, m[i2 + 14], 17, -1502002290);
+              b = FF(b, c2, d, a2, m[i2 + 15], 22, 1236535329);
+              a2 = GG(a2, b, c2, d, m[i2 + 1], 5, -165796510);
+              d = GG(d, a2, b, c2, m[i2 + 6], 9, -1069501632);
+              c2 = GG(c2, d, a2, b, m[i2 + 11], 14, 643717713);
+              b = GG(b, c2, d, a2, m[i2 + 0], 20, -373897302);
+              a2 = GG(a2, b, c2, d, m[i2 + 5], 5, -701558691);
+              d = GG(d, a2, b, c2, m[i2 + 10], 9, 38016083);
+              c2 = GG(c2, d, a2, b, m[i2 + 15], 14, -660478335);
+              b = GG(b, c2, d, a2, m[i2 + 4], 20, -405537848);
+              a2 = GG(a2, b, c2, d, m[i2 + 9], 5, 568446438);
+              d = GG(d, a2, b, c2, m[i2 + 14], 9, -1019803690);
+              c2 = GG(c2, d, a2, b, m[i2 + 3], 14, -187363961);
+              b = GG(b, c2, d, a2, m[i2 + 8], 20, 1163531501);
+              a2 = GG(a2, b, c2, d, m[i2 + 13], 5, -1444681467);
+              d = GG(d, a2, b, c2, m[i2 + 2], 9, -51403784);
+              c2 = GG(c2, d, a2, b, m[i2 + 7], 14, 1735328473);
+              b = GG(b, c2, d, a2, m[i2 + 12], 20, -1926607734);
+              a2 = HH(a2, b, c2, d, m[i2 + 5], 4, -378558);
+              d = HH(d, a2, b, c2, m[i2 + 8], 11, -2022574463);
+              c2 = HH(c2, d, a2, b, m[i2 + 11], 16, 1839030562);
+              b = HH(b, c2, d, a2, m[i2 + 14], 23, -35309556);
+              a2 = HH(a2, b, c2, d, m[i2 + 1], 4, -1530992060);
+              d = HH(d, a2, b, c2, m[i2 + 4], 11, 1272893353);
+              c2 = HH(c2, d, a2, b, m[i2 + 7], 16, -155497632);
+              b = HH(b, c2, d, a2, m[i2 + 10], 23, -1094730640);
+              a2 = HH(a2, b, c2, d, m[i2 + 13], 4, 681279174);
+              d = HH(d, a2, b, c2, m[i2 + 0], 11, -358537222);
+              c2 = HH(c2, d, a2, b, m[i2 + 3], 16, -722521979);
+              b = HH(b, c2, d, a2, m[i2 + 6], 23, 76029189);
+              a2 = HH(a2, b, c2, d, m[i2 + 9], 4, -640364487);
+              d = HH(d, a2, b, c2, m[i2 + 12], 11, -421815835);
+              c2 = HH(c2, d, a2, b, m[i2 + 15], 16, 530742520);
+              b = HH(b, c2, d, a2, m[i2 + 2], 23, -995338651);
+              a2 = II(a2, b, c2, d, m[i2 + 0], 6, -198630844);
+              d = II(d, a2, b, c2, m[i2 + 7], 10, 1126891415);
+              c2 = II(c2, d, a2, b, m[i2 + 14], 15, -1416354905);
+              b = II(b, c2, d, a2, m[i2 + 5], 21, -57434055);
+              a2 = II(a2, b, c2, d, m[i2 + 12], 6, 1700485571);
+              d = II(d, a2, b, c2, m[i2 + 3], 10, -1894986606);
+              c2 = II(c2, d, a2, b, m[i2 + 10], 15, -1051523);
+              b = II(b, c2, d, a2, m[i2 + 1], 21, -2054922799);
+              a2 = II(a2, b, c2, d, m[i2 + 8], 6, 1873313359);
+              d = II(d, a2, b, c2, m[i2 + 15], 10, -30611744);
+              c2 = II(c2, d, a2, b, m[i2 + 6], 15, -1560198380);
+              b = II(b, c2, d, a2, m[i2 + 13], 21, 1309151649);
+              a2 = II(a2, b, c2, d, m[i2 + 4], 6, -145523070);
+              d = II(d, a2, b, c2, m[i2 + 11], 10, -1120210379);
+              c2 = II(c2, d, a2, b, m[i2 + 2], 15, 718787259);
+              b = II(b, c2, d, a2, m[i2 + 9], 21, -343485551);
+              a2 = a2 + aa >>> 0;
               b = b + bb >>> 0;
-              c = c + cc >>> 0;
+              c2 = c2 + cc >>> 0;
               d = d + dd >>> 0;
             }
-            return crypt2.endian([a, b, c, d]);
+            return crypt2.endian([a2, b, c2, d]);
           };
-          md52._ff = function(a, b, c, d, x, s, t) {
-            var n = a + (b & c | ~b & d) + (x >>> 0) + t;
-            return (n << s | n >>> 32 - s) + b;
+          md52._ff = function(a2, b, c2, d, x, s2, t2) {
+            var n2 = a2 + (b & c2 | ~b & d) + (x >>> 0) + t2;
+            return (n2 << s2 | n2 >>> 32 - s2) + b;
           };
-          md52._gg = function(a, b, c, d, x, s, t) {
-            var n = a + (b & d | c & ~d) + (x >>> 0) + t;
-            return (n << s | n >>> 32 - s) + b;
+          md52._gg = function(a2, b, c2, d, x, s2, t2) {
+            var n2 = a2 + (b & d | c2 & ~d) + (x >>> 0) + t2;
+            return (n2 << s2 | n2 >>> 32 - s2) + b;
           };
-          md52._hh = function(a, b, c, d, x, s, t) {
-            var n = a + (b ^ c ^ d) + (x >>> 0) + t;
-            return (n << s | n >>> 32 - s) + b;
+          md52._hh = function(a2, b, c2, d, x, s2, t2) {
+            var n2 = a2 + (b ^ c2 ^ d) + (x >>> 0) + t2;
+            return (n2 << s2 | n2 >>> 32 - s2) + b;
           };
-          md52._ii = function(a, b, c, d, x, s, t) {
-            var n = a + (c ^ (b | ~d)) + (x >>> 0) + t;
-            return (n << s | n >>> 32 - s) + b;
+          md52._ii = function(a2, b, c2, d, x, s2, t2) {
+            var n2 = a2 + (c2 ^ (b | ~d)) + (x >>> 0) + t2;
+            return (n2 << s2 | n2 >>> 32 - s2) + b;
           };
           md52._blocksize = 16;
           md52._digestsize = 16;
@@ -1149,81 +1150,81 @@ var hasRequiredIeee754;
         if (hasRequiredIeee754) return ieee754;
         hasRequiredIeee754 = 1;
         ieee754.read = function(buffer, offset, isLE, mLen, nBytes) {
-          var e, m;
+          var e2, m;
           var eLen = nBytes * 8 - mLen - 1;
           var eMax = (1 << eLen) - 1;
           var eBias = eMax >> 1;
           var nBits = -7;
-          var i = isLE ? nBytes - 1 : 0;
+          var i2 = isLE ? nBytes - 1 : 0;
           var d = isLE ? -1 : 1;
-          var s = buffer[offset + i];
-          i += d;
-          e = s & (1 << -nBits) - 1;
-          s >>= -nBits;
+          var s2 = buffer[offset + i2];
+          i2 += d;
+          e2 = s2 & (1 << -nBits) - 1;
+          s2 >>= -nBits;
           nBits += eLen;
-          for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {
+          for (; nBits > 0; e2 = e2 * 256 + buffer[offset + i2], i2 += d, nBits -= 8) {
           }
-          m = e & (1 << -nBits) - 1;
-          e >>= -nBits;
+          m = e2 & (1 << -nBits) - 1;
+          e2 >>= -nBits;
           nBits += mLen;
-          for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {
+          for (; nBits > 0; m = m * 256 + buffer[offset + i2], i2 += d, nBits -= 8) {
           }
-          if (e === 0) {
-            e = 1 - eBias;
-          } else if (e === eMax) {
-            return m ? NaN : (s ? -1 : 1) * Infinity;
+          if (e2 === 0) {
+            e2 = 1 - eBias;
+          } else if (e2 === eMax) {
+            return m ? NaN : (s2 ? -1 : 1) * Infinity;
           } else {
             m = m + Math.pow(2, mLen);
-            e = e - eBias;
+            e2 = e2 - eBias;
           }
-          return (s ? -1 : 1) * m * Math.pow(2, e - mLen);
+          return (s2 ? -1 : 1) * m * Math.pow(2, e2 - mLen);
         };
         ieee754.write = function(buffer, value2, offset, isLE, mLen, nBytes) {
-          var e, m, c;
+          var e2, m, c2;
           var eLen = nBytes * 8 - mLen - 1;
           var eMax = (1 << eLen) - 1;
           var eBias = eMax >> 1;
           var rt = mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0;
-          var i = isLE ? 0 : nBytes - 1;
+          var i2 = isLE ? 0 : nBytes - 1;
           var d = isLE ? 1 : -1;
-          var s = value2 < 0 || value2 === 0 && 1 / value2 < 0 ? 1 : 0;
+          var s2 = value2 < 0 || value2 === 0 && 1 / value2 < 0 ? 1 : 0;
           value2 = Math.abs(value2);
           if (isNaN(value2) || value2 === Infinity) {
             m = isNaN(value2) ? 1 : 0;
-            e = eMax;
+            e2 = eMax;
           } else {
-            e = Math.floor(Math.log(value2) / Math.LN2);
-            if (value2 * (c = Math.pow(2, -e)) < 1) {
-              e--;
-              c *= 2;
+            e2 = Math.floor(Math.log(value2) / Math.LN2);
+            if (value2 * (c2 = Math.pow(2, -e2)) < 1) {
+              e2--;
+              c2 *= 2;
             }
-            if (e + eBias >= 1) {
-              value2 += rt / c;
+            if (e2 + eBias >= 1) {
+              value2 += rt / c2;
             } else {
               value2 += rt * Math.pow(2, 1 - eBias);
             }
-            if (value2 * c >= 2) {
-              e++;
-              c /= 2;
+            if (value2 * c2 >= 2) {
+              e2++;
+              c2 /= 2;
             }
-            if (e + eBias >= eMax) {
+            if (e2 + eBias >= eMax) {
               m = 0;
-              e = eMax;
-            } else if (e + eBias >= 1) {
-              m = (value2 * c - 1) * Math.pow(2, mLen);
-              e = e + eBias;
+              e2 = eMax;
+            } else if (e2 + eBias >= 1) {
+              m = (value2 * c2 - 1) * Math.pow(2, mLen);
+              e2 = e2 + eBias;
             } else {
               m = value2 * Math.pow(2, eBias - 1) * Math.pow(2, mLen);
-              e = 0;
+              e2 = 0;
             }
           }
-          for (; mLen >= 8; buffer[offset + i] = m & 255, i += d, m /= 256, mLen -= 8) {
+          for (; mLen >= 8; buffer[offset + i2] = m & 255, i2 += d, m /= 256, mLen -= 8) {
           }
-          e = e << mLen | m;
+          e2 = e2 << mLen | m;
           eLen += mLen;
-          for (; eLen > 0; buffer[offset + i] = e & 255, i += d, e /= 256, eLen -= 8) {
+          for (; eLen > 0; buffer[offset + i2] = e2 & 255, i2 += d, e2 /= 256, eLen -= 8) {
           }
-          buffer[offset + i - d] |= s * 128;
+          buffer[offset + i2 - d] |= s2 * 128;
         };
         return ieee754;
       }
@@ -1643,48 +1644,48 @@ get(array, off2) {
       var clim = new u8([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]);
       var freb = function(eb, start) {
         var b = new u16(31);
-        for (var i = 0; i < 31; ++i) {
-          b[i] = start += 1 << eb[i - 1];
+        for (var i2 = 0; i2 < 31; ++i2) {
+          b[i2] = start += 1 << eb[i2 - 1];
         }
-        var r = new i32(b[30]);
-        for (var i = 1; i < 30; ++i) {
-          for (var j = b[i]; j < b[i + 1]; ++j) {
-            r[j] = j - b[i] << 5 | i;
+        var r2 = new i32(b[30]);
+        for (var i2 = 1; i2 < 30; ++i2) {
+          for (var j = b[i2]; j < b[i2 + 1]; ++j) {
+            r2[j] = j - b[i2] << 5 | i2;
           }
         }
-        return { b, r };
+        return { b, r: r2 };
       };
       var _a = freb(fleb, 2), fl = _a.b, revfl = _a.r;
       fl[28] = 258, revfl[258] = 28;
       var _b = freb(fdeb, 0), fd = _b.b;
       var rev = new u16(32768);
-      for (var i = 0; i < 32768; ++i) {
-        var x = (i & 43690) >> 1 | (i & 21845) << 1;
+      for (var i$1 = 0; i$1 < 32768; ++i$1) {
+        var x = (i$1 & 43690) >> 1 | (i$1 & 21845) << 1;
         x = (x & 52428) >> 2 | (x & 13107) << 2;
         x = (x & 61680) >> 4 | (x & 3855) << 4;
-        rev[i] = ((x & 65280) >> 8 | (x & 255) << 8) >> 1;
+        rev[i$1] = ((x & 65280) >> 8 | (x & 255) << 8) >> 1;
       }
-      var hMap = (function(cd, mb, r) {
-        var s = cd.length;
-        var i = 0;
+      var hMap = (function(cd, mb, r2) {
+        var s2 = cd.length;
+        var i2 = 0;
         var l = new u16(mb);
-        for (; i < s; ++i) {
-          if (cd[i])
-            ++l[cd[i] - 1];
+        for (; i2 < s2; ++i2) {
+          if (cd[i2])
+            ++l[cd[i2] - 1];
         }
         var le = new u16(mb);
-        for (i = 1; i < mb; ++i) {
-          le[i] = le[i - 1] + l[i - 1] << 1;
+        for (i2 = 1; i2 < mb; ++i2) {
+          le[i2] = le[i2 - 1] + l[i2 - 1] << 1;
         }
         var co;
         {
           co = new u16(1 << mb);
           var rvb = 15 - mb;
-          for (i = 0; i < s; ++i) {
-            if (cd[i]) {
-              var sv = i << 4 | cd[i];
-              var r_1 = mb - cd[i];
-              var v = le[cd[i] - 1]++ << r_1;
+          for (i2 = 0; i2 < s2; ++i2) {
+            if (cd[i2]) {
+              var sv = i2 << 4 | cd[i2];
+              var r_1 = mb - cd[i2];
+              var v = le[cd[i2] - 1]++ << r_1;
               for (var m = v | (1 << r_1) - 1; v <= m; ++v) {
                 co[rev[v] >> rvb] = sv;
               }
@@ -1694,42 +1695,42 @@ get(array, off2) {
         return co;
       });
       var flt = new u8(288);
-      for (var i = 0; i < 144; ++i)
-        flt[i] = 8;
-      for (var i = 144; i < 256; ++i)
-        flt[i] = 9;
-      for (var i = 256; i < 280; ++i)
-        flt[i] = 7;
-      for (var i = 280; i < 288; ++i)
-        flt[i] = 8;
+      for (var i$1 = 0; i$1 < 144; ++i$1)
+        flt[i$1] = 8;
+      for (var i$1 = 144; i$1 < 256; ++i$1)
+        flt[i$1] = 9;
+      for (var i$1 = 256; i$1 < 280; ++i$1)
+        flt[i$1] = 7;
+      for (var i$1 = 280; i$1 < 288; ++i$1)
+        flt[i$1] = 8;
       var fdt = new u8(32);
-      for (var i = 0; i < 32; ++i)
-        fdt[i] = 5;
+      for (var i$1 = 0; i$1 < 32; ++i$1)
+        fdt[i$1] = 5;
       var flrm = hMap(flt, 9);
       var fdrm = hMap(fdt, 5);
-      var max = function(a) {
-        var m = a[0];
-        for (var i = 1; i < a.length; ++i) {
-          if (a[i] > m)
-            m = a[i];
+      var max = function(a2) {
+        var m = a2[0];
+        for (var i2 = 1; i2 < a2.length; ++i2) {
+          if (a2[i2] > m)
+            m = a2[i2];
         }
         return m;
       };
       var bits = function(d, p, m) {
-        var o = p / 8 | 0;
-        return (d[o] | d[o + 1] << 8) >> (p & 7) & m;
+        var o2 = p / 8 | 0;
+        return (d[o2] | d[o2 + 1] << 8) >> (p & 7) & m;
       };
       var bits16 = function(d, p) {
-        var o = p / 8 | 0;
-        return (d[o] | d[o + 1] << 8 | d[o + 2] << 16) >> (p & 7);
+        var o2 = p / 8 | 0;
+        return (d[o2] | d[o2 + 1] << 8 | d[o2 + 2] << 16) >> (p & 7);
       };
       var shft = function(p) {
         return (p + 7) / 8 | 0;
       };
-      var slc = function(v, s, e) {
-        if (e == null || e > v.length)
-          e = v.length;
-        return new u8(v.subarray(s, e));
+      var slc = function(v, s2, e2) {
+        if (e2 == null || e2 > v.length)
+          e2 = v.length;
+        return new u8(v.subarray(s2, e2));
       };
       var ec = [
         "unexpected EOF",
@@ -1748,13 +1749,13 @@ get(array, off2) {
         "invalid zip data"
 ];
       var err = function(ind, msg, nt) {
-        var e = new Error(msg || ec[ind]);
-        e.code = ind;
+        var e2 = new Error(msg || ec[ind]);
+        e2.code = ind;
         if (Error.captureStackTrace)
-          Error.captureStackTrace(e, err);
+          Error.captureStackTrace(e2, err);
         if (!nt)
-          throw e;
-        return e;
+          throw e2;
+        return e2;
       };
       var inflt = function(dat, st, buf, dict) {
         var sl = dat.length, dl = 0;
@@ -1781,16 +1782,16 @@ get(array, off2) {
             var type = bits(dat, pos + 1, 3);
             pos += 3;
             if (!type) {
-              var s = shft(pos) + 4, l = dat[s - 4] | dat[s - 3] << 8, t = s + l;
-              if (t > sl) {
+              var s2 = shft(pos) + 4, l = dat[s2 - 4] | dat[s2 - 3] << 8, t2 = s2 + l;
+              if (t2 > sl) {
                 if (noSt)
                   err(0);
                 break;
               }
               if (resize)
                 cbuf(bt + l);
-              buf.set(dat.subarray(s, t), bt);
-              st.b = bt += l, st.p = pos = t * 8, st.f = final;
+              buf.set(dat.subarray(s2, t2), bt);
+              st.b = bt += l, st.p = pos = t2 * 8, st.f = final;
               continue;
             } else if (type == 1)
               lm = flrm, dm = fdrm, lbt = 9, dbt = 5;
@@ -1800,28 +1801,28 @@ get(array, off2) {
               pos += 14;
               var ldt = new u8(tl);
               var clt = new u8(19);
-              for (var i = 0; i < hcLen; ++i) {
-                clt[clim[i]] = bits(dat, pos + i * 3, 7);
+              for (var i2 = 0; i2 < hcLen; ++i2) {
+                clt[clim[i2]] = bits(dat, pos + i2 * 3, 7);
               }
               pos += hcLen * 3;
               var clb = max(clt), clbmsk = (1 << clb) - 1;
               var clm = hMap(clt, clb);
-              for (var i = 0; i < tl; ) {
-                var r = clm[bits(dat, pos, clbmsk)];
-                pos += r & 15;
-                var s = r >> 4;
-                if (s < 16) {
-                  ldt[i++] = s;
+              for (var i2 = 0; i2 < tl; ) {
+                var r2 = clm[bits(dat, pos, clbmsk)];
+                pos += r2 & 15;
+                var s2 = r2 >> 4;
+                if (s2 < 16) {
+                  ldt[i2++] = s2;
                 } else {
-                  var c = 0, n = 0;
-                  if (s == 16)
-                    n = 3 + bits(dat, pos, 3), pos += 2, c = ldt[i - 1];
-                  else if (s == 17)
-                    n = 3 + bits(dat, pos, 7), pos += 3;
-                  else if (s == 18)
-                    n = 11 + bits(dat, pos, 127), pos += 7;
-                  while (n--)
-                    ldt[i++] = c;
+                  var c2 = 0, n2 = 0;
+                  if (s2 == 16)
+                    n2 = 3 + bits(dat, pos, 3), pos += 2, c2 = ldt[i2 - 1];
+                  else if (s2 == 17)
+                    n2 = 3 + bits(dat, pos, 7), pos += 3;
+                  else if (s2 == 18)
+                    n2 = 11 + bits(dat, pos, 127), pos += 7;
+                  while (n2--)
+                    ldt[i2++] = c2;
                 }
               }
               var lt = ldt.subarray(0, hLit), dt = ldt.subarray(hLit);
@@ -1842,14 +1843,14 @@ get(array, off2) {
           var lms = (1 << lbt) - 1, dms = (1 << dbt) - 1;
           var lpos = pos;
           for (; ; lpos = pos) {
-            var c = lm[bits16(dat, pos) & lms], sym = c >> 4;
-            pos += c & 15;
+            var c2 = lm[bits16(dat, pos) & lms], sym = c2 >> 4;
+            pos += c2 & 15;
             if (pos > tbts) {
               if (noSt)
                 err(0);
               break;
             }
-            if (!c)
+            if (!c2)
               err(2);
             if (sym < 256)
               buf[bt++] = sym;
@@ -1859,8 +1860,8 @@ get(array, off2) {
             } else {
               var add = sym - 254;
               if (sym > 264) {
-                var i = sym - 257, b = fleb[i];
-                add = bits(dat, pos, (1 << b) - 1) + fl[i];
+                var i2 = sym - 257, b = fleb[i2];
+                add = bits(dat, pos, (1 << b) - 1) + fl[i2];
                 pos += b;
               }
               var d = dm[bits16(dat, pos) & dms], dsym = d >> 4;
@@ -1940,7 +1941,7 @@ get(array, off2) {
       try {
         td.decode(et, { stream: true });
         tds = 1;
-      } catch (e) {
+      } catch (e2) {
       }
       var browser$1 = { exports: {} };
       var ms;
@@ -1948,8 +1949,8 @@ get(array, off2) {
       function requireMs() {
         if (hasRequiredMs) return ms;
         hasRequiredMs = 1;
-        var s = 1e3;
-        var m = s * 60;
+        var s2 = 1e3;
+        var m = s2 * 60;
         var h = m * 60;
         var d = h * 24;
         var w = d * 7;
@@ -1977,7 +1978,7 @@ get(array, off2) {
           if (!match) {
             return;
           }
-          var n = parseFloat(match[1]);
+          var n2 = parseFloat(match[1]);
           var type = (match[2] || "ms").toLowerCase();
           switch (type) {
             case "years":
@@ -1985,39 +1986,39 @@ get(array, off2) {
             case "yrs":
             case "yr":
             case "y":
-              return n * y;
+              return n2 * y;
             case "weeks":
             case "week":
             case "w":
-              return n * w;
+              return n2 * w;
             case "days":
             case "day":
             case "d":
-              return n * d;
+              return n2 * d;
             case "hours":
             case "hour":
             case "hrs":
             case "hr":
             case "h":
-              return n * h;
+              return n2 * h;
             case "minutes":
             case "minute":
             case "mins":
             case "min":
             case "m":
-              return n * m;
+              return n2 * m;
             case "seconds":
             case "second":
             case "secs":
             case "sec":
             case "s":
-              return n * s;
+              return n2 * s2;
             case "milliseconds":
             case "millisecond":
             case "msecs":
             case "msec":
             case "ms":
-              return n;
+              return n2;
             default:
               return void 0;
           }
@@ -2033,8 +2034,8 @@ get(array, off2) {
           if (msAbs >= m) {
             return Math.round(ms2 / m) + "m";
           }
-          if (msAbs >= s) {
-            return Math.round(ms2 / s) + "s";
+          if (msAbs >= s2) {
+            return Math.round(ms2 / s2) + "s";
           }
           return ms2 + "ms";
         }
@@ -2049,14 +2050,14 @@ get(array, off2) {
           if (msAbs >= m) {
             return plural(ms2, msAbs, m, "minute");
           }
-          if (msAbs >= s) {
-            return plural(ms2, msAbs, s, "second");
+          if (msAbs >= s2) {
+            return plural(ms2, msAbs, s2, "second");
           }
           return ms2 + " ms";
         }
-        function plural(ms2, msAbs, n, name2) {
-          var isPlural = msAbs >= n * 1.5;
-          return Math.round(ms2 / n) + " " + name2 + (isPlural ? "s" : "");
+        function plural(ms2, msAbs, n2, name2) {
+          var isPlural = msAbs >= n2 * 1.5;
+          return Math.round(ms2 / n2) + " " + name2 + (isPlural ? "s" : "");
         }
         return ms;
       }
@@ -2082,8 +2083,8 @@ get(array, off2) {
           createDebug.formatters = {};
           function selectColor(namespace) {
             let hash = 0;
-            for (let i = 0; i < namespace.length; i++) {
-              hash = (hash << 5) - hash + namespace.charCodeAt(i);
+            for (let i2 = 0; i2 < namespace.length; i2++) {
+              hash = (hash << 5) - hash + namespace.charCodeAt(i2);
               hash |= 0;
             }
             return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
@@ -2355,8 +2356,8 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
             if (!this.useColors) {
               return;
             }
-            const c = "color: " + this.color;
-            args.splice(1, 0, c, "color: inherit");
+            const c2 = "color: " + this.color;
+            args.splice(1, 0, c2, "color: inherit");
             let index2 = 0;
             let lastC = 0;
             args[0].replace(/%[a-zA-Z%]/g, (match) => {
@@ -2368,7 +2369,7 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
                 lastC = index2;
               }
             });
-            args.splice(lastC, 0, c);
+            args.splice(lastC, 0, c2);
           }
           exports.log = console.debug || console.log || (() => {
           });
@@ -2383,15 +2384,15 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
             }
           }
           function load() {
-            let r;
+            let r2;
             try {
-              r = exports.storage.getItem("debug") || exports.storage.getItem("DEBUG");
+              r2 = exports.storage.getItem("debug") || exports.storage.getItem("DEBUG");
             } catch (error) {
             }
-            if (!r && typeof process !== "undefined" && "env" in process) {
-              r = define_process_env_default.DEBUG;
+            if (!r2 && typeof process !== "undefined" && "env" in process) {
+              r2 = define_process_env_default.DEBUG;
             }
-            return r;
+            return r2;
           }
           function localstorage() {
             try {
@@ -2506,9 +2507,9 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
           const chunkLength = Math.min(16 * 1024, randomReadTokenizer.fileInfo.size);
           const buffer = this.syncBuffer.subarray(0, chunkLength);
           await this.tokenizer.readBuffer(buffer, { position: randomReadTokenizer.fileInfo.size - chunkLength });
-          for (let i = buffer.length - 4; i >= 0; i--) {
-            if (buffer[i] === eocdSignatureBytes[0] && buffer[i + 1] === eocdSignatureBytes[1] && buffer[i + 2] === eocdSignatureBytes[2] && buffer[i + 3] === eocdSignatureBytes[3]) {
-              return randomReadTokenizer.fileInfo.size - chunkLength + i;
+          for (let i2 = buffer.length - 4; i2 >= 0; i2--) {
+            if (buffer[i2] === eocdSignatureBytes[0] && buffer[i2 + 1] === eocdSignatureBytes[1] && buffer[i2 + 2] === eocdSignatureBytes[2] && buffer[i2 + 3] === eocdSignatureBytes[3]) {
+              return randomReadTokenizer.fileInfo.size - chunkLength + i2;
             }
           }
           return -1;
@@ -2526,7 +2527,7 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
             const eocdHeader = await this.tokenizer.readToken(EndOfCentralDirectoryRecordToken, offset);
             const files = [];
             this.tokenizer.setPosition(eocdHeader.offsetOfStartOfCd);
-            for (let n = 0; n < eocdHeader.nrOfEntriesOfSize; ++n) {
+            for (let n2 = 0; n2 < eocdHeader.nrOfEntriesOfSize; ++n2) {
               const entry = await this.tokenizer.readToken(FileHeader);
               if (entry.signature !== Signature.CentralFileHeader) {
                 throw new Error("Expected Central-File-Header signature");
@@ -2535,7 +2536,7 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
               await this.tokenizer.ignore(entry.extraFieldLength);
               await this.tokenizer.ignore(entry.fileCommentLength);
               files.push(entry);
-              debug$4(`Add central-directory file-entry: n=${n + 1}/${files.length}: filename=${files[n].filename}`);
+              debug$4(`Add central-directory file-entry: n=${n2 + 1}/${files.length}: filename=${files[n2].filename}`);
             }
             this.tokenizer.setPosition(pos);
             return files;
@@ -2643,16 +2644,16 @@ typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.t
         const portionLength = portion.length;
         if (portionLength > bufferLength)
           return -1;
-        for (let i = 0; i <= bufferLength - portionLength; i++) {
+        for (let i2 = 0; i2 <= bufferLength - portionLength; i2++) {
           let found = true;
           for (let j = 0; j < portionLength; j++) {
-            if (buffer[i + j] !== portion[j]) {
+            if (buffer[i2 + j] !== portion[j]) {
               found = false;
               break;
             }
           }
           if (found) {
-            return i;
+            return i2;
           }
         }
         return -1;
@@ -4561,7 +4562,7 @@ detectImprecise = async (tokenizer) => {
         }
         async readTiffIFD(bigEndian) {
           const numberOfTags = await this.tokenizer.readToken(bigEndian ? UINT16_BE : UINT16_LE);
-          for (let n = 0; n < numberOfTags; ++n) {
+          for (let n2 = 0; n2 < numberOfTags; ++n2) {
             const fileType = await this.readTiffTag(bigEndian);
             if (fileType) {
               return fileType;
@@ -4633,8 +4634,8 @@ var hasRequiredContentType;
           if (parameters && typeof parameters === "object") {
             var param;
             var params = Object.keys(parameters).sort();
-            for (var i = 0; i < params.length; i++) {
-              param = params[i];
+            for (var i2 = 0; i2 < params.length; i2++) {
+              param = params[i2];
               if (!TOKEN_REGEXP.test(param)) {
                 throw new TypeError("invalid parameter name");
               }
@@ -4847,21 +4848,21 @@ toString() {
         return (buf[off2] & 1 << bit) !== 0;
       }
       function findZero(uint8Array, start, end, encoding) {
-        let i = start;
+        let i2 = start;
         if (encoding === "utf-16le") {
-          while (uint8Array[i] !== 0 || uint8Array[i + 1] !== 0) {
-            if (i >= end)
+          while (uint8Array[i2] !== 0 || uint8Array[i2 + 1] !== 0) {
+            if (i2 >= end)
               return end;
-            i += 2;
+            i2 += 2;
           }
-          return i;
+          return i2;
         }
-        while (uint8Array[i] !== 0) {
-          if (i >= end)
+        while (uint8Array[i2] !== 0) {
+          if (i2 >= end)
             return end;
-          i++;
+          i2++;
         }
-        return i;
+        return i2;
       }
       function trimRightNull(x) {
         const pos0 = x.indexOf("\0");
@@ -4871,10 +4872,10 @@ toString() {
         const l = uint8Array.length;
         if ((l & 1) !== 0)
           throw new FieldDecodingError("Buffer length must be even");
-        for (let i = 0; i < l; i += 2) {
-          const a = uint8Array[i];
-          uint8Array[i] = uint8Array[i + 1];
-          uint8Array[i + 1] = a;
+        for (let i2 = 0; i2 < l; i2 += 2) {
+          const a2 = uint8Array[i2];
+          uint8Array[i2] = uint8Array[i2 + 1];
+          uint8Array[i2 + 1] = a2;
         }
         return uint8Array;
       }
@@ -4914,8 +4915,8 @@ toString() {
       }
       function a2hex(str) {
         const arr = [];
-        for (let i = 0, l = str.length; i < l; i++) {
-          const hex = Number(str.charCodeAt(i)).toString(16);
+        for (let i2 = 0, l = str.length; i2 < l; i2++) {
+          const hex = Number(str.charCodeAt(i2)).toString(16);
           arr.push(hex.length === 1 ? `0${hex}` : hex);
         }
         return arr.join(" ");
@@ -6241,7 +6242,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/mpeg", "audio/mp3", "audio/aacs", "audio/aacp"],
         async load() {
           return (await __vitePreload(async () => {
-            const { MpegParser } = await module.import('./MpegParser-3s0uV7VE-gpC5rqab.js');
+            const { MpegParser } = await module.import('./MpegParser-B5rdoYLh-DVezUQvh.js');
             return { MpegParser };
           }, void 0 )).MpegParser;
         }
@@ -6263,7 +6264,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/ms-wma", "video/ms-wmv", "audio/ms-asf", "video/ms-asf", "application/vnd.ms-asf"],
         async load() {
           return (await __vitePreload(async () => {
-            const { AsfParser } = await module.import('./AsfParser-CHf-FRXj-BLlGYq7e.js');
+            const { AsfParser } = await module.import('./AsfParser-SIBzyqWu-BRPg8S-2.js');
             return { AsfParser };
           }, void 0 )).AsfParser;
         }
@@ -6274,7 +6275,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/dsf", "audio/dsd"],
         async load() {
           return (await __vitePreload(async () => {
-            const { DsdiffParser } = await module.import('./DsdiffParser-7wc5EY1Y-DoGjFcGp.js');
+            const { DsdiffParser } = await module.import('./DsdiffParser-BW4ltQqQ-Bl1VPZy4.js');
             return { DsdiffParser };
           }, void 0 )).DsdiffParser;
         }
@@ -6285,7 +6286,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/aiff", "audio/aif", "audio/aifc", "application/aiff"],
         async load() {
           return (await __vitePreload(async () => {
-            const { AIFFParser } = await module.import('./AiffParser-WwqSk4Of-CGpFlK9l.js');
+            const { AIFFParser } = await module.import('./AiffParser-_5m4dqWC-CQhOHMhG.js');
             return { AIFFParser };
           }, void 0 )).AIFFParser;
         }
@@ -6296,7 +6297,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/dsf"],
         async load() {
           return (await __vitePreload(async () => {
-            const { DsfParser } = await module.import('./DsfParser-BfIrpRcq-DTKdcrjR.js');
+            const { DsfParser } = await module.import('./DsfParser-BKHYy_Ww-C4l4ho2H.js');
             return { DsfParser };
           }, void 0 )).DsfParser;
         }
@@ -6307,7 +6308,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/flac"],
         async load() {
           return (await __vitePreload(async () => {
-            const { FlacParser } = await module.import('./FlacParser-DpY42fDv-C2TyF8sN.js');
+            const { FlacParser } = await module.import('./FlacParser-CwReiQDF-DDbFdnQD.js');
             return { FlacParser };
           }, void 0 )).FlacParser;
         }
@@ -6318,7 +6319,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/matroska", "video/matroska", "audio/webm", "video/webm"],
         async load() {
           return (await __vitePreload(async () => {
-            const { MatroskaParser } = await module.import('./MatroskaParser-vHNbamuD-CVi14DtY.js');
+            const { MatroskaParser } = await module.import('./MatroskaParser-BYBqQp4o-BlZq3WZ-.js');
             return { MatroskaParser };
           }, void 0 )).MatroskaParser;
         }
@@ -6329,7 +6330,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/mp4", "audio/m4a", "video/m4v", "video/mp4"],
         async load() {
           return (await __vitePreload(async () => {
-            const { MP4Parser } = await module.import('./MP4Parser-DGXj3j1W-BT-9DL8S.js');
+            const { MP4Parser } = await module.import('./MP4Parser-BzZukf3J-CcQM-gw0.js');
             return { MP4Parser };
           }, void 0 )).MP4Parser;
         }
@@ -6340,7 +6341,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/musepack"],
         async load() {
           return (await __vitePreload(async () => {
-            const { MusepackParser } = await module.import('./MusepackParser-BZlUP-dI-v58HDgkH.js');
+            const { MusepackParser } = await module.import('./MusepackParser-BNEyCqVq-B0I2OlsG.js');
             return { MusepackParser };
           }, void 0 )).MusepackParser;
         }
@@ -6351,7 +6352,7 @@ setGenericTag(tagType2, tag2) {
         mimeTypes: ["audio/ogg", "audio/opus", "audio/speex", "video/ogg"],
 async load() {
           return (await __vitePreload(async () => {
-            const { OggParser } = await module.import('./OggParser-DM3CTSxa-CoCwH8Z1.js');
+            const { OggParser } = await module.import('./OggParser-vTY7mv7q-COx0zg1B.js');
             return { OggParser };
           }, void 0 )).OggParser;
         }
@@ -6362,7 +6363,7 @@ async load() {
         mimeTypes: ["audio/wavpack"],
         async load() {
           return (await __vitePreload(async () => {
-            const { WavPackParser } = await module.import('./WavPackParser-DmG7oqui-BxH30fAt.js');
+            const { WavPackParser } = await module.import('./WavPackParser-DjIv98eF-D5dkKsV4.js');
             return { WavPackParser };
           }, void 0 )).WavPackParser;
         }
@@ -6373,7 +6374,7 @@ async load() {
         mimeTypes: ["audio/vnd.wave", "audio/wav", "audio/wave"],
         async load() {
           return (await __vitePreload(async () => {
-            const { WaveParser } = await module.import('./WaveParser-C6D8sCtT-ZpwuMhyW.js');
+            const { WaveParser } = await module.import('./WaveParser-Mn0F8ace-DcjkiAJ4.js');
             return { WaveParser };
           }, void 0 )).WaveParser;
         }
@@ -6479,8 +6480,8 @@ findLoaderForExtension(filePath) {
         }
       }
       function getExtension(fname) {
-        const i = fname.lastIndexOf(".");
-        return i === -1 ? "" : fname.slice(i);
+        const i2 = fname.lastIndexOf(".");
+        return i2 === -1 ? "" : fname.slice(i2);
       }
       class BasicParser {
 constructor(metadata, tokenizer, options) {
@@ -6659,9 +6660,9 @@ async tryParseApeHeader() {
           const keyBuffer = new Uint8Array(256);
           let bytesRemaining = footer2.size - TagFooter.len;
           debug$1(`Parse APE tags at offset=${this.tokenizer.position}, size=${bytesRemaining}`);
-          for (let i = 0; i < footer2.fields; i++) {
+          for (let i2 = 0; i2 < footer2.fields; i2++) {
             if (bytesRemaining < TagItemHeader.len) {
-              this.metadata.addWarning(`APEv2 Tag-header: ${footer2.fields - i} items remaining, but no more tag data to read.`);
+              this.metadata.addWarning(`APEv2 Tag-header: ${footer2.fields - i2} items remaining, but no more tag data to read.`);
               break;
             }
             const tagItemHeader = await this.tokenizer.readToken(TagItemHeader);
@@ -7076,8 +7077,8 @@ track: UINT8.get(buf, off2 + 126),
       };
       function chunkArray(array, size2) {
         const result = [];
-        for (let i = 0; i < array.length; i += size2) {
-          result.push(array.slice(i, i + size2));
+        for (let i2 = 0; i2 < array.length; i2 += size2) {
+          result.push(array.slice(i2, i2 + size2));
         }
         return result;
       }
@@ -7139,7 +7140,7 @@ track: UINT8.get(buf, off2 + 126),
             }
           };
           const tasksToStart = Math.min(limit, promiseArray.length);
-          for (let i = 0; i < tasksToStart; i++) {
+          for (let i2 = 0; i2 < tasksToStart; i2++) {
             try {
               runTask();
             } catch (error) {
@@ -7285,257 +7286,257 @@ track: UINT8.get(buf, off2 + 126),
         if (hasRequiredDayjs_min) return dayjs_min$1.exports;
         hasRequiredDayjs_min = 1;
         (function(module, exports) {
-          !(function(t, e) {
-            module.exports = e();
+          !(function(t2, e2) {
+            module.exports = e2();
           })(dayjs_min, (function() {
-            var t = 1e3, e = 6e4, n = 36e5, r = "millisecond", i = "second", s = "minute", u = "hour", a = "day", o = "week", c = "month", f = "quarter", h = "year", d = "date", l = "Invalid Date", $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/, y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, M = { name: "en", weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"), months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"), ordinal: function(t2) {
-              var e2 = ["th", "st", "nd", "rd"], n2 = t2 % 100;
-              return "[" + t2 + (e2[(n2 - 20) % 10] || e2[n2] || e2[0]) + "]";
-            } }, m = function(t2, e2, n2) {
-              var r2 = String(t2);
-              return !r2 || r2.length >= e2 ? t2 : "" + Array(e2 + 1 - r2.length).join(n2) + t2;
-            }, v = { s: m, z: function(t2) {
-              var e2 = -t2.utcOffset(), n2 = Math.abs(e2), r2 = Math.floor(n2 / 60), i2 = n2 % 60;
-              return (e2 <= 0 ? "+" : "-") + m(r2, 2, "0") + ":" + m(i2, 2, "0");
-            }, m: function t2(e2, n2) {
-              if (e2.date() < n2.date()) return -t2(n2, e2);
-              var r2 = 12 * (n2.year() - e2.year()) + (n2.month() - e2.month()), i2 = e2.clone().add(r2, c), s2 = n2 - i2 < 0, u2 = e2.clone().add(r2 + (s2 ? -1 : 1), c);
-              return +(-(r2 + (n2 - i2) / (s2 ? i2 - u2 : u2 - i2)) || 0);
-            }, a: function(t2) {
-              return t2 < 0 ? Math.ceil(t2) || 0 : Math.floor(t2);
-            }, p: function(t2) {
-              return { M: c, y: h, w: o, d: a, D: d, h: u, m: s, s: i, ms: r, Q: f }[t2] || String(t2 || "").toLowerCase().replace(/s$/, "");
-            }, u: function(t2) {
-              return void 0 === t2;
+            var t2 = 1e3, e2 = 6e4, n2 = 36e5, r2 = "millisecond", i2 = "second", s2 = "minute", u = "hour", a2 = "day", o2 = "week", c2 = "month", f = "quarter", h = "year", d = "date", l = "Invalid Date", $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/, y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, M = { name: "en", weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"), months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"), ordinal: function(t3) {
+              var e3 = ["th", "st", "nd", "rd"], n3 = t3 % 100;
+              return "[" + t3 + (e3[(n3 - 20) % 10] || e3[n3] || e3[0]) + "]";
+            } }, m = function(t3, e3, n3) {
+              var r3 = String(t3);
+              return !r3 || r3.length >= e3 ? t3 : "" + Array(e3 + 1 - r3.length).join(n3) + t3;
+            }, v = { s: m, z: function(t3) {
+              var e3 = -t3.utcOffset(), n3 = Math.abs(e3), r3 = Math.floor(n3 / 60), i3 = n3 % 60;
+              return (e3 <= 0 ? "+" : "-") + m(r3, 2, "0") + ":" + m(i3, 2, "0");
+            }, m: function t3(e3, n3) {
+              if (e3.date() < n3.date()) return -t3(n3, e3);
+              var r3 = 12 * (n3.year() - e3.year()) + (n3.month() - e3.month()), i3 = e3.clone().add(r3, c2), s3 = n3 - i3 < 0, u2 = e3.clone().add(r3 + (s3 ? -1 : 1), c2);
+              return +(-(r3 + (n3 - i3) / (s3 ? i3 - u2 : u2 - i3)) || 0);
+            }, a: function(t3) {
+              return t3 < 0 ? Math.ceil(t3) || 0 : Math.floor(t3);
+            }, p: function(t3) {
+              return { M: c2, y: h, w: o2, d: a2, D: d, h: u, m: s2, s: i2, ms: r2, Q: f }[t3] || String(t3 || "").toLowerCase().replace(/s$/, "");
+            }, u: function(t3) {
+              return void 0 === t3;
             } }, g = "en", D = {};
             D[g] = M;
-            var p = "$isDayjsObject", S = function(t2) {
-              return t2 instanceof _ || !(!t2 || !t2[p]);
-            }, w = function t2(e2, n2, r2) {
-              var i2;
-              if (!e2) return g;
-              if ("string" == typeof e2) {
-                var s2 = e2.toLowerCase();
-                D[s2] && (i2 = s2), n2 && (D[s2] = n2, i2 = s2);
-                var u2 = e2.split("-");
-                if (!i2 && u2.length > 1) return t2(u2[0]);
+            var p = "$isDayjsObject", S = function(t3) {
+              return t3 instanceof _ || !(!t3 || !t3[p]);
+            }, w = function t3(e3, n3, r3) {
+              var i3;
+              if (!e3) return g;
+              if ("string" == typeof e3) {
+                var s3 = e3.toLowerCase();
+                D[s3] && (i3 = s3), n3 && (D[s3] = n3, i3 = s3);
+                var u2 = e3.split("-");
+                if (!i3 && u2.length > 1) return t3(u2[0]);
               } else {
-                var a2 = e2.name;
-                D[a2] = e2, i2 = a2;
+                var a3 = e3.name;
+                D[a3] = e3, i3 = a3;
               }
-              return !r2 && i2 && (g = i2), i2 || !r2 && g;
-            }, O = function(t2, e2) {
-              if (S(t2)) return t2.clone();
-              var n2 = "object" == typeof e2 ? e2 : {};
-              return n2.date = t2, n2.args = arguments, new _(n2);
+              return !r3 && i3 && (g = i3), i3 || !r3 && g;
+            }, O = function(t3, e3) {
+              if (S(t3)) return t3.clone();
+              var n3 = "object" == typeof e3 ? e3 : {};
+              return n3.date = t3, n3.args = arguments, new _(n3);
             }, b = v;
-            b.l = w, b.i = S, b.w = function(t2, e2) {
-              return O(t2, { locale: e2.$L, utc: e2.$u, x: e2.$x, $offset: e2.$offset });
+            b.l = w, b.i = S, b.w = function(t3, e3) {
+              return O(t3, { locale: e3.$L, utc: e3.$u, x: e3.$x, $offset: e3.$offset });
             };
             var _ = (function() {
-              function M2(t2) {
-                this.$L = w(t2.locale, null, true), this.parse(t2), this.$x = this.$x || t2.x || {}, this[p] = true;
+              function M2(t3) {
+                this.$L = w(t3.locale, null, true), this.parse(t3), this.$x = this.$x || t3.x || {}, this[p] = true;
               }
               var m2 = M2.prototype;
-              return m2.parse = function(t2) {
-                this.$d = (function(t3) {
-                  var e2 = t3.date, n2 = t3.utc;
-                  if (null === e2) return new Date(NaN);
-                  if (b.u(e2)) return new Date();
-                  if (e2 instanceof Date) return new Date(e2);
-                  if ("string" == typeof e2 && !/Z$/i.test(e2)) {
-                    var r2 = e2.match($);
-                    if (r2) {
-                      var i2 = r2[2] - 1 || 0, s2 = (r2[7] || "0").substring(0, 3);
-                      return n2 ? new Date(Date.UTC(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2)) : new Date(r2[1], i2, r2[3] || 1, r2[4] || 0, r2[5] || 0, r2[6] || 0, s2);
+              return m2.parse = function(t3) {
+                this.$d = (function(t4) {
+                  var e3 = t4.date, n3 = t4.utc;
+                  if (null === e3) return new Date(NaN);
+                  if (b.u(e3)) return new Date();
+                  if (e3 instanceof Date) return new Date(e3);
+                  if ("string" == typeof e3 && !/Z$/i.test(e3)) {
+                    var r3 = e3.match($);
+                    if (r3) {
+                      var i3 = r3[2] - 1 || 0, s3 = (r3[7] || "0").substring(0, 3);
+                      return n3 ? new Date(Date.UTC(r3[1], i3, r3[3] || 1, r3[4] || 0, r3[5] || 0, r3[6] || 0, s3)) : new Date(r3[1], i3, r3[3] || 1, r3[4] || 0, r3[5] || 0, r3[6] || 0, s3);
                     }
                   }
-                  return new Date(e2);
-                })(t2), this.init();
+                  return new Date(e3);
+                })(t3), this.init();
               }, m2.init = function() {
-                var t2 = this.$d;
-                this.$y = t2.getFullYear(), this.$M = t2.getMonth(), this.$D = t2.getDate(), this.$W = t2.getDay(), this.$H = t2.getHours(), this.$m = t2.getMinutes(), this.$s = t2.getSeconds(), this.$ms = t2.getMilliseconds();
+                var t3 = this.$d;
+                this.$y = t3.getFullYear(), this.$M = t3.getMonth(), this.$D = t3.getDate(), this.$W = t3.getDay(), this.$H = t3.getHours(), this.$m = t3.getMinutes(), this.$s = t3.getSeconds(), this.$ms = t3.getMilliseconds();
               }, m2.$utils = function() {
                 return b;
               }, m2.isValid = function() {
                 return !(this.$d.toString() === l);
-              }, m2.isSame = function(t2, e2) {
-                var n2 = O(t2);
-                return this.startOf(e2) <= n2 && n2 <= this.endOf(e2);
-              }, m2.isAfter = function(t2, e2) {
-                return O(t2) < this.startOf(e2);
-              }, m2.isBefore = function(t2, e2) {
-                return this.endOf(e2) < O(t2);
-              }, m2.$g = function(t2, e2, n2) {
-                return b.u(t2) ? this[e2] : this.set(n2, t2);
+              }, m2.isSame = function(t3, e3) {
+                var n3 = O(t3);
+                return this.startOf(e3) <= n3 && n3 <= this.endOf(e3);
+              }, m2.isAfter = function(t3, e3) {
+                return O(t3) < this.startOf(e3);
+              }, m2.isBefore = function(t3, e3) {
+                return this.endOf(e3) < O(t3);
+              }, m2.$g = function(t3, e3, n3) {
+                return b.u(t3) ? this[e3] : this.set(n3, t3);
               }, m2.unix = function() {
                 return Math.floor(this.valueOf() / 1e3);
               }, m2.valueOf = function() {
                 return this.$d.getTime();
-              }, m2.startOf = function(t2, e2) {
-                var n2 = this, r2 = !!b.u(e2) || e2, f2 = b.p(t2), l2 = function(t3, e3) {
-                  var i2 = b.w(n2.$u ? Date.UTC(n2.$y, e3, t3) : new Date(n2.$y, e3, t3), n2);
-                  return r2 ? i2 : i2.endOf(a);
-                }, $2 = function(t3, e3) {
-                  return b.w(n2.toDate()[t3].apply(n2.toDate("s"), (r2 ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e3)), n2);
+              }, m2.startOf = function(t3, e3) {
+                var n3 = this, r3 = !!b.u(e3) || e3, f2 = b.p(t3), l2 = function(t4, e4) {
+                  var i3 = b.w(n3.$u ? Date.UTC(n3.$y, e4, t4) : new Date(n3.$y, e4, t4), n3);
+                  return r3 ? i3 : i3.endOf(a2);
+                }, $2 = function(t4, e4) {
+                  return b.w(n3.toDate()[t4].apply(n3.toDate("s"), (r3 ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e4)), n3);
                 }, y2 = this.$W, M3 = this.$M, m3 = this.$D, v2 = "set" + (this.$u ? "UTC" : "");
                 switch (f2) {
                   case h:
-                    return r2 ? l2(1, 0) : l2(31, 11);
-                  case c:
-                    return r2 ? l2(1, M3) : l2(0, M3 + 1);
-                  case o:
+                    return r3 ? l2(1, 0) : l2(31, 11);
+                  case c2:
+                    return r3 ? l2(1, M3) : l2(0, M3 + 1);
+                  case o2:
                     var g2 = this.$locale().weekStart || 0, D2 = (y2 < g2 ? y2 + 7 : y2) - g2;
-                    return l2(r2 ? m3 - D2 : m3 + (6 - D2), M3);
-                  case a:
+                    return l2(r3 ? m3 - D2 : m3 + (6 - D2), M3);
+                  case a2:
                   case d:
                     return $2(v2 + "Hours", 0);
                   case u:
                     return $2(v2 + "Minutes", 1);
-                  case s:
+                  case s2:
                     return $2(v2 + "Seconds", 2);
-                  case i:
+                  case i2:
                     return $2(v2 + "Milliseconds", 3);
                   default:
                     return this.clone();
                 }
-              }, m2.endOf = function(t2) {
-                return this.startOf(t2, false);
-              }, m2.$set = function(t2, e2) {
-                var n2, o2 = b.p(t2), f2 = "set" + (this.$u ? "UTC" : ""), l2 = (n2 = {}, n2[a] = f2 + "Date", n2[d] = f2 + "Date", n2[c] = f2 + "Month", n2[h] = f2 + "FullYear", n2[u] = f2 + "Hours", n2[s] = f2 + "Minutes", n2[i] = f2 + "Seconds", n2[r] = f2 + "Milliseconds", n2)[o2], $2 = o2 === a ? this.$D + (e2 - this.$W) : e2;
-                if (o2 === c || o2 === h) {
+              }, m2.endOf = function(t3) {
+                return this.startOf(t3, false);
+              }, m2.$set = function(t3, e3) {
+                var n3, o3 = b.p(t3), f2 = "set" + (this.$u ? "UTC" : ""), l2 = (n3 = {}, n3[a2] = f2 + "Date", n3[d] = f2 + "Date", n3[c2] = f2 + "Month", n3[h] = f2 + "FullYear", n3[u] = f2 + "Hours", n3[s2] = f2 + "Minutes", n3[i2] = f2 + "Seconds", n3[r2] = f2 + "Milliseconds", n3)[o3], $2 = o3 === a2 ? this.$D + (e3 - this.$W) : e3;
+                if (o3 === c2 || o3 === h) {
                   var y2 = this.clone().set(d, 1);
                   y2.$d[l2]($2), y2.init(), this.$d = y2.set(d, Math.min(this.$D, y2.daysInMonth())).$d;
                 } else l2 && this.$d[l2]($2);
                 return this.init(), this;
-              }, m2.set = function(t2, e2) {
-                return this.clone().$set(t2, e2);
-              }, m2.get = function(t2) {
-                return this[b.p(t2)]();
-              }, m2.add = function(r2, f2) {
+              }, m2.set = function(t3, e3) {
+                return this.clone().$set(t3, e3);
+              }, m2.get = function(t3) {
+                return this[b.p(t3)]();
+              }, m2.add = function(r3, f2) {
                 var d2, l2 = this;
-                r2 = Number(r2);
-                var $2 = b.p(f2), y2 = function(t2) {
-                  var e2 = O(l2);
-                  return b.w(e2.date(e2.date() + Math.round(t2 * r2)), l2);
+                r3 = Number(r3);
+                var $2 = b.p(f2), y2 = function(t3) {
+                  var e3 = O(l2);
+                  return b.w(e3.date(e3.date() + Math.round(t3 * r3)), l2);
                 };
-                if ($2 === c) return this.set(c, this.$M + r2);
-                if ($2 === h) return this.set(h, this.$y + r2);
-                if ($2 === a) return y2(1);
-                if ($2 === o) return y2(7);
-                var M3 = (d2 = {}, d2[s] = e, d2[u] = n, d2[i] = t, d2)[$2] || 1, m3 = this.$d.getTime() + r2 * M3;
+                if ($2 === c2) return this.set(c2, this.$M + r3);
+                if ($2 === h) return this.set(h, this.$y + r3);
+                if ($2 === a2) return y2(1);
+                if ($2 === o2) return y2(7);
+                var M3 = (d2 = {}, d2[s2] = e2, d2[u] = n2, d2[i2] = t2, d2)[$2] || 1, m3 = this.$d.getTime() + r3 * M3;
                 return b.w(m3, this);
-              }, m2.subtract = function(t2, e2) {
-                return this.add(-1 * t2, e2);
-              }, m2.format = function(t2) {
-                var e2 = this, n2 = this.$locale();
-                if (!this.isValid()) return n2.invalidDate || l;
-                var r2 = t2 || "YYYY-MM-DDTHH:mm:ssZ", i2 = b.z(this), s2 = this.$H, u2 = this.$m, a2 = this.$M, o2 = n2.weekdays, c2 = n2.months, f2 = n2.meridiem, h2 = function(t3, n3, i3, s3) {
-                  return t3 && (t3[n3] || t3(e2, r2)) || i3[n3].slice(0, s3);
-                }, d2 = function(t3) {
-                  return b.s(s2 % 12 || 12, t3, "0");
-                }, $2 = f2 || function(t3, e3, n3) {
-                  var r3 = t3 < 12 ? "AM" : "PM";
-                  return n3 ? r3.toLowerCase() : r3;
+              }, m2.subtract = function(t3, e3) {
+                return this.add(-1 * t3, e3);
+              }, m2.format = function(t3) {
+                var e3 = this, n3 = this.$locale();
+                if (!this.isValid()) return n3.invalidDate || l;
+                var r3 = t3 || "YYYY-MM-DDTHH:mm:ssZ", i3 = b.z(this), s3 = this.$H, u2 = this.$m, a3 = this.$M, o3 = n3.weekdays, c3 = n3.months, f2 = n3.meridiem, h2 = function(t4, n4, i4, s4) {
+                  return t4 && (t4[n4] || t4(e3, r3)) || i4[n4].slice(0, s4);
+                }, d2 = function(t4) {
+                  return b.s(s3 % 12 || 12, t4, "0");
+                }, $2 = f2 || function(t4, e4, n4) {
+                  var r4 = t4 < 12 ? "AM" : "PM";
+                  return n4 ? r4.toLowerCase() : r4;
                 };
-                return r2.replace(y, (function(t3, r3) {
-                  return r3 || (function(t4) {
-                    switch (t4) {
+                return r3.replace(y, (function(t4, r4) {
+                  return r4 || (function(t5) {
+                    switch (t5) {
                       case "YY":
-                        return String(e2.$y).slice(-2);
+                        return String(e3.$y).slice(-2);
                       case "YYYY":
-                        return b.s(e2.$y, 4, "0");
+                        return b.s(e3.$y, 4, "0");
                       case "M":
-                        return a2 + 1;
+                        return a3 + 1;
                       case "MM":
-                        return b.s(a2 + 1, 2, "0");
+                        return b.s(a3 + 1, 2, "0");
                       case "MMM":
-                        return h2(n2.monthsShort, a2, c2, 3);
+                        return h2(n3.monthsShort, a3, c3, 3);
                       case "MMMM":
-                        return h2(c2, a2);
+                        return h2(c3, a3);
                       case "D":
-                        return e2.$D;
+                        return e3.$D;
                       case "DD":
-                        return b.s(e2.$D, 2, "0");
+                        return b.s(e3.$D, 2, "0");
                       case "d":
-                        return String(e2.$W);
+                        return String(e3.$W);
                       case "dd":
-                        return h2(n2.weekdaysMin, e2.$W, o2, 2);
+                        return h2(n3.weekdaysMin, e3.$W, o3, 2);
                       case "ddd":
-                        return h2(n2.weekdaysShort, e2.$W, o2, 3);
+                        return h2(n3.weekdaysShort, e3.$W, o3, 3);
                       case "dddd":
-                        return o2[e2.$W];
+                        return o3[e3.$W];
                       case "H":
-                        return String(s2);
+                        return String(s3);
                       case "HH":
-                        return b.s(s2, 2, "0");
+                        return b.s(s3, 2, "0");
                       case "h":
                         return d2(1);
                       case "hh":
                         return d2(2);
                       case "a":
-                        return $2(s2, u2, true);
+                        return $2(s3, u2, true);
                       case "A":
-                        return $2(s2, u2, false);
+                        return $2(s3, u2, false);
                       case "m":
                         return String(u2);
                       case "mm":
                         return b.s(u2, 2, "0");
                       case "s":
-                        return String(e2.$s);
+                        return String(e3.$s);
                       case "ss":
-                        return b.s(e2.$s, 2, "0");
+                        return b.s(e3.$s, 2, "0");
                       case "SSS":
-                        return b.s(e2.$ms, 3, "0");
+                        return b.s(e3.$ms, 3, "0");
                       case "Z":
-                        return i2;
+                        return i3;
                     }
                     return null;
-                  })(t3) || i2.replace(":", "");
+                  })(t4) || i3.replace(":", "");
                 }));
               }, m2.utcOffset = function() {
                 return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
-              }, m2.diff = function(r2, d2, l2) {
-                var $2, y2 = this, M3 = b.p(d2), m3 = O(r2), v2 = (m3.utcOffset() - this.utcOffset()) * e, g2 = this - m3, D2 = function() {
+              }, m2.diff = function(r3, d2, l2) {
+                var $2, y2 = this, M3 = b.p(d2), m3 = O(r3), v2 = (m3.utcOffset() - this.utcOffset()) * e2, g2 = this - m3, D2 = function() {
                   return b.m(y2, m3);
                 };
                 switch (M3) {
                   case h:
                     $2 = D2() / 12;
                     break;
-                  case c:
+                  case c2:
                     $2 = D2();
                     break;
                   case f:
                     $2 = D2() / 3;
                     break;
-                  case o:
+                  case o2:
                     $2 = (g2 - v2) / 6048e5;
                     break;
-                  case a:
+                  case a2:
                     $2 = (g2 - v2) / 864e5;
                     break;
                   case u:
-                    $2 = g2 / n;
+                    $2 = g2 / n2;
                     break;
-                  case s:
-                    $2 = g2 / e;
+                  case s2:
+                    $2 = g2 / e2;
                     break;
-                  case i:
-                    $2 = g2 / t;
+                  case i2:
+                    $2 = g2 / t2;
                     break;
                   default:
                     $2 = g2;
                 }
                 return l2 ? $2 : b.a($2);
               }, m2.daysInMonth = function() {
-                return this.endOf(c).$D;
+                return this.endOf(c2).$D;
               }, m2.$locale = function() {
                 return D[this.$L];
-              }, m2.locale = function(t2, e2) {
-                if (!t2) return this.$L;
-                var n2 = this.clone(), r2 = w(t2, e2, true);
-                return r2 && (n2.$L = r2), n2;
+              }, m2.locale = function(t3, e3) {
+                if (!t3) return this.$L;
+                var n3 = this.clone(), r3 = w(t3, e3, true);
+                return r3 && (n3.$L = r3), n3;
               }, m2.clone = function() {
                 return b.w(this.$d, this);
               }, m2.toDate = function() {
@@ -7548,14 +7549,14 @@ track: UINT8.get(buf, off2 + 126),
                 return this.$d.toUTCString();
               }, M2;
             })(), k = _.prototype;
-            return O.prototype = k, [["$ms", r], ["$s", i], ["$m", s], ["$H", u], ["$W", a], ["$M", c], ["$y", h], ["$D", d]].forEach((function(t2) {
-              k[t2[1]] = function(e2) {
-                return this.$g(e2, t2[0], t2[1]);
+            return O.prototype = k, [["$ms", r2], ["$s", i2], ["$m", s2], ["$H", u], ["$W", a2], ["$M", c2], ["$y", h], ["$D", d]].forEach((function(t3) {
+              k[t3[1]] = function(e3) {
+                return this.$g(e3, t3[0], t3[1]);
               };
-            })), O.extend = function(t2, e2) {
-              return t2.$i || (t2(e2, _, O), t2.$i = true), O;
-            }, O.locale = w, O.isDayjs = S, O.unix = function(t2) {
-              return O(1e3 * t2);
+            })), O.extend = function(t3, e3) {
+              return t3.$i || (t3(e3, _, O), t3.$i = true), O;
+            }, O.locale = w, O.isDayjs = S, O.unix = function(t3) {
+              return O(1e3 * t3);
             }, O.en = D[g], O.Ls = D, O.p = {}, O;
           }));
         })(dayjs_min$1);
@@ -7939,13 +7940,13 @@ cursor,
         if (!pop) return "0";
         return pop.toFixed(1);
       };
-      const getTypeTag = (t) => {
+      const getTypeTag = (t2) => {
         const types = {
           0: { text: "普通歌曲", color: "#108ee9" },
           1: { text: "独立云盘", color: "#f50" },
           2: { text: "云盘歌曲", color: "#87d068" }
         };
-        return types[t] || types[0];
+        return types[t2] || types[0];
       };
       const getFeeTag = (fee) => {
         const fees = {
@@ -7997,20 +7998,20 @@ createPlaylistShortcut: [
         if (encoding === "utf8") {
           const utf8 = unescape(encodeURIComponent(str));
           const bytes = new Uint8Array(utf8.length);
-          for (let i = 0; i < utf8.length; i++) {
-            bytes[i] = utf8.charCodeAt(i);
+          for (let i2 = 0; i2 < utf8.length; i2++) {
+            bytes[i2] = utf8.charCodeAt(i2);
           }
           return bytes;
         } else if (encoding === "ascii") {
           const bytes = new Uint8Array(str.length);
-          for (let i = 0; i < str.length; i++) {
-            bytes[i] = str.charCodeAt(i) & 255;
+          for (let i2 = 0; i2 < str.length; i2++) {
+            bytes[i2] = str.charCodeAt(i2) & 255;
           }
           return bytes;
         } else if (encoding === "hex") {
           const bytes = new Uint8Array(str.length / 2);
-          for (let i = 0; i < str.length; i += 2) {
-            bytes[i / 2] = parseInt(str.substr(i, 2), 16);
+          for (let i2 = 0; i2 < str.length; i2 += 2) {
+            bytes[i2 / 2] = parseInt(str.substr(i2, 2), 16);
           }
           return bytes;
         }
@@ -8019,24 +8020,24 @@ createPlaylistShortcut: [
       function bytesToString(bytes, encoding = "utf8") {
         if (encoding === "utf8") {
           let str = "";
-          for (let i = 0; i < bytes.length; i++) {
-            str += String.fromCharCode(bytes[i]);
+          for (let i2 = 0; i2 < bytes.length; i2++) {
+            str += String.fromCharCode(bytes[i2]);
           }
           try {
             return decodeURIComponent(escape(str));
-          } catch (e) {
+          } catch (e2) {
             return str;
           }
         } else if (encoding === "ascii") {
           let str = "";
-          for (let i = 0; i < bytes.length; i++) {
-            str += String.fromCharCode(bytes[i] & 255);
+          for (let i2 = 0; i2 < bytes.length; i2++) {
+            str += String.fromCharCode(bytes[i2] & 255);
           }
           return str;
         } else if (encoding === "hex") {
           let hex = "";
-          for (let i = 0; i < bytes.length; i++) {
-            const h = bytes[i].toString(16);
+          for (let i2 = 0; i2 < bytes.length; i2++) {
+            const h = bytes[i2].toString(16);
             hex += h.length === 1 ? "0" + h : h;
           }
           return hex;
@@ -8091,8 +8092,8 @@ readUInt32LE(offset) {
         }
 readUIntBE(offset, byteLength) {
           let value2 = 0;
-          for (let i = 0; i < byteLength; i++) {
-            value2 = (value2 << 8) + this._view.getUint8(offset + i);
+          for (let i2 = 0; i2 < byteLength; i2++) {
+            value2 = (value2 << 8) + this._view.getUint8(offset + i2);
           }
           return value2;
         }
@@ -8109,8 +8110,8 @@ writeUInt32LE(value2, offset) {
           this._view.setUint32(offset, value2, true);
         }
 writeUIntBE(value2, offset, byteLength) {
-          for (let i = byteLength - 1; i >= 0; i--) {
-            this._view.setUint8(offset + i, value2 & 255);
+          for (let i2 = byteLength - 1; i2 >= 0; i2--) {
+            this._view.setUint8(offset + i2, value2 & 255);
             value2 = value2 >> 8;
           }
         }
@@ -8163,13 +8164,13 @@ static from(data, encoding) {
         }
 static concat(buffers) {
           let totalLength = 0;
-          for (let i = 0; i < buffers.length; i++) {
-            totalLength += buffers[i].length;
+          for (let i2 = 0; i2 < buffers.length; i2++) {
+            totalLength += buffers[i2].length;
           }
           const result = new Uint8Array(totalLength);
           let offset = 0;
-          for (let i = 0; i < buffers.length; i++) {
-            const buf = buffers[i];
+          for (let i2 = 0; i2 < buffers.length; i2++) {
+            const buf = buffers[i2];
             if (buf instanceof BrowserBuffer) {
               result.set(buf._data, offset);
               offset += buf.length;
@@ -8266,8 +8267,8 @@ static concat(buffers) {
         const userCommentListLengthBuffer = BrowserBuffer.alloc(4);
         userCommentListLengthBuffer.writeUInt32LE(commentList.length, 0);
         bufferArray.push(vendorLengthBuffer, vendorStringBuffer, userCommentListLengthBuffer);
-        for (let i = 0; i < commentList.length; i++) {
-          const comment = commentList[i];
+        for (let i2 = 0; i2 < commentList.length; i2++) {
+          const comment = commentList[i2];
           const commentBuffer = BrowserBuffer.from(comment, "utf8");
           const lengthBuffer = BrowserBuffer.alloc(4);
           lengthBuffer.writeUInt32LE(commentBuffer.length, 0);
@@ -9455,7 +9456,7 @@ expireTime: Date.now() + 6e4,
             }
             try {
               return fromString(value2);
-            } catch (e) {
+            } catch (e2) {
               return defaultValue;
             }
           };
@@ -9477,8 +9478,8 @@ expireTime: Date.now() + 6e4,
             return (this.buffer[bufIndex] >>> 7 - index2 % 8 & 1) === 1;
           },
           put: function(num, length) {
-            for (let i = 0; i < length; i++) {
-              this.putBit((num >>> length - i - 1 & 1) === 1);
+            for (let i2 = 0; i2 < length; i2++) {
+              this.putBit((num >>> length - i2 - 1 & 1) === 1);
             }
           },
           getLengthInBits: function() {
@@ -9541,8 +9542,8 @@ expireTime: Date.now() + 6e4,
             const size2 = getSymbolSize(version2);
             const intervals = size2 === 145 ? 26 : Math.ceil((size2 - 13) / (2 * posCount - 2)) * 2;
             const positions = [size2 - 7];
-            for (let i = 1; i < posCount - 1; i++) {
-              positions[i] = positions[i - 1] - intervals;
+            for (let i2 = 1; i2 < posCount - 1; i2++) {
+              positions[i2] = positions[i2 - 1] - intervals;
             }
             positions.push(6);
             return positions.reverse();
@@ -9551,14 +9552,14 @@ expireTime: Date.now() + 6e4,
             const coords = [];
             const pos = exports.getRowColCoords(version2);
             const posLength = pos.length;
-            for (let i = 0; i < posLength; i++) {
+            for (let i2 = 0; i2 < posLength; i2++) {
               for (let j = 0; j < posLength; j++) {
-                if (i === 0 && j === 0 ||
-i === 0 && j === posLength - 1 ||
-i === posLength - 1 && j === 0) {
+                if (i2 === 0 && j === 0 ||
+i2 === 0 && j === posLength - 1 ||
+i2 === posLength - 1 && j === 0) {
                   continue;
                 }
-                coords.push([pos[i], pos[j]]);
+                coords.push([pos[i2], pos[j]]);
               }
             }
             return coords;
@@ -9674,28 +9675,28 @@ i === posLength - 1 && j === 0) {
           exports.getPenaltyN4 = function getPenaltyN4(data) {
             let darkCount = 0;
             const modulesCount = data.data.length;
-            for (let i = 0; i < modulesCount; i++) darkCount += data.data[i];
+            for (let i2 = 0; i2 < modulesCount; i2++) darkCount += data.data[i2];
             const k = Math.abs(Math.ceil(darkCount * 100 / modulesCount / 5) - 10);
             return k * PenaltyScores.N4;
           };
-          function getMaskAt(maskPattern2, i, j) {
+          function getMaskAt(maskPattern2, i2, j) {
             switch (maskPattern2) {
               case exports.Patterns.PATTERN000:
-                return (i + j) % 2 === 0;
+                return (i2 + j) % 2 === 0;
               case exports.Patterns.PATTERN001:
-                return i % 2 === 0;
+                return i2 % 2 === 0;
               case exports.Patterns.PATTERN010:
                 return j % 3 === 0;
               case exports.Patterns.PATTERN011:
-                return (i + j) % 3 === 0;
+                return (i2 + j) % 3 === 0;
               case exports.Patterns.PATTERN100:
-                return (Math.floor(i / 2) + Math.floor(j / 3)) % 2 === 0;
+                return (Math.floor(i2 / 2) + Math.floor(j / 3)) % 2 === 0;
               case exports.Patterns.PATTERN101:
-                return i * j % 2 + i * j % 3 === 0;
+                return i2 * j % 2 + i2 * j % 3 === 0;
               case exports.Patterns.PATTERN110:
-                return (i * j % 2 + i * j % 3) % 2 === 0;
+                return (i2 * j % 2 + i2 * j % 3) % 2 === 0;
               case exports.Patterns.PATTERN111:
-                return (i * j % 3 + (i + j) % 2) % 2 === 0;
+                return (i2 * j % 3 + (i2 + j) % 2) % 2 === 0;
               default:
                 throw new Error("bad maskPattern:" + maskPattern2);
             }
@@ -10098,24 +10099,24 @@ i === posLength - 1 && j === 0) {
         const LOG_TABLE = new Uint8Array(256);
         (function initTables() {
           let x = 1;
-          for (let i = 0; i < 255; i++) {
-            EXP_TABLE[i] = x;
-            LOG_TABLE[x] = i;
+          for (let i2 = 0; i2 < 255; i2++) {
+            EXP_TABLE[i2] = x;
+            LOG_TABLE[x] = i2;
             x <<= 1;
             if (x & 256) {
               x ^= 285;
             }
           }
-          for (let i = 255; i < 512; i++) {
-            EXP_TABLE[i] = EXP_TABLE[i - 255];
+          for (let i2 = 255; i2 < 512; i2++) {
+            EXP_TABLE[i2] = EXP_TABLE[i2 - 255];
           }
         })();
-        galoisField.log = function log(n) {
-          if (n < 1) throw new Error("log(" + n + ")");
-          return LOG_TABLE[n];
+        galoisField.log = function log(n2) {
+          if (n2 < 1) throw new Error("log(" + n2 + ")");
+          return LOG_TABLE[n2];
         };
-        galoisField.exp = function exp(n) {
-          return EXP_TABLE[n];
+        galoisField.exp = function exp(n2) {
+          return EXP_TABLE[n2];
         };
         galoisField.mul = function mul(x, y) {
           if (x === 0 || y === 0) return 0;
@@ -10131,9 +10132,9 @@ i === posLength - 1 && j === 0) {
           const GF = requireGaloisField();
           exports.mul = function mul(p1, p2) {
             const coeff = new Uint8Array(p1.length + p2.length - 1);
-            for (let i = 0; i < p1.length; i++) {
+            for (let i2 = 0; i2 < p1.length; i2++) {
               for (let j = 0; j < p2.length; j++) {
-                coeff[i + j] ^= GF.mul(p1[i], p2[j]);
+                coeff[i2 + j] ^= GF.mul(p1[i2], p2[j]);
               }
             }
             return coeff;
@@ -10142,8 +10143,8 @@ i === posLength - 1 && j === 0) {
             let result = new Uint8Array(divident);
             while (result.length - divisor.length >= 0) {
               const coeff = result[0];
-              for (let i = 0; i < divisor.length; i++) {
-                result[i] ^= GF.mul(divisor[i], coeff);
+              for (let i2 = 0; i2 < divisor.length; i2++) {
+                result[i2] ^= GF.mul(divisor[i2], coeff);
               }
               let offset = 0;
               while (offset < result.length && result[offset] === 0) offset++;
@@ -10153,8 +10154,8 @@ i === posLength - 1 && j === 0) {
           };
           exports.generateECPolynomial = function generateECPolynomial(degree) {
             let poly = new Uint8Array([1]);
-            for (let i = 0; i < degree; i++) {
-              poly = exports.mul(poly, new Uint8Array([1, GF.exp(i)]));
+            for (let i2 = 0; i2 < degree; i2++) {
+              poly = exports.mul(poly, new Uint8Array([1, GF.exp(i2)]));
             }
             return poly;
           };
@@ -10311,7 +10312,7 @@ i === posLength - 1 && j === 0) {
             }
             try {
               return fromString(value2);
-            } catch (e) {
+            } catch (e2) {
               return defaultValue;
             }
           };
@@ -10455,15 +10456,15 @@ i === posLength - 1 && j === 0) {
           return NumericData.getBitsLength(this.data.length);
         };
         NumericData.prototype.write = function write(bitBuffer2) {
-          let i, group, value2;
-          for (i = 0; i + 3 <= this.data.length; i += 3) {
-            group = this.data.substr(i, 3);
+          let i2, group, value2;
+          for (i2 = 0; i2 + 3 <= this.data.length; i2 += 3) {
+            group = this.data.substr(i2, 3);
             value2 = parseInt(group, 10);
             bitBuffer2.put(value2, 10);
           }
-          const remainingNum = this.data.length - i;
+          const remainingNum = this.data.length - i2;
           if (remainingNum > 0) {
-            group = this.data.substr(i);
+            group = this.data.substr(i2);
             value2 = parseInt(group, 10);
             bitBuffer2.put(value2, remainingNum * 3 + 1);
           }
@@ -10538,14 +10539,14 @@ i === posLength - 1 && j === 0) {
           return AlphanumericData.getBitsLength(this.data.length);
         };
         AlphanumericData.prototype.write = function write(bitBuffer2) {
-          let i;
-          for (i = 0; i + 2 <= this.data.length; i += 2) {
-            let value2 = ALPHA_NUM_CHARS.indexOf(this.data[i]) * 45;
-            value2 += ALPHA_NUM_CHARS.indexOf(this.data[i + 1]);
+          let i2;
+          for (i2 = 0; i2 + 2 <= this.data.length; i2 += 2) {
+            let value2 = ALPHA_NUM_CHARS.indexOf(this.data[i2]) * 45;
+            value2 += ALPHA_NUM_CHARS.indexOf(this.data[i2 + 1]);
             bitBuffer2.put(value2, 11);
           }
           if (this.data.length % 2) {
-            bitBuffer2.put(ALPHA_NUM_CHARS.indexOf(this.data[i]), 6);
+            bitBuffer2.put(ALPHA_NUM_CHARS.indexOf(this.data[i2]), 6);
           }
         };
         alphanumericData = AlphanumericData;
@@ -10575,8 +10576,8 @@ i === posLength - 1 && j === 0) {
           return ByteData.getBitsLength(this.data.length);
         };
         ByteData.prototype.write = function(bitBuffer2) {
-          for (let i = 0, l = this.data.length; i < l; i++) {
-            bitBuffer2.put(this.data[i], 8);
+          for (let i2 = 0, l = this.data.length; i2 < l; i2++) {
+            bitBuffer2.put(this.data[i2], 8);
           }
         };
         byteData = ByteData;
@@ -10603,16 +10604,16 @@ i === posLength - 1 && j === 0) {
           return KanjiData.getBitsLength(this.data.length);
         };
         KanjiData.prototype.write = function(bitBuffer2) {
-          let i;
-          for (i = 0; i < this.data.length; i++) {
-            let value2 = Utils.toSJIS(this.data[i]);
+          let i2;
+          for (i2 = 0; i2 < this.data.length; i2++) {
+            let value2 = Utils.toSJIS(this.data[i2]);
             if (value2 >= 33088 && value2 <= 40956) {
               value2 -= 33088;
             } else if (value2 >= 57408 && value2 <= 60351) {
               value2 -= 49472;
             } else {
               throw new Error(
-                "Invalid SJIS character: " + this.data[i] + "\nMake sure your charset is UTF-8"
+                "Invalid SJIS character: " + this.data[i2] + "\nMake sure your charset is UTF-8"
               );
             }
             value2 = (value2 >>> 8 & 255) * 192 + (value2 & 255);
@@ -10629,12 +10630,12 @@ i === posLength - 1 && j === 0) {
         hasRequiredDijkstra = 1;
         (function(module) {
           var dijkstra2 = {
-            single_source_shortest_paths: function(graph, s, d) {
+            single_source_shortest_paths: function(graph, s2, d) {
               var predecessors = {};
               var costs = {};
-              costs[s] = 0;
+              costs[s2] = 0;
               var open = dijkstra2.PriorityQueue.make();
-              open.push(s, 0);
+              open.push(s2, 0);
               var closest, u, v, cost_of_s_to_u, adjacent_nodes, cost_of_e, cost_of_s_to_u_plus_cost_of_e, cost_of_s_to_v, first_visit;
               while (!open.empty()) {
                 closest = open.pop();
@@ -10656,7 +10657,7 @@ i === posLength - 1 && j === 0) {
                 }
               }
               if (typeof d !== "undefined" && typeof costs[d] === "undefined") {
-                var msg = ["Could not find a path from ", s, " to ", d, "."].join("");
+                var msg = ["Could not find a path from ", s2, " to ", d, "."].join("");
                 throw new Error(msg);
               }
               return predecessors;
@@ -10672,8 +10673,8 @@ i === posLength - 1 && j === 0) {
               nodes.reverse();
               return nodes;
             },
-            find_path: function(graph, s, d) {
-              var predecessors = dijkstra2.single_source_shortest_paths(graph, s, d);
+            find_path: function(graph, s2, d) {
+              var predecessors = dijkstra2.single_source_shortest_paths(graph, s2, d);
               return dijkstra2.extract_shortest_path_from_predecessor_list(
                 predecessors,
                 d
@@ -10681,19 +10682,19 @@ i === posLength - 1 && j === 0) {
             },
 PriorityQueue: {
               make: function(opts) {
-                var T = dijkstra2.PriorityQueue, t = {}, key;
+                var T = dijkstra2.PriorityQueue, t2 = {}, key;
                 opts = opts || {};
                 for (key in T) {
                   if (T.hasOwnProperty(key)) {
-                    t[key] = T[key];
+                    t2[key] = T[key];
                   }
                 }
-                t.queue = [];
-                t.sorter = opts.sorter || T.default_sorter;
-                return t;
+                t2.queue = [];
+                t2.sorter = opts.sorter || T.default_sorter;
+                return t2;
               },
-              default_sorter: function(a, b) {
-                return a.cost - b.cost;
+              default_sorter: function(a2, b) {
+                return a2.cost - b.cost;
               },
 push: function(value2, cost) {
                 var item = { value: value2, cost };
@@ -10791,8 +10792,8 @@ pop: function() {
           }
           function buildNodes(segs) {
             const nodes = [];
-            for (let i = 0; i < segs.length; i++) {
-              const seg = segs[i];
+            for (let i2 = 0; i2 < segs.length; i2++) {
+              const seg = segs[i2];
               switch (seg.mode) {
                 case Mode.NUMERIC:
                   nodes.push([
@@ -10825,17 +10826,17 @@ pop: function() {
             const table = {};
             const graph = { start: {} };
             let prevNodeIds = ["start"];
-            for (let i = 0; i < nodes.length; i++) {
-              const nodeGroup = nodes[i];
+            for (let i2 = 0; i2 < nodes.length; i2++) {
+              const nodeGroup = nodes[i2];
               const currentNodeIds = [];
               for (let j = 0; j < nodeGroup.length; j++) {
                 const node = nodeGroup[j];
-                const key = "" + i + j;
+                const key = "" + i2 + j;
                 currentNodeIds.push(key);
                 table[key] = { node, lastCount: 0 };
                 graph[key] = {};
-                for (let n = 0; n < prevNodeIds.length; n++) {
-                  const prevNodeId = prevNodeIds[n];
+                for (let n2 = 0; n2 < prevNodeIds.length; n2++) {
+                  const prevNodeId = prevNodeIds[n2];
                   if (table[prevNodeId] && table[prevNodeId].node.mode === node.mode) {
                     graph[prevNodeId][key] = getSegmentBitsLength(table[prevNodeId].lastCount + node.length, node.mode) - getSegmentBitsLength(table[prevNodeId].lastCount, node.mode);
                     table[prevNodeId].lastCount += node.length;
@@ -10847,8 +10848,8 @@ pop: function() {
               }
               prevNodeIds = currentNodeIds;
             }
-            for (let n = 0; n < prevNodeIds.length; n++) {
-              graph[prevNodeIds[n]].end = 0;
+            for (let n2 = 0; n2 < prevNodeIds.length; n2++) {
+              graph[prevNodeIds[n2]].end = 0;
             }
             return { map: graph, table };
           }
@@ -10889,8 +10890,8 @@ pop: function() {
             const graph = buildGraph(nodes, version2);
             const path = dijkstra2.find_path(graph.map, "start", "end");
             const optimizedSegs = [];
-            for (let i = 1; i < path.length - 1; i++) {
-              optimizedSegs.push(graph.table[path[i]].node);
+            for (let i2 = 1; i2 < path.length - 1; i2++) {
+              optimizedSegs.push(graph.table[path[i2]].node);
             }
             return exports.fromArray(mergeSegments(optimizedSegs));
           };
@@ -10922,17 +10923,17 @@ pop: function() {
         function setupFinderPattern(matrix, version2) {
           const size2 = matrix.size;
           const pos = FinderPattern.getPositions(version2);
-          for (let i = 0; i < pos.length; i++) {
-            const row = pos[i][0];
-            const col = pos[i][1];
-            for (let r = -1; r <= 7; r++) {
-              if (row + r <= -1 || size2 <= row + r) continue;
-              for (let c = -1; c <= 7; c++) {
-                if (col + c <= -1 || size2 <= col + c) continue;
-                if (r >= 0 && r <= 6 && (c === 0 || c === 6) || c >= 0 && c <= 6 && (r === 0 || r === 6) || r >= 2 && r <= 4 && c >= 2 && c <= 4) {
-                  matrix.set(row + r, col + c, true, true);
+          for (let i2 = 0; i2 < pos.length; i2++) {
+            const row = pos[i2][0];
+            const col = pos[i2][1];
+            for (let r2 = -1; r2 <= 7; r2++) {
+              if (row + r2 <= -1 || size2 <= row + r2) continue;
+              for (let c2 = -1; c2 <= 7; c2++) {
+                if (col + c2 <= -1 || size2 <= col + c2) continue;
+                if (r2 >= 0 && r2 <= 6 && (c2 === 0 || c2 === 6) || c2 >= 0 && c2 <= 6 && (r2 === 0 || r2 === 6) || r2 >= 2 && r2 <= 4 && c2 >= 2 && c2 <= 4) {
+                  matrix.set(row + r2, col + c2, true, true);
                 } else {
-                  matrix.set(row + r, col + c, false, true);
+                  matrix.set(row + r2, col + c2, false, true);
                 }
               }
             }
@@ -10940,23 +10941,23 @@ pop: function() {
         }
         function setupTimingPattern(matrix) {
           const size2 = matrix.size;
-          for (let r = 8; r < size2 - 8; r++) {
-            const value2 = r % 2 === 0;
-            matrix.set(r, 6, value2, true);
-            matrix.set(6, r, value2, true);
+          for (let r2 = 8; r2 < size2 - 8; r2++) {
+            const value2 = r2 % 2 === 0;
+            matrix.set(r2, 6, value2, true);
+            matrix.set(6, r2, value2, true);
           }
         }
         function setupAlignmentPattern(matrix, version2) {
           const pos = AlignmentPattern.getPositions(version2);
-          for (let i = 0; i < pos.length; i++) {
-            const row = pos[i][0];
-            const col = pos[i][1];
-            for (let r = -2; r <= 2; r++) {
-              for (let c = -2; c <= 2; c++) {
-                if (r === -2 || r === 2 || c === -2 || c === 2 || r === 0 && c === 0) {
-                  matrix.set(row + r, col + c, true, true);
+          for (let i2 = 0; i2 < pos.length; i2++) {
+            const row = pos[i2][0];
+            const col = pos[i2][1];
+            for (let r2 = -2; r2 <= 2; r2++) {
+              for (let c2 = -2; c2 <= 2; c2++) {
+                if (r2 === -2 || r2 === 2 || c2 === -2 || c2 === 2 || r2 === 0 && c2 === 0) {
+                  matrix.set(row + r2, col + c2, true, true);
                 } else {
-                  matrix.set(row + r, col + c, false, true);
+                  matrix.set(row + r2, col + c2, false, true);
                 }
               }
             }
@@ -10966,10 +10967,10 @@ pop: function() {
           const size2 = matrix.size;
           const bits2 = Version.getEncodedBits(version2);
           let row, col, mod;
-          for (let i = 0; i < 18; i++) {
-            row = Math.floor(i / 3);
-            col = i % 3 + size2 - 8 - 3;
-            mod = (bits2 >> i & 1) === 1;
+          for (let i2 = 0; i2 < 18; i2++) {
+            row = Math.floor(i2 / 3);
+            col = i2 % 3 + size2 - 8 - 3;
+            mod = (bits2 >> i2 & 1) === 1;
             matrix.set(row, col, mod, true);
             matrix.set(col, row, mod, true);
           }
@@ -10977,22 +10978,22 @@ pop: function() {
         function setupFormatInfo(matrix, errorCorrectionLevel2, maskPattern2) {
           const size2 = matrix.size;
           const bits2 = FormatInfo.getEncodedBits(errorCorrectionLevel2, maskPattern2);
-          let i, mod;
-          for (i = 0; i < 15; i++) {
-            mod = (bits2 >> i & 1) === 1;
-            if (i < 6) {
-              matrix.set(i, 8, mod, true);
-            } else if (i < 8) {
-              matrix.set(i + 1, 8, mod, true);
+          let i2, mod;
+          for (i2 = 0; i2 < 15; i2++) {
+            mod = (bits2 >> i2 & 1) === 1;
+            if (i2 < 6) {
+              matrix.set(i2, 8, mod, true);
+            } else if (i2 < 8) {
+              matrix.set(i2 + 1, 8, mod, true);
             } else {
-              matrix.set(size2 - 15 + i, 8, mod, true);
+              matrix.set(size2 - 15 + i2, 8, mod, true);
             }
-            if (i < 8) {
-              matrix.set(8, size2 - i - 1, mod, true);
-            } else if (i < 9) {
-              matrix.set(8, 15 - i - 1 + 1, mod, true);
+            if (i2 < 8) {
+              matrix.set(8, size2 - i2 - 1, mod, true);
+            } else if (i2 < 9) {
+              matrix.set(8, 15 - i2 - 1 + 1, mod, true);
             } else {
-              matrix.set(8, 15 - i - 1, mod, true);
+              matrix.set(8, 15 - i2 - 1, mod, true);
             }
           }
           matrix.set(size2 - 8, 8, 1, true);
@@ -11006,13 +11007,13 @@ pop: function() {
           for (let col = size2 - 1; col > 0; col -= 2) {
             if (col === 6) col--;
             while (true) {
-              for (let c = 0; c < 2; c++) {
-                if (!matrix.isReserved(row, col - c)) {
+              for (let c2 = 0; c2 < 2; c2++) {
+                if (!matrix.isReserved(row, col - c2)) {
                   let dark = false;
                   if (byteIndex < data.length) {
                     dark = (data[byteIndex] >>> bitIndex & 1) === 1;
                   }
-                  matrix.set(row, col - c, dark);
+                  matrix.set(row, col - c2, dark);
                   bitIndex--;
                   if (bitIndex === -1) {
                     byteIndex++;
@@ -11046,8 +11047,8 @@ pop: function() {
             buffer.putBit(0);
           }
           const remainingByte = (dataTotalCodewordsBits - buffer.getLengthInBits()) / 8;
-          for (let i = 0; i < remainingByte; i++) {
-            buffer.put(i % 2 ? 17 : 236, 8);
+          for (let i2 = 0; i2 < remainingByte; i2++) {
+            buffer.put(i2 % 2 ? 17 : 236, 8);
           }
           return createCodewords(buffer, version2, errorCorrectionLevel2);
         }
@@ -11077,17 +11078,17 @@ pop: function() {
           }
           const data = new Uint8Array(totalCodewords);
           let index2 = 0;
-          let i, r;
-          for (i = 0; i < maxDataSize; i++) {
-            for (r = 0; r < ecTotalBlocks; r++) {
-              if (i < dcData[r].length) {
-                data[index2++] = dcData[r][i];
+          let i2, r2;
+          for (i2 = 0; i2 < maxDataSize; i2++) {
+            for (r2 = 0; r2 < ecTotalBlocks; r2++) {
+              if (i2 < dcData[r2].length) {
+                data[index2++] = dcData[r2][i2];
               }
             }
           }
-          for (i = 0; i < ecCount; i++) {
-            for (r = 0; r < ecTotalBlocks; r++) {
-              data[index2++] = ecData[r][i];
+          for (i2 = 0; i2 < ecCount; i2++) {
+            for (r2 = 0; r2 < ecTotalBlocks; r2++) {
+              data[index2++] = ecData[r2][i2];
             }
           }
           return data;
@@ -11182,8 +11183,8 @@ pop: function() {
               throw new Error("Invalid hex color: " + hex);
             }
             if (hexCode.length === 3 || hexCode.length === 4) {
-              hexCode = Array.prototype.concat.apply([], hexCode.map(function(c) {
-                return [c, c];
+              hexCode = Array.prototype.concat.apply([], hexCode.map(function(c2) {
+                return [c2, c2];
               }));
             }
             if (hexCode.length === 6) hexCode.push("F", "F");
@@ -11228,12 +11229,12 @@ pop: function() {
             const symbolSize = Math.floor((size2 + opts.margin * 2) * scale);
             const scaledMargin = opts.margin * scale;
             const palette = [opts.color.light, opts.color.dark];
-            for (let i = 0; i < symbolSize; i++) {
+            for (let i2 = 0; i2 < symbolSize; i2++) {
               for (let j = 0; j < symbolSize; j++) {
-                let posDst = (i * symbolSize + j) * 4;
+                let posDst = (i2 * symbolSize + j) * 4;
                 let pxColor = opts.color.light;
-                if (i >= scaledMargin && j >= scaledMargin && i < symbolSize - scaledMargin && j < symbolSize - scaledMargin) {
-                  const iSrc = Math.floor((i - scaledMargin) / scale);
+                if (i2 >= scaledMargin && j >= scaledMargin && i2 < symbolSize - scaledMargin && j < symbolSize - scaledMargin) {
+                  const iSrc = Math.floor((i2 - scaledMargin) / scale);
                   const jSrc = Math.floor((j - scaledMargin) / scale);
                   pxColor = palette[data[iSrc * size2 + jSrc] ? 1 : 0];
                 }
@@ -11264,7 +11265,7 @@ pop: function() {
           function getCanvasElement() {
             try {
               return document.createElement("canvas");
-            } catch (e) {
+            } catch (e2) {
               throw new Error("You need to specify a canvas element");
             }
           }
@@ -11323,18 +11324,18 @@ pop: function() {
           let moveBy = 0;
           let newRow = false;
           let lineLength = 0;
-          for (let i = 0; i < data.length; i++) {
-            const col = Math.floor(i % size2);
-            const row = Math.floor(i / size2);
+          for (let i2 = 0; i2 < data.length; i2++) {
+            const col = Math.floor(i2 % size2);
+            const row = Math.floor(i2 / size2);
             if (!col && !newRow) newRow = true;
-            if (data[i]) {
+            if (data[i2]) {
               lineLength++;
-              if (!(i > 0 && col > 0 && data[i - 1])) {
+              if (!(i2 > 0 && col > 0 && data[i2 - 1])) {
                 path += newRow ? svgCmd("M", col + margin, 0.5 + row + margin) : svgCmd("m", moveBy, 0);
                 moveBy = 0;
                 newRow = false;
               }
-              if (!(col + 1 < size2 && data[i + 1])) {
+              if (!(col + 1 < size2 && data[i2 + 1])) {
                 path += svgCmd("h", lineLength);
                 lineLength = 0;
               }
@@ -11411,16 +11412,16 @@ pop: function() {
               try {
                 const data = QRCode2.create(text2, opts);
                 resolve(renderFunc(data, canvas2, opts));
-              } catch (e) {
-                reject(e);
+              } catch (e2) {
+                reject(e2);
               }
             });
           }
           try {
             const data = QRCode2.create(text2, opts);
             cb(null, renderFunc(data, canvas2, opts));
-          } catch (e) {
-            cb(e);
+          } catch (e2) {
+            cb(e2);
           }
         }
         browser.create = QRCode2.create;
@@ -11665,26 +11666,26 @@ op: "update"
           }, deps);
         };
       };
-      function __read(o, n) {
-        var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m) return o;
-        var i = m.call(o), r, ar = [], e;
+      function __read(o2, n2) {
+        var m = typeof Symbol === "function" && o2[Symbol.iterator];
+        if (!m) return o2;
+        var i2 = m.call(o2), r2, ar = [], e2;
         try {
-          while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+          while ((n2 === void 0 || n2-- > 0) && !(r2 = i2.next()).done) ar.push(r2.value);
         } catch (error) {
-          e = { error };
+          e2 = { error };
         } finally {
           try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
+            if (r2 && !r2.done && (m = i2["return"])) m.call(i2);
           } finally {
-            if (e) throw e.error;
+            if (e2) throw e2.error;
           }
         }
         return ar;
       }
       typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message2) {
-        var e = new Error(message2);
-        return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+        var e2 = new Error(message2);
+        return e2.name = "SuppressedError", e2.error = error, e2.suppressed = suppressed, e2;
       };
       var isFunction = function(value2) {
         return typeof value2 === "function";
@@ -11714,8 +11715,8 @@ op: "update"
         if (oldDeps === deps) {
           return true;
         }
-        for (var i = 0; i < oldDeps.length; i++) {
-          if (!Object.is(oldDeps[i], deps[i])) {
+        for (var i2 = 0; i2 < oldDeps.length; i2++) {
+          if (!Object.is(oldDeps[i2], deps[i2])) {
             return false;
           }
         }
@@ -11828,8 +11829,8 @@ op: "update"
             options = {};
           }
           var storage;
-          var _a2 = options.listenStorageChange, listenStorageChange = _a2 === void 0 ? false : _a2, _b2 = options.onError, onError = _b2 === void 0 ? function(e) {
-            console.error(e);
+          var _a2 = options.listenStorageChange, listenStorageChange = _a2 === void 0 ? false : _a2, _b2 = options.onError, onError = _b2 === void 0 ? function(e2) {
+            console.error(e2);
           } : _b2;
           try {
             storage = getStorage();
@@ -11854,8 +11855,8 @@ op: "update"
               if (raw) {
                 return deserializer(raw);
               }
-            } catch (e) {
-              onError(e);
+            } catch (e2) {
+              onError(e2);
             }
             if (isFunction(options.defaultValue)) {
               return options.defaultValue();
@@ -11893,8 +11894,8 @@ new CustomEvent(SYNC_STORAGE_EVENT_NAME, {
                   }
                 })
               );
-            } catch (e) {
-              onError(e);
+            } catch (e2) {
+              onError(e2);
             }
           };
           var syncState = function(event) {
@@ -12529,8 +12530,8 @@ get: function() {
           link.style.display = "none";
           link.style.position = "absolute";
           link.style.left = "-9999px";
-          const handleClick = (e) => {
-            e.stopPropagation();
+          const handleClick = (e2) => {
+            e2.stopPropagation();
           };
           link.addEventListener("click", handleClick, true);
           link.click();
@@ -12601,21 +12602,21 @@ get: function() {
       };
       const downloadFileWithBlob = (file, name2) => {
         const blobUrl = window.URL.createObjectURL(file);
-        const a = document.createElement("a");
-        a.href = blobUrl;
-        a.download = name2;
-        a.style.display = "none";
-        a.style.position = "absolute";
-        a.style.left = "-9999px";
-        const handleClick = (e) => {
-          e.stopPropagation();
+        const a2 = document.createElement("a");
+        a2.href = blobUrl;
+        a2.download = name2;
+        a2.style.display = "none";
+        a2.style.position = "absolute";
+        a2.style.left = "-9999px";
+        const handleClick = (e2) => {
+          e2.stopPropagation();
         };
-        a.addEventListener("click", handleClick, true);
-        document.body.appendChild(a);
-        a.click();
+        a2.addEventListener("click", handleClick, true);
+        document.body.appendChild(a2);
+        a2.click();
         setTimeout(() => {
-          a.removeEventListener("click", handleClick);
-          document.body.removeChild(a);
+          a2.removeEventListener("click", handleClick);
+          document.body.removeChild(a2);
           window.URL.revokeObjectURL(blobUrl);
         }, 100);
       };
@@ -12625,6 +12626,460 @@ get: function() {
         downloadFile(blobUrl, `${filename}.html`);
         window.URL.revokeObjectURL(blobUrl);
         return true;
+      };
+      function e(e2) {
+        return String(e2).split("").map((e3) => e3.charCodeAt(0));
+      }
+      function t(t2) {
+        return new Uint8Array(e(t2));
+      }
+      function a(t2) {
+        const a2 = new ArrayBuffer(2 * t2.length), r2 = new Uint8Array(a2);
+        return new Uint16Array(a2).set(e(t2)), r2;
+      }
+      function r(e2) {
+        const t2 = 255;
+        return [e2 >>> 24 & t2, e2 >>> 16 & t2, e2 >>> 8 & t2, e2 & t2];
+      }
+      function n(e2) {
+        return 11 + e2;
+      }
+      function s(e2, t2, a2, r2) {
+        return 11 + t2 + 1 + 1 + (r2 ? 2 + 2 * (a2 + 1) : a2 + 1) + e2;
+      }
+      function i(e2) {
+        let t2 = 0;
+        return e2.forEach((e3) => {
+          t2 += 2 + 2 * e3[0].length + 2 + 2 + 2 * e3[1].length + 2;
+        }), 11 + t2;
+      }
+      function c(e2, t2) {
+        const a2 = 2 * t2;
+        let r2 = 0;
+        return e2.forEach((e3) => {
+          r2 += 2 + 2 * e3[0].length + 2 + 4;
+        }), 18 + a2 + 2 + r2;
+      }
+      class o {
+        _setIntegerFrame(e2, t2) {
+          const a2 = parseInt(t2, 10);
+          this.frames.push({ name: e2, value: a2, size: n(a2.toString().length) });
+        }
+        _setStringFrame(e2, t2) {
+          const a2 = t2.toString();
+          let r2 = 13 + 2 * a2.length;
+          "TDAT" === e2 && (r2 = n(a2.length)), this.frames.push({ name: e2, value: a2, size: r2 });
+        }
+        _setPictureFrame(e2, t2, a2, r2) {
+          const n2 = (function(e3) {
+            if (!e3 || !e3.length) return null;
+            if (255 === e3[0] && 216 === e3[1] && 255 === e3[2]) return "image/jpeg";
+            if (137 === e3[0] && 80 === e3[1] && 78 === e3[2] && 71 === e3[3]) return "image/png";
+            if (71 === e3[0] && 73 === e3[1] && 70 === e3[2]) return "image/gif";
+            if (87 === e3[8] && 69 === e3[9] && 66 === e3[10] && 80 === e3[11]) return "image/webp";
+            const t3 = 73 === e3[0] && 73 === e3[1] && 42 === e3[2] && 0 === e3[3], a3 = 77 === e3[0] && 77 === e3[1] && 0 === e3[2] && 42 === e3[3];
+            return t3 || a3 ? "image/tiff" : 66 === e3[0] && 77 === e3[1] ? "image/bmp" : 0 === e3[0] && 0 === e3[1] && 1 === e3[2] && 0 === e3[3] ? "image/x-icon" : null;
+          })(new Uint8Array(t2)), i2 = a2.toString();
+          if (!n2) throw new Error("Unknown picture MIME type");
+          a2 || (r2 = false), this.frames.push({ name: "APIC", value: t2, pictureType: e2, mimeType: n2, useUnicodeEncoding: r2, description: i2, size: s(t2.byteLength, n2.length, i2.length, r2) });
+        }
+        _setLyricsFrame(e2, t2, a2) {
+          const r2 = e2.split("").map((e3) => e3.charCodeAt(0)), n2 = t2.toString(), s2 = a2.toString();
+          var i2, c2;
+          this.frames.push({ name: "USLT", value: s2, language: r2, description: n2, size: (i2 = n2.length, c2 = s2.length, 16 + 2 * i2 + 2 + 2 + 2 * c2) });
+        }
+        _setCommentFrame(e2, t2, a2) {
+          const r2 = e2.split("").map((e3) => e3.charCodeAt(0)), n2 = t2.toString(), s2 = a2.toString();
+          var i2, c2;
+          this.frames.push({ name: "COMM", value: s2, language: r2, description: n2, size: (i2 = n2.length, c2 = s2.length, 16 + 2 * i2 + 2 + 2 + 2 * c2) });
+        }
+        _setPrivateFrame(e2, t2) {
+          const a2 = e2.toString();
+          var r2, n2;
+          this.frames.push({ name: "PRIV", value: t2, id: a2, size: (r2 = a2.length, n2 = t2.byteLength, 10 + r2 + 1 + n2) });
+        }
+        _setUserStringFrame(e2, t2) {
+          const a2 = e2.toString(), r2 = t2.toString();
+          var n2, s2;
+          this.frames.push({ name: "TXXX", description: a2, value: r2, size: (n2 = a2.length, s2 = r2.length, 13 + 2 * n2 + 2 + 2 + 2 * s2) });
+        }
+        _setUrlLinkFrame(e2, t2) {
+          const a2 = t2.toString();
+          var r2;
+          this.frames.push({ name: e2, value: a2, size: (r2 = a2.length, 10 + r2) });
+        }
+        _setPairedTextFrame(e2, t2) {
+          this.frames.push({ name: e2, value: t2, size: i(t2) });
+        }
+        _setSynchronisedLyricsFrame(e2, t2, a2, r2, n2) {
+          const s2 = n2.toString(), i2 = r2.split("").map((e3) => e3.charCodeAt(0));
+          this.frames.push({ name: "SYLT", value: t2, language: i2, description: s2, type: e2, timestampFormat: a2, size: c(t2, s2.length) });
+        }
+        constructor(e2) {
+          if (!e2 || "object" != typeof e2 || !("byteLength" in e2)) throw new Error("First argument should be an instance of ArrayBuffer or Buffer");
+          this.arrayBuffer = e2, this.padding = 4096, this.frames = [], this.url = "";
+        }
+        setFrame(e2, t2) {
+          switch (e2) {
+            case "TPE1":
+            case "TCOM":
+            case "TCON": {
+              if (!Array.isArray(t2)) throw new Error(`${e2} frame value should be an array of strings`);
+              const a2 = "TCON" === e2 ? ";" : "/", r2 = t2.join(a2);
+              this._setStringFrame(e2, r2);
+              break;
+            }
+            case "TLAN":
+            case "TIT1":
+            case "TIT2":
+            case "TIT3":
+            case "TALB":
+            case "TPE2":
+            case "TPE3":
+            case "TPE4":
+            case "TRCK":
+            case "TPOS":
+            case "TMED":
+            case "TPUB":
+            case "TCOP":
+            case "TKEY":
+            case "TEXT":
+            case "TDAT":
+            case "TCMP":
+            case "TSSE":
+            case "TSRC":
+              this._setStringFrame(e2, t2);
+              break;
+            case "TBPM":
+            case "TLEN":
+            case "TYER":
+              this._setIntegerFrame(e2, t2);
+              break;
+            case "USLT":
+              if (t2.language = t2.language || "eng", "object" != typeof t2 || !("description" in t2) || !("lyrics" in t2)) throw new Error("USLT frame value should be an object with keys description and lyrics");
+              if (t2.language && !t2.language.match(/[a-z]{3}/i)) throw new Error("Language must be coded following the ISO 639-2 standards");
+              this._setLyricsFrame(t2.language, t2.description, t2.lyrics);
+              break;
+            case "APIC":
+              if ("object" != typeof t2 || !("type" in t2) || !("data" in t2) || !("description" in t2)) throw new Error("APIC frame value should be an object with keys type, data and description");
+              if (t2.type < 0 || t2.type > 20) throw new Error("Incorrect APIC frame picture type");
+              this._setPictureFrame(t2.type, t2.data, t2.description, !!t2.useUnicodeEncoding);
+              break;
+            case "TXXX":
+              if ("object" != typeof t2 || !("description" in t2) || !("value" in t2)) throw new Error("TXXX frame value should be an object with keys description and value");
+              this._setUserStringFrame(t2.description, t2.value);
+              break;
+            case "WCOM":
+            case "WCOP":
+            case "WOAF":
+            case "WOAR":
+            case "WOAS":
+            case "WORS":
+            case "WPAY":
+            case "WPUB":
+              this._setUrlLinkFrame(e2, t2);
+              break;
+            case "COMM":
+              if (t2.language = t2.language || "eng", "object" != typeof t2 || !("description" in t2) || !("text" in t2)) throw new Error("COMM frame value should be an object with keys description and text");
+              if (t2.language && !t2.language.match(/[a-z]{3}/i)) throw new Error("Language must be coded following the ISO 639-2 standards");
+              this._setCommentFrame(t2.language, t2.description, t2.text);
+              break;
+            case "PRIV":
+              if ("object" != typeof t2 || !("id" in t2) || !("data" in t2)) throw new Error("PRIV frame value should be an object with keys id and data");
+              this._setPrivateFrame(t2.id, t2.data);
+              break;
+            case "IPLS":
+              if (!Array.isArray(t2) || !Array.isArray(t2[0])) throw new Error("IPLS frame value should be an array of pairs");
+              this._setPairedTextFrame(e2, t2);
+              break;
+            case "SYLT":
+              if ("object" != typeof t2 || !("type" in t2) || !("text" in t2) || !("timestampFormat" in t2)) throw new Error("SYLT frame value should be an object with keys type, text and timestampFormat");
+              if (!Array.isArray(t2.text) || !Array.isArray(t2.text[0])) throw new Error("SYLT frame text value should be an array of pairs");
+              if (t2.type < 0 || t2.type > 6) throw new Error("Incorrect SYLT frame content type");
+              if (t2.timestampFormat < 1 || t2.timestampFormat > 2) throw new Error("Incorrect SYLT frame time stamp format");
+              t2.language = t2.language || "eng", t2.description = t2.description || "", this._setSynchronisedLyricsFrame(t2.type, t2.text, t2.timestampFormat, t2.language, t2.description);
+              break;
+            default:
+              throw new Error(`Unsupported frame ${e2}`);
+          }
+          return this;
+        }
+        removeTag() {
+          if (this.arrayBuffer.byteLength < 10) return;
+          const e2 = new Uint8Array(this.arrayBuffer), t2 = e2[3], a2 = ((r2 = [e2[6], e2[7], e2[8], e2[9]])[0] << 21) + (r2[1] << 14) + (r2[2] << 7) + r2[3] + 10;
+          var r2, n2;
+          73 !== (n2 = e2)[0] || 68 !== n2[1] || 51 !== n2[2] || t2 < 2 || t2 > 4 || (this.arrayBuffer = new Uint8Array(e2.subarray(a2)).buffer);
+        }
+        addTag() {
+          this.removeTag();
+          const e2 = [255, 254], n2 = 10 + this.frames.reduce((e3, t2) => e3 + t2.size, 0) + this.padding, s2 = new ArrayBuffer(this.arrayBuffer.byteLength + n2), i2 = new Uint8Array(s2);
+          let c2 = 0, o2 = [];
+          return o2 = [73, 68, 51, 3], i2.set(o2, c2), c2 += o2.length, c2++, c2++, o2 = (function(e3) {
+            const t2 = 127;
+            return [e3 >>> 21 & t2, e3 >>> 14 & t2, e3 >>> 7 & t2, e3 & t2];
+          })(n2 - 10), i2.set(o2, c2), c2 += o2.length, this.frames.forEach((n3) => {
+            switch (o2 = t(n3.name), i2.set(o2, c2), c2 += o2.length, o2 = r(n3.size - 10), i2.set(o2, c2), c2 += o2.length, c2 += 2, n3.name) {
+              case "WCOM":
+              case "WCOP":
+              case "WOAF":
+              case "WOAR":
+              case "WOAS":
+              case "WORS":
+              case "WPAY":
+              case "WPUB":
+                o2 = t(n3.value), i2.set(o2, c2), c2 += o2.length;
+                break;
+              case "TPE1":
+              case "TCOM":
+              case "TCON":
+              case "TLAN":
+              case "TIT1":
+              case "TIT2":
+              case "TIT3":
+              case "TALB":
+              case "TPE2":
+              case "TPE3":
+              case "TPE4":
+              case "TRCK":
+              case "TPOS":
+              case "TKEY":
+              case "TMED":
+              case "TPUB":
+              case "TCOP":
+              case "TEXT":
+              case "TSSE":
+              case "TSRC":
+                o2 = [1].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(n3.value), i2.set(o2, c2), c2 += o2.length;
+                break;
+              case "TXXX":
+              case "USLT":
+              case "COMM":
+                o2 = [1], "USLT" !== n3.name && "COMM" !== n3.name || (o2 = o2.concat(n3.language)), o2 = o2.concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(n3.description), i2.set(o2, c2), c2 += o2.length, o2 = [0, 0].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(n3.value), i2.set(o2, c2), c2 += o2.length;
+                break;
+              case "TBPM":
+              case "TLEN":
+              case "TDAT":
+              case "TYER":
+                c2++, o2 = t(n3.value), i2.set(o2, c2), c2 += o2.length;
+                break;
+              case "PRIV":
+                o2 = t(n3.id), i2.set(o2, c2), c2 += o2.length, c2++, i2.set(new Uint8Array(n3.value), c2), c2 += n3.value.byteLength;
+                break;
+              case "APIC":
+                o2 = [n3.useUnicodeEncoding ? 1 : 0], i2.set(o2, c2), c2 += o2.length, o2 = t(n3.mimeType), i2.set(o2, c2), c2 += o2.length, o2 = [0, n3.pictureType], i2.set(o2, c2), c2 += o2.length, n3.useUnicodeEncoding ? (o2 = [].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(n3.description), i2.set(o2, c2), c2 += o2.length, c2 += 2) : (o2 = t(n3.description), i2.set(o2, c2), c2 += o2.length, c2++), i2.set(new Uint8Array(n3.value), c2), c2 += n3.value.byteLength;
+                break;
+              case "IPLS":
+                o2 = [1], i2.set(o2, c2), c2 += o2.length, n3.value.forEach((t2) => {
+                  o2 = [].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(t2[0].toString()), i2.set(o2, c2), c2 += o2.length, o2 = [0, 0].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(t2[1].toString()), i2.set(o2, c2), c2 += o2.length, o2 = [0, 0], i2.set(o2, c2), c2 += o2.length;
+                });
+                break;
+              case "SYLT":
+                o2 = [1].concat(n3.language).concat(n3.timestampFormat).concat(n3.type), i2.set(o2, c2), c2 += o2.length, o2 = [].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(n3.description), i2.set(o2, c2), c2 += o2.length, c2 += 2, n3.value.forEach((t2) => {
+                  o2 = [].concat(e2), i2.set(o2, c2), c2 += o2.length, o2 = a(t2[0].toString()), i2.set(o2, c2), c2 += o2.length, o2 = [0, 0], i2.set(o2, c2), c2 += o2.length, o2 = r(t2[1]), i2.set(o2, c2), c2 += o2.length;
+                });
+            }
+          }), c2 += this.padding, i2.set(new Uint8Array(this.arrayBuffer), c2), this.arrayBuffer = s2, s2;
+        }
+        getBlob() {
+          return new Blob([this.arrayBuffer], { type: "audio/mpeg" });
+        }
+        getURL() {
+          return this.url || (this.url = URL.createObjectURL(this.getBlob())), this.url;
+        }
+        revokeURL() {
+          URL.revokeObjectURL(this.url);
+        }
+      }
+      const blobToArrayBuffer = async (blob) => {
+        if (!blob) throw new Error("blob 不能为空");
+        return await blob.arrayBuffer();
+      };
+      const normalizeMp3Tags = (metadata) => {
+        const common2 = metadata?.common || {};
+        const {
+          title: title2,
+          artist: artist2,
+          album: album2,
+          year,
+          genre,
+          comment,
+          track,
+          disk,
+          composer,
+          lyricist,
+          lyrics,
+          picture
+        } = common2;
+        console.log("metadata", metadata);
+        return {
+          title: title2 || void 0,
+          artist: artist2 || (Array.isArray(common2?.artists) ? common2.artists[0] : "") || void 0,
+          album: album2 || void 0,
+          year: typeof year === "number" ? String(year) : year || void 0,
+          genre: Array.isArray(genre) ? genre.join(",") : genre || void 0,
+          comment: Array.isArray(comment) ? comment.filter(Boolean).join("\n") : comment || void 0,
+          track: track?.no ? String(track.no) : void 0,
+          disc: disk?.no ? String(disk.no) : void 0,
+          composer: Array.isArray(composer) ? composer.filter(Boolean).join(",") : composer || void 0,
+          lyricist: Array.isArray(lyricist) ? lyricist.filter(Boolean).join(",") : lyricist || void 0,
+          lyrics: lyrics?.[0]?.text,
+          picture: Array.isArray(picture) ? picture : void 0
+        };
+      };
+      const readAllMp3Tag = async (file) => {
+        try {
+          const metadata = await parseBlob(file);
+          const tags = normalizeMp3Tags(metadata);
+          console.log("MP3 解析后的标签:", tags);
+          return tags;
+        } catch (error) {
+          console.error("读取 MP3 标签失败:", error);
+          return {};
+        }
+      };
+      const readMp3Tag = async (file, tagName) => {
+        try {
+          if (!tagName) return void 0;
+          const all = await readAllMp3Tag(file);
+          const key = String(tagName).toLowerCase();
+          const val = all?.[key];
+          return typeof val === "string" ? val : void 0;
+        } catch (error) {
+          console.error(`读取 MP3 标签 ${tagName} 失败:`, error);
+          return void 0;
+        }
+      };
+      const applyId3Frames = (writer, tags) => {
+        if (!tags || typeof tags !== "object") return;
+        const {
+          title: title2,
+          artist: artist2,
+          album: album2,
+          year,
+          genre,
+          comment,
+          track,
+          disc,
+          composer,
+          lyricist,
+          lyrics
+        } = tags;
+        if (title2) writer.setFrame("TIT2", String(title2));
+        if (album2) writer.setFrame("TALB", String(album2));
+        if (year) writer.setFrame("TYER", Number(String(year).slice(0, 4)) || 0);
+        if (artist2) writer.setFrame("TPE1", [String(artist2)]);
+        if (genre) writer.setFrame("TCON", [String(genre)]);
+        if (composer) writer.setFrame("TCOM", [String(composer)]);
+        if (track) writer.setFrame("TRCK", String(track));
+        if (disc) writer.setFrame("TPOS", String(disc));
+        if (comment) {
+          writer.setFrame("COMM", {
+            description: "comment",
+            text: String(comment),
+            language: "chi"
+          });
+        }
+        if (lyricist) writer.setFrame("TEXT", String(lyricist));
+        if (lyrics) {
+          writer.setFrame("USLT", {
+            description: "LYRICS",
+            lyrics: String(lyrics)
+          });
+          writer.setFrame("TXXX", {
+            description: "LYRICS",
+            value: String(lyrics)
+          });
+        }
+      };
+      const writeMp3Tag = async (file, tagName, tagValue) => {
+        try {
+          if (!tagName) throw new Error("tagName 不能为空");
+          const key = String(tagName).toLowerCase();
+          const all = await readAllMp3Tag(file);
+          const nextTags = {
+            ...all,
+            [key]: tagValue
+          };
+          const buffer = await blobToArrayBuffer(file);
+          const writer = new o(buffer);
+          writer.removeTag();
+          applyId3Frames(writer, nextTags);
+          writer.addTag();
+          const blob = writer.getBlob();
+          console.log("给 MP3 写标签成功");
+          return blob;
+        } catch (error) {
+          console.error("给 MP3 写标签失败:", error);
+          throw new Error("给 MP3 写标签失败");
+        }
+      };
+      const writeMp3Tags = async (file, tags) => {
+        try {
+          if (!tags?.length) return file;
+          const all = await readAllMp3Tag(file);
+          const newTags = Object.fromEntries(
+            tags.map(({ tag: tag2, value: value2 }) => [tag2, value2])
+          );
+          const nextTags = {
+            ...all,
+            ...newTags
+          };
+          const buffer = await blobToArrayBuffer(file);
+          const writer = new o(buffer);
+          writer.removeTag();
+          applyId3Frames(writer, nextTags);
+          writer.addTag();
+          const blob = writer.getBlob();
+          console.log("给 MP3 写多个标签成功");
+          return blob;
+        } catch (error) {
+          console.error("给 MP3 写多个标签失败:", error);
+          throw new Error("给 MP3 写多个标签失败");
+        }
+      };
+      const embedMp3Picture = async (file, picture) => {
+        try {
+          if (!picture) return file;
+          const all = await readAllMp3Tag(file);
+          const buffer = await blobToArrayBuffer(file);
+          const picBuffer = await blobToArrayBuffer(picture);
+          const writer = new o(buffer);
+          writer.removeTag();
+          applyId3Frames(writer, all);
+          writer.setFrame("APIC", {
+            description: "cover",
+            data: picBuffer,
+            type: (
+3
+            ),
+            useUnicodeEncoding: false
+          });
+          writer.addTag();
+          console.log("给 MP3 嵌入封面成功");
+          return writer.getBlob();
+        } catch (error) {
+          console.error("给 MP3 嵌入封面失败:", error);
+          return file;
+        }
+      };
+      const removeMp3Tag = async (file, tagName) => {
+        try {
+          if (!tagName) return file;
+          const key = String(tagName).toLowerCase();
+          const all = await readAllMp3Tag(file);
+          const nextTags = { ...all };
+          delete nextTags[key];
+          const buffer = await blobToArrayBuffer(file);
+          const writer = new o(buffer);
+          writer.removeTag();
+          applyId3Frames(writer, nextTags);
+          writer.addTag();
+          console.log("移除 MP3 标签成功:", tagName);
+          return writer.getBlob();
+        } catch (error) {
+          console.error("移除 MP3 标签失败:", error);
+          return file;
+        }
       };
       const audio = new Audio();
       const usePlayMusic = () => {
@@ -12784,7 +13239,16 @@ get: function() {
                   );
                 }
                 break;
-default:
+              case "mp3":
+                if (embedSongInfo) {
+                  outputFile = await writeMp3Tags(outputFile, tags);
+                }
+                if (embedLyricCover) {
+                  outputFile = await writeMp3Tag(outputFile, "lyrics", lyric);
+                  outputFile = await embedMp3Picture(outputFile, coverBlob);
+                }
+                break;
+              default:
                 console.log("当前格式不支持内嵌信息");
                 break;
             }
@@ -13598,7 +14062,7 @@ singerIds
                   return types;
                 }
                 return freeProcess && freeProcess.binding && freeProcess.binding("util");
-              } catch (e) {
+              } catch (e2) {
               }
             })();
             var nodeIsArrayBuffer = nodeUtil && nodeUtil.isArrayBuffer, nodeIsDate = nodeUtil && nodeUtil.isDate, nodeIsMap = nodeUtil && nodeUtil.isMap, nodeIsRegExp = nodeUtil && nodeUtil.isRegExp, nodeIsSet = nodeUtil && nodeUtil.isSet, nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -13795,9 +14259,9 @@ singerIds
               }
               return result;
             }
-            function baseTimes(n, iteratee) {
-              var index2 = -1, result = Array(n);
-              while (++index2 < n) {
+            function baseTimes(n2, iteratee) {
+              var index2 = -1, result = Array(n2);
+              while (++index2 < n2) {
                 result[index2] = iteratee(index2);
               }
               return result;
@@ -13970,7 +14434,7 @@ singerIds
                   var func = getNative(Object2, "defineProperty");
                   func({}, "", {});
                   return func;
-                } catch (e) {
+                } catch (e2) {
                 }
               })();
               var ctxClearTimeout = context.clearTimeout !== root.clearTimeout && context.clearTimeout, ctxNow = Date2 && Date2.now !== root.Date.now && Date2.now, ctxSetTimeout = context.setTimeout !== root.setTimeout && context.setTimeout;
@@ -14285,8 +14749,8 @@ isIndex(key, length)))) {
                 var length = array.length;
                 return length ? array[baseRandom(0, length - 1)] : undefined$1;
               }
-              function arraySampleSize(array, n) {
-                return shuffleSelf(copyArray(array), baseClamp(n, 0, array.length));
+              function arraySampleSize(array, n2) {
+                return shuffleSelf(copyArray(array), baseClamp(n2, 0, array.length));
               }
               function arrayShuffle(array) {
                 return shuffleSelf(copyArray(array));
@@ -14847,13 +15311,13 @@ isIndex(key, length)))) {
                 }
                 assignMergeValue(object, key, newValue);
               }
-              function baseNth(array, n) {
+              function baseNth(array, n2) {
                 var length = array.length;
                 if (!length) {
                   return;
                 }
-                n += n < 0 ? length : 0;
-                return isIndex(n, length) ? array[n] : undefined$1;
+                n2 += n2 < 0 ? length : 0;
+                return isIndex(n2, length) ? array[n2] : undefined$1;
               }
               function baseOrderBy(collection, iteratees, orders) {
                 if (iteratees.length) {
@@ -14945,20 +15409,20 @@ isIndex(key, length)))) {
                 }
                 return result2;
               }
-              function baseRepeat(string, n) {
+              function baseRepeat(string, n2) {
                 var result2 = "";
-                if (!string || n < 1 || n > MAX_SAFE_INTEGER) {
+                if (!string || n2 < 1 || n2 > MAX_SAFE_INTEGER) {
                   return result2;
                 }
                 do {
-                  if (n % 2) {
+                  if (n2 % 2) {
                     result2 += string;
                   }
-                  n = nativeFloor(n / 2);
-                  if (n) {
+                  n2 = nativeFloor(n2 / 2);
+                  if (n2) {
                     string += string;
                   }
-                } while (n);
+                } while (n2);
                 return result2;
               }
               function baseRest(func, start) {
@@ -14967,9 +15431,9 @@ isIndex(key, length)))) {
               function baseSample(collection) {
                 return arraySample(values(collection));
               }
-              function baseSampleSize(collection, n) {
+              function baseSampleSize(collection, n2) {
                 var array = values(collection);
-                return shuffleSelf(array, baseClamp(n, 0, array.length));
+                return shuffleSelf(array, baseClamp(n2, 0, array.length));
               }
               function baseSet(object, path, value2, customizer) {
                 if (!isObject(object)) {
@@ -15966,7 +16430,7 @@ isIndex(key, length)))) {
                 try {
                   value2[symToStringTag] = undefined$1;
                   var unmasked = true;
-                } catch (e) {
+                } catch (e2) {
                 }
                 var result2 = nativeObjectToString.call(value2);
                 if (unmasked) {
@@ -16323,11 +16787,11 @@ isIndex(key, length)))) {
                 if (func != null) {
                   try {
                     return funcToString.call(func);
-                  } catch (e) {
+                  } catch (e2) {
                   }
                   try {
                     return func + "";
-                  } catch (e) {
+                  } catch (e2) {
                   }
                 }
                 return "";
@@ -16405,22 +16869,22 @@ isIndex(key, length)))) {
                 }
                 return isArrayLikeObject(array) ? baseDifference(array, baseFlatten(values2, 1, isArrayLikeObject, true), undefined$1, comparator) : [];
               });
-              function drop(array, n, guard) {
+              function drop(array, n2, guard) {
                 var length = array == null ? 0 : array.length;
                 if (!length) {
                   return [];
                 }
-                n = guard || n === undefined$1 ? 1 : toInteger(n);
-                return baseSlice(array, n < 0 ? 0 : n, length);
+                n2 = guard || n2 === undefined$1 ? 1 : toInteger(n2);
+                return baseSlice(array, n2 < 0 ? 0 : n2, length);
               }
-              function dropRight(array, n, guard) {
+              function dropRight(array, n2, guard) {
                 var length = array == null ? 0 : array.length;
                 if (!length) {
                   return [];
                 }
-                n = guard || n === undefined$1 ? 1 : toInteger(n);
-                n = length - n;
-                return baseSlice(array, 0, n < 0 ? 0 : n);
+                n2 = guard || n2 === undefined$1 ? 1 : toInteger(n2);
+                n2 = length - n2;
+                return baseSlice(array, 0, n2 < 0 ? 0 : n2);
               }
               function dropRightWhile(array, predicate) {
                 return array && array.length ? baseWhile(array, getIteratee(predicate, 3), true, true) : [];
@@ -16544,8 +17008,8 @@ isIndex(key, length)))) {
                 }
                 return value2 === value2 ? strictLastIndexOf(array, value2, index2) : baseFindIndex(array, baseIsNaN, index2, true);
               }
-              function nth(array, n) {
-                return array && array.length ? baseNth(array, toInteger(n)) : undefined$1;
+              function nth(array, n2) {
+                return array && array.length ? baseNth(array, toInteger(n2)) : undefined$1;
               }
               var pull = baseRest(pullAll);
               function pullAll(array, values2) {
@@ -16640,21 +17104,21 @@ isIndex(key, length)))) {
                 var length = array == null ? 0 : array.length;
                 return length ? baseSlice(array, 1, length) : [];
               }
-              function take(array, n, guard) {
+              function take(array, n2, guard) {
                 if (!(array && array.length)) {
                   return [];
                 }
-                n = guard || n === undefined$1 ? 1 : toInteger(n);
-                return baseSlice(array, 0, n < 0 ? 0 : n);
+                n2 = guard || n2 === undefined$1 ? 1 : toInteger(n2);
+                return baseSlice(array, 0, n2 < 0 ? 0 : n2);
               }
-              function takeRight(array, n, guard) {
+              function takeRight(array, n2, guard) {
                 var length = array == null ? 0 : array.length;
                 if (!length) {
                   return [];
                 }
-                n = guard || n === undefined$1 ? 1 : toInteger(n);
-                n = length - n;
-                return baseSlice(array, n < 0 ? 0 : n, length);
+                n2 = guard || n2 === undefined$1 ? 1 : toInteger(n2);
+                n2 = length - n2;
+                return baseSlice(array, n2 < 0 ? 0 : n2, length);
               }
               function takeRightWhile(array, predicate) {
                 return array && array.length ? baseWhile(array, getIteratee(predicate, 3), false, true) : [];
@@ -16931,14 +17395,14 @@ isIndex(key, length)))) {
                 var func = isArray(collection) ? arraySample : baseSample;
                 return func(collection);
               }
-              function sampleSize(collection, n, guard) {
-                if (guard ? isIterateeCall(collection, n, guard) : n === undefined$1) {
-                  n = 1;
+              function sampleSize(collection, n2, guard) {
+                if (guard ? isIterateeCall(collection, n2, guard) : n2 === undefined$1) {
+                  n2 = 1;
                 } else {
-                  n = toInteger(n);
+                  n2 = toInteger(n2);
                 }
                 var func = isArray(collection) ? arraySampleSize : baseSampleSize;
-                return func(collection, n);
+                return func(collection, n2);
               }
               function shuffle(collection) {
                 var func = isArray(collection) ? arrayShuffle : baseShuffle;
@@ -16979,33 +17443,33 @@ isIndex(key, length)))) {
               var now = ctxNow || function() {
                 return root.Date.now();
               };
-              function after(n, func) {
+              function after(n2, func) {
                 if (typeof func != "function") {
                   throw new TypeError2(FUNC_ERROR_TEXT);
                 }
-                n = toInteger(n);
+                n2 = toInteger(n2);
                 return function() {
-                  if (--n < 1) {
+                  if (--n2 < 1) {
                     return func.apply(this, arguments);
                   }
                 };
               }
-              function ary(func, n, guard) {
-                n = guard ? undefined$1 : n;
-                n = func && n == null ? func.length : n;
-                return createWrap(func, WRAP_ARY_FLAG, undefined$1, undefined$1, undefined$1, undefined$1, n);
+              function ary(func, n2, guard) {
+                n2 = guard ? undefined$1 : n2;
+                n2 = func && n2 == null ? func.length : n2;
+                return createWrap(func, WRAP_ARY_FLAG, undefined$1, undefined$1, undefined$1, undefined$1, n2);
               }
-              function before(n, func) {
+              function before(n2, func) {
                 var result2;
                 if (typeof func != "function") {
                   throw new TypeError2(FUNC_ERROR_TEXT);
                 }
-                n = toInteger(n);
+                n2 = toInteger(n2);
                 return function() {
-                  if (--n > 0) {
+                  if (--n2 > 0) {
                     result2 = func.apply(this, arguments);
                   }
-                  if (n <= 1) {
+                  if (n2 <= 1) {
                     func = undefined$1;
                   }
                   return result2;
@@ -17819,13 +18283,13 @@ isIndex(key, length)))) {
                 }
                 return nativeParseInt(toString(string).replace(reTrimStart, ""), radix || 0);
               }
-              function repeat(string, n, guard) {
-                if (guard ? isIterateeCall(string, n, guard) : n === undefined$1) {
-                  n = 1;
+              function repeat(string, n2, guard) {
+                if (guard ? isIterateeCall(string, n2, guard) : n2 === undefined$1) {
+                  n2 = 1;
                 } else {
-                  n = toInteger(n);
+                  n2 = toInteger(n2);
                 }
-                return baseRepeat(toString(string), n);
+                return baseRepeat(toString(string), n2);
               }
               function replace() {
                 var args = arguments, string = toString(args[0]);
@@ -18014,8 +18478,8 @@ isIndex(key, length)))) {
               var attempt = baseRest(function(func, args) {
                 try {
                   return apply(func, undefined$1, args);
-                } catch (e) {
-                  return isError(e) ? e : new Error2(e);
+                } catch (e2) {
+                  return isError(e2) ? e2 : new Error2(e2);
                 }
               });
               var bindAll = flatRest(function(object, methodNames) {
@@ -18113,10 +18577,10 @@ isIndex(key, length)))) {
               }
               function noop() {
               }
-              function nthArg(n) {
-                n = toInteger(n);
+              function nthArg(n2) {
+                n2 = toInteger(n2);
                 return baseRest(function(args) {
-                  return baseNth(args, n);
+                  return baseNth(args, n2);
                 });
               }
               var over = createOver(arrayMap);
@@ -18147,16 +18611,16 @@ isIndex(key, length)))) {
               function stubTrue() {
                 return true;
               }
-              function times(n, iteratee2) {
-                n = toInteger(n);
-                if (n < 1 || n > MAX_SAFE_INTEGER) {
+              function times(n2, iteratee2) {
+                n2 = toInteger(n2);
+                if (n2 < 1 || n2 > MAX_SAFE_INTEGER) {
                   return [];
                 }
-                var index2 = MAX_ARRAY_LENGTH, length = nativeMin(n, MAX_ARRAY_LENGTH);
+                var index2 = MAX_ARRAY_LENGTH, length = nativeMin(n2, MAX_ARRAY_LENGTH);
                 iteratee2 = getIteratee(iteratee2);
-                n -= MAX_ARRAY_LENGTH;
+                n2 -= MAX_ARRAY_LENGTH;
                 var result2 = baseTimes(length, iteratee2);
-                while (++index2 < n) {
+                while (++index2 < n2) {
                   iteratee2(index2);
                 }
                 return result2;
@@ -18530,21 +18994,21 @@ isIndex(key, length)))) {
                 lodash2[methodName].placeholder = lodash2;
               });
               arrayEach(["drop", "take"], function(methodName, index2) {
-                LazyWrapper.prototype[methodName] = function(n) {
-                  n = n === undefined$1 ? 1 : nativeMax(toInteger(n), 0);
+                LazyWrapper.prototype[methodName] = function(n2) {
+                  n2 = n2 === undefined$1 ? 1 : nativeMax(toInteger(n2), 0);
                   var result2 = this.__filtered__ && !index2 ? new LazyWrapper(this) : this.clone();
                   if (result2.__filtered__) {
-                    result2.__takeCount__ = nativeMin(n, result2.__takeCount__);
+                    result2.__takeCount__ = nativeMin(n2, result2.__takeCount__);
                   } else {
                     result2.__views__.push({
-                      "size": nativeMin(n, MAX_ARRAY_LENGTH),
+                      "size": nativeMin(n2, MAX_ARRAY_LENGTH),
                       "type": methodName + (result2.__dir__ < 0 ? "Right" : "")
                     });
                   }
                   return result2;
                 };
-                LazyWrapper.prototype[methodName + "Right"] = function(n) {
-                  return this.reverse()[methodName](n).reverse();
+                LazyWrapper.prototype[methodName + "Right"] = function(n2) {
+                  return this.reverse()[methodName](n2).reverse();
                 };
               });
               arrayEach(["filter", "map", "takeWhile"], function(methodName, index2) {
@@ -18867,7 +19331,7 @@ keywords
             if (singerKeywordsMap[keywords2]) {
               const res2 = await singerKeywordsMap[keywords2];
               const list = (res2.data.list || []).sort(
-                (a, b) => a.artistId - b.artistId
+                (a2, b) => a2.artistId - b.artistId
               );
               setSingerList(list);
               return;
@@ -18876,7 +19340,7 @@ keywords
             const res = await singerKeywordsMap[keywords2];
             if (res.code === 200) {
               const list = (res.data.list || []).sort(
-                (a, b) => a.artistId - b.artistId
+                (a2, b) => a2.artistId - b.artistId
               );
               setSingerList(list);
             }
@@ -19194,7 +19658,7 @@ jsxRuntimeExports.jsx(
                 size: "middle",
                 min: 1,
                 value: concurrent,
-                onChange: (e) => setConcurrent(Number(e.target.value))
+                onChange: (e2) => setConcurrent(Number(e2.target.value))
               }
             ),
 jsxRuntimeExports.jsx(Button, { onClick: () => setSelectedRows(filteredList), children: "全部选择" }),
@@ -19267,9 +19731,9 @@ jsxRuntimeExports.jsx(
                     showUploadList: false,
                     beforeUpload: (file) => {
                       const reader = new FileReader();
-                      reader.onload = (e) => {
+                      reader.onload = (e2) => {
                         try {
-                          const jsonData = JSON.parse(e.target.result);
+                          const jsonData = JSON.parse(e2.target.result);
                           setTableData(jsonData?.data || jsonData || []);
                           message.success("JSON文件解析成功");
                         } catch (error) {
@@ -19296,19 +19760,19 @@ jsxRuntimeExports.jsx(
           }
         );
       });
-      function mitt(n) {
-        return { all: n = n || new Map(), on: function(t, e) {
-          var i = n.get(t);
-          i ? i.push(e) : n.set(t, [e]);
-        }, off: function(t, e) {
-          var i = n.get(t);
-          i && (e ? i.splice(i.indexOf(e) >>> 0, 1) : n.set(t, []));
-        }, emit: function(t, e) {
-          var i = n.get(t);
-          i && i.slice().map(function(n2) {
-            n2(e);
-          }), (i = n.get("*")) && i.slice().map(function(n2) {
-            n2(t, e);
+      function mitt(n2) {
+        return { all: n2 = n2 || new Map(), on: function(t2, e2) {
+          var i2 = n2.get(t2);
+          i2 ? i2.push(e2) : n2.set(t2, [e2]);
+        }, off: function(t2, e2) {
+          var i2 = n2.get(t2);
+          i2 && (e2 ? i2.splice(i2.indexOf(e2) >>> 0, 1) : n2.set(t2, []));
+        }, emit: function(t2, e2) {
+          var i2 = n2.get(t2);
+          i2 && i2.slice().map(function(n3) {
+            n3(e2);
+          }), (i2 = n2.get("*")) && i2.slice().map(function(n3) {
+            n3(t2, e2);
           });
         } };
       }
@@ -19493,9 +19957,9 @@ jsxRuntimeExports.jsx(
                   },
                   defaultValue: keywords,
                   placeholder: "请输入歌手名",
-                  onPressEnter: (e) => {
-                    console.log("e", e);
-                    setKeywords(e.target.value);
+                  onPressEnter: (e2) => {
+                    console.log("e", e2);
+                    setKeywords(e2.target.value);
                   }
                 }
               ),
@@ -19687,12 +20151,12 @@ jsxRuntimeExports.jsx(
             Input,
             {
               value: value2,
-              onChange: (e) => {
-                setValue(e.target.value);
+              onChange: (e2) => {
+                setValue(e2.target.value);
               },
               size: "small",
-              onKeyDown: (e) => {
-                if (e.key === "Enter") {
+              onKeyDown: (e2) => {
+                if (e2.key === "Enter") {
                   handleUpdate();
                 }
               },
@@ -19757,8 +20221,8 @@ var hasRequiredClassnames;
             var hasOwn = {}.hasOwnProperty;
             function classNames2() {
               var classes = "";
-              for (var i = 0; i < arguments.length; i++) {
-                var arg = arguments[i];
+              for (var i2 = 0; i2 < arguments.length; i2++) {
+                var arg = arguments[i2];
                 if (arg) {
                   classes = appendClass(classes, parseValue(arg));
                 }
@@ -20022,7 +20486,7 @@ jsxRuntimeExports.jsx(
             key: "trackCount",
             width: 100,
             align: "right",
-            sorter: (a, b) => a.trackCount - b.trackCount,
+            sorter: (a2, b) => a2.trackCount - b.trackCount,
             sortDirections: ["descend", "ascend"],
             render: (text2) => jsxRuntimeExports.jsxs(
               "span",
@@ -20051,7 +20515,7 @@ jsxRuntimeExports.jsx(
             key: "updateTime",
             width: 200,
             render: (text2) => new Date(text2).toLocaleString(),
-            sorter: (a, b) => a.updateTime - b.updateTime,
+            sorter: (a2, b) => a2.updateTime - b.updateTime,
             sortDirections: ["descend", "ascend"]
           },
           {
@@ -20063,7 +20527,7 @@ jsxRuntimeExports.jsx(
               const count2 = text2 > 1e4 ? `${(text2 / 1e4).toFixed(1)}万` : text2;
               return jsxRuntimeExports.jsx("span", { children: count2 });
             },
-            sorter: (a, b) => a.playCount - b.playCount,
+            sorter: (a2, b) => a2.playCount - b.playCount,
             sortDirections: ["descend", "ascend"]
           }
         ];
@@ -20203,7 +20667,7 @@ jsxRuntimeExports.jsx(
                     Checkbox,
                     {
                       checked: autoSort,
-                      onChange: (e) => setAutoSort(e.target.checked),
+                      onChange: (e2) => setAutoSort(e2.target.checked),
                       children: "添加后自动排序"
                     }
                   ),
@@ -20255,7 +20719,7 @@ jsxRuntimeExports.jsx(
                   {
                     placeholder: "请输入歌单名称",
                     value: name2,
-                    onChange: (e) => setName(e.target.value),
+                    onChange: (e2) => setName(e2.target.value),
                     onPressEnter: handleCreate,
                     autoFocus: true,
                     style: { marginBottom: 16, padding: "4px 8px" }
@@ -20431,9 +20895,9 @@ jsxRuntimeExports.jsx("span", { className: styles$f.size, children: filteredSong
         const handleTableChange = (pagination, filters, sorter) => {
           console.log("sorter", sorter);
           setFilteredSongList((songList22) => {
-            return [...songList22].sort((a, b) => {
+            return [...songList22].sort((a2, b) => {
               const order = sorter.order === "ascend" ? 1 : -1;
-              return order * sorter.column?.sorter?.(a, b);
+              return order * sorter.column?.sorter?.(a2, b);
             });
           });
         };
@@ -20514,7 +20978,7 @@ jsxRuntimeExports.jsxs("div", { className: styles$f.album, children: [
             key: "name",
             width: 300,
             fixed: !isMobile() ? "left" : void 0,
-            sorter: (a, b) => a.simpleSong.name?.localeCompare(b.simpleSong.name),
+            sorter: (a2, b) => a2.simpleSong.name?.localeCompare(b.simpleSong.name),
             sortDirections: ["ascend", "descend"],
             render: renderSongInfo
           },
@@ -20523,9 +20987,9 @@ jsxRuntimeExports.jsxs("div", { className: styles$f.album, children: [
             dataIndex: "simpleSong",
             key: "artists",
             width: 60,
-            sorter: (a, b) => {
-              const aArtists = a.simpleSong.ar?.map((a2) => a2.name).join(",");
-              const bArtists = b.simpleSong.ar?.map((a2) => a2.name).join(",");
+            sorter: (a2, b) => {
+              const aArtists = a2.simpleSong.ar?.map((a22) => a22.name).join(",");
+              const bArtists = b.simpleSong.ar?.map((a22) => a22.name).join(",");
               return aArtists?.localeCompare(bArtists);
             },
             fixed: !isMobile() ? "left" : void 0,
@@ -20539,7 +21003,7 @@ jsxRuntimeExports.jsxs("div", { className: styles$f.album, children: [
             key: "album",
             width: 60,
             fixed: !isMobile() ? "left" : void 0,
-            sorter: (a, b) => a.simpleSong.al?.name?.localeCompare(b.simpleSong.al?.name),
+            sorter: (a2, b) => a2.simpleSong.al?.name?.localeCompare(b.simpleSong.al?.name),
             sortDirections: ["ascend", "descend"],
             defaultSortOrder: "ascend",
             ellipsis: true,
@@ -20551,8 +21015,8 @@ jsxRuntimeExports.jsxs("div", { className: styles$f.album, children: [
             width: 160,
             fixed: "left",
             ellipsis: true,
-            sorter: (a, b) => {
-              const aOriginalInfo = getOriginalInfo(a);
+            sorter: (a2, b) => {
+              const aOriginalInfo = getOriginalInfo(a2);
               const bOriginalInfo = getOriginalInfo(b);
               return aOriginalInfo.album?.localeCompare(bOriginalInfo.album);
             },
@@ -20574,8 +21038,8 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
             dataIndex: "matchType",
             key: "matchType",
             width: 300,
-            sorter: (a, b) => {
-              const isAMatched = a.matchType === "matched";
+            sorter: (a2, b) => {
+              const isAMatched = a2.matchType === "matched";
               const isBMatched = b.matchType === "matched";
               if (!isAMatched && !isBMatched) {
                 return 0;
@@ -20586,9 +21050,9 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
               if (isAMatched && !isBMatched) {
                 return -1;
               }
-              const aAlbum = getAlbumName(a);
+              const aAlbum = getAlbumName(a2);
               const bAlbum = getAlbumName(b);
-              const aOriginalAlbum = getOriginalInfo(a).album;
+              const aOriginalAlbum = getOriginalInfo(a2).album;
               const bOriginalAlbum = getOriginalInfo(b).album;
               const aMatchError = aAlbum.includes(aOriginalAlbum.slice(0, 3));
               const bMatchError = bAlbum.includes(bOriginalAlbum.slice(0, 3));
@@ -20603,7 +21067,7 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
               return 0;
             },
             sortDirections: ["ascend", "descend"],
-            render: (matchType, r) => jsxRuntimeExports.jsx(IdMatch, { data: r, onUpdate: getCloudDataList })
+            render: (matchType, r2) => jsxRuntimeExports.jsx(IdMatch, { data: r2, onUpdate: getCloudDataList })
           },
 {
             title: "自定义匹配",
@@ -20617,7 +21081,7 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
             dataIndex: "fileSize",
             key: "fileSize",
             width: 100,
-            sorter: (a, b) => a.fileSize - b.fileSize,
+            sorter: (a2, b) => a2.fileSize - b.fileSize,
             sortDirections: ["ascend", "descend"],
             render: (size2) => `${(size2 / 1024 / 1024).toFixed(2)}MB`
           },
@@ -20626,7 +21090,7 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
             dataIndex: "bitrate",
             key: "bitrate",
             width: 100,
-            sorter: (a, b) => a.bitrate - b.bitrate,
+            sorter: (a2, b) => a2.bitrate - b.bitrate,
             sortDirections: ["ascend", "descend"],
             render: (bitrate) => jsxRuntimeExports.jsxs(Tag, { color: "blue", children: [
               bitrate,
@@ -20638,7 +21102,7 @@ jsxRuntimeExports.jsx("div", { className: styles$f["album-info"], title: album2,
             dataIndex: "addTime",
             key: "addTime",
             width: 150,
-            sorter: (a, b) => a.addTime - b.addTime,
+            sorter: (a2, b) => a2.addTime - b.addTime,
             sortDirections: ["ascend", "descend"],
             render: (time) => dayjs(time).format("YYYY-MM-DD HH:mm:ss")
           }
@@ -20748,7 +21212,7 @@ jsxRuntimeExports.jsx(AutoAddContent, { totalSongs, albums }),
             } = item;
             return {
               artist: artist2,
-              artists: ar?.map((a) => a.name) || [artist2],
+              artists: ar?.map((a2) => a2.name) || [artist2],
               album: album2 || getAlbumName(item),
               id: songId,
               size: fileSize,
@@ -20916,8 +21380,8 @@ jsxRuntimeExports.jsx(
                         width: 100
                       },
                       value: range[0],
-                      onChange: (e) => {
-                        setRange([+e.target.value || void 0, range[1]]);
+                      onChange: (e2) => {
+                        setRange([+e2.target.value || void 0, range[1]]);
                       },
                       placeholder: "起始位置"
                     }
@@ -20929,7 +21393,7 @@ jsxRuntimeExports.jsx(
                         width: 100
                       },
                       value: range[1],
-                      onChange: (e) => setRange([range[0], +e.target.value || void 0]),
+                      onChange: (e2) => setRange([range[0], +e2.target.value || void 0]),
                       placeholder: "结束位置"
                     }
                   ),
@@ -21061,7 +21525,7 @@ jsxRuntimeExports.jsx("span", { className: styles$f.icon, children: "!" }),
         ] });
       };
       const getArtistName = (song) => {
-        return song.simpleSong.ar?.map((a) => a.name).filter(Boolean).join(",") || song.artist || "";
+        return song.simpleSong.ar?.map((a2) => a2.name).filter(Boolean).join(",") || song.artist || "";
       };
       const getAlbumName = (song) => {
         return song.simpleSong.al?.name || song.album || "";
@@ -21118,7 +21582,7 @@ jsxRuntimeExports.jsx("span", { className: styles$f.icon, children: "!" }),
             filterOption: false,
             optionRender: (option) => {
               const { data } = option;
-              const artists2 = data.ar?.map((a) => a.name).join(" / ") || "未知艺术家";
+              const artists2 = data.ar?.map((a2) => a2.name).join(" / ") || "未知艺术家";
               const albumName = data.al?.name || "未知专辑";
               const duration2 = formatDuration$1(data.dt);
               return jsxRuntimeExports.jsxs(
@@ -21474,7 +21938,7 @@ jsxRuntimeExports.jsxs(
                       className: styles$c["artists"],
                       children: [
                         "艺术家：",
-                        ar.map((a) => a.name).join(" / ") || "-"
+                        ar.map((a2) => a2.name).join(" / ") || "-"
                       ]
                     }
                   ),
@@ -21529,10 +21993,10 @@ jsxRuntimeExports.jsx(Descriptions.Item, { label: "歌曲ID", children: jsxRunti
                       Input,
                       {
                         value: songId,
-                        onChange: (e) => handleSongIdChange(e.target.value),
+                        onChange: (e2) => handleSongIdChange(e2.target.value),
                         size: "small",
                         allowClear: true,
-                        onPressEnter: (e) => handleSongIdChange(e.target.value),
+                        onPressEnter: (e2) => handleSongIdChange(e2.target.value),
                         style: {
                           border: "none"
                         },
@@ -21776,10 +22240,10 @@ jsxRuntimeExports.jsx(Descriptions.Item, { label: "用户ID", children: jsxRunti
                       Input,
                       {
                         value: userId,
-                        onChange: (e) => handleUserIdChange(e.target.value),
+                        onChange: (e2) => handleUserIdChange(e2.target.value),
                         size: "small",
                         allowClear: true,
-                        onPressEnter: (e) => handleUserIdChange(e.target.value),
+                        onPressEnter: (e2) => handleUserIdChange(e2.target.value),
                         style: {
                           border: "none"
                         },
@@ -23873,7 +24337,7 @@ jsxRuntimeExports.jsx(
                 const res2 = await uploadLocalSong(file);
                 file.status = "done";
                 return res2;
-              } catch (e) {
+              } catch (e2) {
                 file.status = "error";
                 return null;
               } finally {
@@ -23925,8 +24389,8 @@ jsxRuntimeExports.jsx(
             });
             const data = await Promise.all(proArr);
             downloadJsonFile(data, data[0].artist + ".json");
-          } catch (e) {
-            console.log("error", e);
+          } catch (e2) {
+            console.log("error", e2);
           } finally {
             setGetJsonLoading(false);
           }
@@ -23989,7 +24453,7 @@ jsxRuntimeExports.jsx(
                       min: 1,
                       max: 6,
                       value: concurrency,
-                      onChange: (e) => setConcurrency(parseInt(e.target.value) || 1),
+                      onChange: (e2) => setConcurrency(parseInt(e2.target.value) || 1),
                       style: { width: 80 }
                     }
                   )
@@ -24096,7 +24560,7 @@ jsxRuntimeExports.jsx(
             "div",
             {
               className: styles$7["cover-wrapper"],
-              onClick: (e) => e.stopPropagation(),
+              onClick: (e2) => e2.stopPropagation(),
               children: al?.picUrl ? jsxRuntimeExports.jsx(
                 Image,
                 {
@@ -24144,82 +24608,82 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
         if (hasRequiredDuration) return duration$2.exports;
         hasRequiredDuration = 1;
         (function(module, exports) {
-          !(function(t, s) {
-            module.exports = s();
+          !(function(t2, s2) {
+            module.exports = s2();
           })(duration$1, (function() {
-            var t, s, n = 1e3, i = 6e4, e = 36e5, r = 864e5, o = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, u = 31536e6, d = 2628e6, a = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/, h = { years: u, months: d, days: r, hours: e, minutes: i, seconds: n, milliseconds: 1, weeks: 6048e5 }, c = function(t2) {
-              return t2 instanceof g;
-            }, f = function(t2, s2, n2) {
-              return new g(t2, n2, s2.$l);
-            }, m = function(t2) {
-              return s.p(t2) + "s";
-            }, l = function(t2) {
-              return t2 < 0;
-            }, $ = function(t2) {
-              return l(t2) ? Math.ceil(t2) : Math.floor(t2);
-            }, y = function(t2) {
-              return Math.abs(t2);
-            }, v = function(t2, s2) {
-              return t2 ? l(t2) ? { negative: true, format: "" + y(t2) + s2 } : { negative: false, format: "" + t2 + s2 } : { negative: false, format: "" };
+            var t2, s2, n2 = 1e3, i2 = 6e4, e2 = 36e5, r2 = 864e5, o2 = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g, u = 31536e6, d = 2628e6, a2 = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/, h = { years: u, months: d, days: r2, hours: e2, minutes: i2, seconds: n2, milliseconds: 1, weeks: 6048e5 }, c2 = function(t3) {
+              return t3 instanceof g;
+            }, f = function(t3, s3, n3) {
+              return new g(t3, n3, s3.$l);
+            }, m = function(t3) {
+              return s2.p(t3) + "s";
+            }, l = function(t3) {
+              return t3 < 0;
+            }, $ = function(t3) {
+              return l(t3) ? Math.ceil(t3) : Math.floor(t3);
+            }, y = function(t3) {
+              return Math.abs(t3);
+            }, v = function(t3, s3) {
+              return t3 ? l(t3) ? { negative: true, format: "" + y(t3) + s3 } : { negative: false, format: "" + t3 + s3 } : { negative: false, format: "" };
             }, g = (function() {
-              function l2(t2, s2, n2) {
-                var i2 = this;
-                if (this.$d = {}, this.$l = n2, void 0 === t2 && (this.$ms = 0, this.parseFromMilliseconds()), s2) return f(t2 * h[m(s2)], this);
-                if ("number" == typeof t2) return this.$ms = t2, this.parseFromMilliseconds(), this;
-                if ("object" == typeof t2) return Object.keys(t2).forEach((function(s3) {
-                  i2.$d[m(s3)] = t2[s3];
+              function l2(t3, s3, n3) {
+                var i3 = this;
+                if (this.$d = {}, this.$l = n3, void 0 === t3 && (this.$ms = 0, this.parseFromMilliseconds()), s3) return f(t3 * h[m(s3)], this);
+                if ("number" == typeof t3) return this.$ms = t3, this.parseFromMilliseconds(), this;
+                if ("object" == typeof t3) return Object.keys(t3).forEach((function(s4) {
+                  i3.$d[m(s4)] = t3[s4];
                 })), this.calMilliseconds(), this;
-                if ("string" == typeof t2) {
-                  var e2 = t2.match(a);
-                  if (e2) {
-                    var r2 = e2.slice(2).map((function(t3) {
-                      return null != t3 ? Number(t3) : 0;
+                if ("string" == typeof t3) {
+                  var e3 = t3.match(a2);
+                  if (e3) {
+                    var r3 = e3.slice(2).map((function(t4) {
+                      return null != t4 ? Number(t4) : 0;
                     }));
-                    return this.$d.years = r2[0], this.$d.months = r2[1], this.$d.weeks = r2[2], this.$d.days = r2[3], this.$d.hours = r2[4], this.$d.minutes = r2[5], this.$d.seconds = r2[6], this.calMilliseconds(), this;
+                    return this.$d.years = r3[0], this.$d.months = r3[1], this.$d.weeks = r3[2], this.$d.days = r3[3], this.$d.hours = r3[4], this.$d.minutes = r3[5], this.$d.seconds = r3[6], this.calMilliseconds(), this;
                   }
                 }
                 return this;
               }
               var y2 = l2.prototype;
               return y2.calMilliseconds = function() {
-                var t2 = this;
-                this.$ms = Object.keys(this.$d).reduce((function(s2, n2) {
-                  return s2 + (t2.$d[n2] || 0) * h[n2];
+                var t3 = this;
+                this.$ms = Object.keys(this.$d).reduce((function(s3, n3) {
+                  return s3 + (t3.$d[n3] || 0) * h[n3];
                 }), 0);
               }, y2.parseFromMilliseconds = function() {
-                var t2 = this.$ms;
-                this.$d.years = $(t2 / u), t2 %= u, this.$d.months = $(t2 / d), t2 %= d, this.$d.days = $(t2 / r), t2 %= r, this.$d.hours = $(t2 / e), t2 %= e, this.$d.minutes = $(t2 / i), t2 %= i, this.$d.seconds = $(t2 / n), t2 %= n, this.$d.milliseconds = t2;
+                var t3 = this.$ms;
+                this.$d.years = $(t3 / u), t3 %= u, this.$d.months = $(t3 / d), t3 %= d, this.$d.days = $(t3 / r2), t3 %= r2, this.$d.hours = $(t3 / e2), t3 %= e2, this.$d.minutes = $(t3 / i2), t3 %= i2, this.$d.seconds = $(t3 / n2), t3 %= n2, this.$d.milliseconds = t3;
               }, y2.toISOString = function() {
-                var t2 = v(this.$d.years, "Y"), s2 = v(this.$d.months, "M"), n2 = +this.$d.days || 0;
-                this.$d.weeks && (n2 += 7 * this.$d.weeks);
-                var i2 = v(n2, "D"), e2 = v(this.$d.hours, "H"), r2 = v(this.$d.minutes, "M"), o2 = this.$d.seconds || 0;
-                this.$d.milliseconds && (o2 += this.$d.milliseconds / 1e3, o2 = Math.round(1e3 * o2) / 1e3);
-                var u2 = v(o2, "S"), d2 = t2.negative || s2.negative || i2.negative || e2.negative || r2.negative || u2.negative, a2 = e2.format || r2.format || u2.format ? "T" : "", h2 = (d2 ? "-" : "") + "P" + t2.format + s2.format + i2.format + a2 + e2.format + r2.format + u2.format;
+                var t3 = v(this.$d.years, "Y"), s3 = v(this.$d.months, "M"), n3 = +this.$d.days || 0;
+                this.$d.weeks && (n3 += 7 * this.$d.weeks);
+                var i3 = v(n3, "D"), e3 = v(this.$d.hours, "H"), r3 = v(this.$d.minutes, "M"), o3 = this.$d.seconds || 0;
+                this.$d.milliseconds && (o3 += this.$d.milliseconds / 1e3, o3 = Math.round(1e3 * o3) / 1e3);
+                var u2 = v(o3, "S"), d2 = t3.negative || s3.negative || i3.negative || e3.negative || r3.negative || u2.negative, a3 = e3.format || r3.format || u2.format ? "T" : "", h2 = (d2 ? "-" : "") + "P" + t3.format + s3.format + i3.format + a3 + e3.format + r3.format + u2.format;
                 return "P" === h2 || "-P" === h2 ? "P0D" : h2;
               }, y2.toJSON = function() {
                 return this.toISOString();
-              }, y2.format = function(t2) {
-                var n2 = t2 || "YYYY-MM-DDTHH:mm:ss", i2 = { Y: this.$d.years, YY: s.s(this.$d.years, 2, "0"), YYYY: s.s(this.$d.years, 4, "0"), M: this.$d.months, MM: s.s(this.$d.months, 2, "0"), D: this.$d.days, DD: s.s(this.$d.days, 2, "0"), H: this.$d.hours, HH: s.s(this.$d.hours, 2, "0"), m: this.$d.minutes, mm: s.s(this.$d.minutes, 2, "0"), s: this.$d.seconds, ss: s.s(this.$d.seconds, 2, "0"), SSS: s.s(this.$d.milliseconds, 3, "0") };
-                return n2.replace(o, (function(t3, s2) {
-                  return s2 || String(i2[t3]);
+              }, y2.format = function(t3) {
+                var n3 = t3 || "YYYY-MM-DDTHH:mm:ss", i3 = { Y: this.$d.years, YY: s2.s(this.$d.years, 2, "0"), YYYY: s2.s(this.$d.years, 4, "0"), M: this.$d.months, MM: s2.s(this.$d.months, 2, "0"), D: this.$d.days, DD: s2.s(this.$d.days, 2, "0"), H: this.$d.hours, HH: s2.s(this.$d.hours, 2, "0"), m: this.$d.minutes, mm: s2.s(this.$d.minutes, 2, "0"), s: this.$d.seconds, ss: s2.s(this.$d.seconds, 2, "0"), SSS: s2.s(this.$d.milliseconds, 3, "0") };
+                return n3.replace(o2, (function(t4, s3) {
+                  return s3 || String(i3[t4]);
                 }));
-              }, y2.as = function(t2) {
-                return this.$ms / h[m(t2)];
-              }, y2.get = function(t2) {
-                var s2 = this.$ms, n2 = m(t2);
-                return "milliseconds" === n2 ? s2 %= 1e3 : s2 = "weeks" === n2 ? $(s2 / h[n2]) : this.$d[n2], s2 || 0;
-              }, y2.add = function(t2, s2, n2) {
-                var i2;
-                return i2 = s2 ? t2 * h[m(s2)] : c(t2) ? t2.$ms : f(t2, this).$ms, f(this.$ms + i2 * (n2 ? -1 : 1), this);
-              }, y2.subtract = function(t2, s2) {
-                return this.add(t2, s2, true);
-              }, y2.locale = function(t2) {
-                var s2 = this.clone();
-                return s2.$l = t2, s2;
+              }, y2.as = function(t3) {
+                return this.$ms / h[m(t3)];
+              }, y2.get = function(t3) {
+                var s3 = this.$ms, n3 = m(t3);
+                return "milliseconds" === n3 ? s3 %= 1e3 : s3 = "weeks" === n3 ? $(s3 / h[n3]) : this.$d[n3], s3 || 0;
+              }, y2.add = function(t3, s3, n3) {
+                var i3;
+                return i3 = s3 ? t3 * h[m(s3)] : c2(t3) ? t3.$ms : f(t3, this).$ms, f(this.$ms + i3 * (n3 ? -1 : 1), this);
+              }, y2.subtract = function(t3, s3) {
+                return this.add(t3, s3, true);
+              }, y2.locale = function(t3) {
+                var s3 = this.clone();
+                return s3.$l = t3, s3;
               }, y2.clone = function() {
                 return f(this.$ms, this);
-              }, y2.humanize = function(s2) {
-                return t().add(this.$ms, "ms").locale(this.$l).fromNow(!s2);
+              }, y2.humanize = function(s3) {
+                return t2().add(this.$ms, "ms").locale(this.$l).fromNow(!s3);
               }, y2.valueOf = function() {
                 return this.asMilliseconds();
               }, y2.milliseconds = function() {
@@ -24255,19 +24719,19 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
               }, y2.asYears = function() {
                 return this.as("years");
               }, l2;
-            })(), p = function(t2, s2, n2) {
-              return t2.add(s2.years() * n2, "y").add(s2.months() * n2, "M").add(s2.days() * n2, "d").add(s2.hours() * n2, "h").add(s2.minutes() * n2, "m").add(s2.seconds() * n2, "s").add(s2.milliseconds() * n2, "ms");
+            })(), p = function(t3, s3, n3) {
+              return t3.add(s3.years() * n3, "y").add(s3.months() * n3, "M").add(s3.days() * n3, "d").add(s3.hours() * n3, "h").add(s3.minutes() * n3, "m").add(s3.seconds() * n3, "s").add(s3.milliseconds() * n3, "ms");
             };
-            return function(n2, i2, e2) {
-              t = e2, s = e2().$utils(), e2.duration = function(t2, s2) {
-                var n3 = e2.locale();
-                return f(t2, { $l: n3 }, s2);
-              }, e2.isDuration = c;
-              var r2 = i2.prototype.add, o2 = i2.prototype.subtract;
-              i2.prototype.add = function(t2, s2) {
-                return c(t2) ? p(this, t2, 1) : r2.bind(this)(t2, s2);
-              }, i2.prototype.subtract = function(t2, s2) {
-                return c(t2) ? p(this, t2, -1) : o2.bind(this)(t2, s2);
+            return function(n3, i3, e3) {
+              t2 = e3, s2 = e3().$utils(), e3.duration = function(t3, s3) {
+                var n4 = e3.locale();
+                return f(t3, { $l: n4 }, s3);
+              }, e3.isDuration = c2;
+              var r3 = i3.prototype.add, o3 = i3.prototype.subtract;
+              i3.prototype.add = function(t3, s3) {
+                return c2(t3) ? p(this, t3, 1) : r3.bind(this)(t3, s3);
+              }, i3.prototype.subtract = function(t3, s3) {
+                return c2(t3) ? p(this, t3, -1) : o3.bind(this)(t3, s3);
               };
             };
           }));
@@ -24388,7 +24852,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             key: "songInfo",
             width: 280,
             fixed: "left",
-            sorter: (a, b) => a.name?.localeCompare(b.name),
+            sorter: (a2, b) => a2.name?.localeCompare(b.name),
             sortDirections: ["ascend", "descend"],
             render: (_, record) => {
               return jsxRuntimeExports.jsx(SongInfoRender, { record });
@@ -24399,20 +24863,20 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "ar",
             key: "ar",
             width: 150,
-            sorter: (a, b) => {
-              const aName = a.ar?.map((a2) => a2.name).join(", ") || "";
+            sorter: (a2, b) => {
+              const aName = a2.ar?.map((a22) => a22.name).join(", ") || "";
               const bName = b.ar?.map((b2) => b2.name).join(", ") || "";
               return aName.localeCompare(bName);
             },
             sortDirections: ["ascend", "descend"],
-            render: (ar) => ar?.map((a) => a.name).join(", ")
+            render: (ar) => ar?.map((a2) => a2.name).join(", ")
           },
           {
             title: "专辑",
             dataIndex: "al",
             key: "al",
             width: 200,
-            sorter: (a, b) => (a.al?.name || "").localeCompare(b.al?.name || ""),
+            sorter: (a2, b) => (a2.al?.name || "").localeCompare(b.al?.name || ""),
             sortDirections: ["ascend", "descend"],
             render: (al) => al?.name
           },
@@ -24428,7 +24892,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "dt",
             key: "dt",
             width: 80,
-            sorter: (a, b) => a.dt - b.dt,
+            sorter: (a2, b) => a2.dt - b.dt,
             sortDirections: ["ascend", "descend"],
             render: (dt) => formatDuration(dt)
           },
@@ -24444,7 +24908,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "no",
             key: "no",
             width: 60,
-            sorter: (a, b) => a.no - b.no,
+            sorter: (a2, b) => a2.no - b.no,
             sortDirections: ["ascend", "descend"],
             render: (no) => no || "-"
           },
@@ -24510,7 +24974,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "pop",
             key: "pop",
             width: 80,
-            sorter: (a, b) => a.pop - b.pop,
+            sorter: (a2, b) => a2.pop - b.pop,
             sortDirections: ["ascend", "descend"],
             render: (pop) => formatPopularity(pop)
           },
@@ -24526,7 +24990,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "publishTime",
             key: "publishTime",
             width: 120,
-            sorter: (a, b) => a.publishTime - b.publishTime,
+            sorter: (a2, b) => a2.publishTime - b.publishTime,
             sortDirections: ["ascend", "descend"],
             render: (time) => time ? dayjs(time).format("YYYY-MM-DD") : "-"
           },
@@ -24535,8 +24999,8 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "t",
             key: "t",
             width: 100,
-            render: (t) => {
-              const tag2 = getTypeTag(t);
+            render: (t2) => {
+              const tag2 = getTypeTag(t2);
               return jsxRuntimeExports.jsx(Tag, { color: tag2.color, children: tag2.text });
             }
           },
@@ -24829,9 +25293,9 @@ jsxRuntimeExports.jsx(Form.Item, { label: "歌单ID", children: jsxRuntimeExport
                 {
                   className: styles$6["playlist-id-input"],
                   defaultValue: playlistId,
-                  onKeyDown: (e) => {
-                    if (e.key === "Enter") {
-                      setPlaylistId(e.target.value);
+                  onKeyDown: (e2) => {
+                    if (e2.key === "Enter") {
+                      setPlaylistId(e2.target.value);
                     }
                   }
                 }
@@ -24931,20 +25395,20 @@ jsxRuntimeExports.jsx(
             }
           }
         });
-        const handleSaveToCloud = async (e, record) => {
-          e.stopPropagation();
+        const handleSaveToCloud = async (e2, record) => {
+          e2.stopPropagation();
           return playlistToCloud(record.id);
         };
-        const handleSort = async (e, record) => {
-          e.stopPropagation();
+        const handleSort = async (e2, record) => {
+          e2.stopPropagation();
           try {
             await sortSongListByListId(record.id);
           } catch (error) {
             console.log("error", error);
           }
         };
-        const handleDelete = async (e, record) => {
-          e.stopPropagation();
+        const handleDelete = async (e2, record) => {
+          e2.stopPropagation();
           try {
             await confirm(`确定删除《${record.name}》歌单吗？`, "删除歌单");
             const res = await deletePlaylist(record.id);
@@ -24960,8 +25424,8 @@ jsxRuntimeExports.jsx(
             msgError$1(`删除歌单失败: ${error.message}`);
           }
         };
-        const handleDownload = async (e, record) => {
-          e.stopPropagation();
+        const handleDownload = async (e2, record) => {
+          e2.stopPropagation();
           try {
             const songs2 = await getSongListData(record.id);
             await downloadSongList(songs2);
@@ -24983,7 +25447,7 @@ jsxRuntimeExports.jsx("div", { className: styles$5["cover"], children: jsxRuntim
                   src: record.coverImgUrl,
                   width: 60,
                   height: 60,
-                  onClick: (e) => e.stopPropagation(),
+                  onClick: (e2) => e2.stopPropagation(),
                   preview: false
                 }
               ) }),
@@ -25044,7 +25508,7 @@ jsxRuntimeExports.jsx(
                 {
                   type: "link",
                   icon: jsxRuntimeExports.jsx(CloudUploadOutlined, {}),
-                  onClick: (e) => handleSaveToCloud(e, record),
+                  onClick: (e2) => handleSaveToCloud(e2, record),
                   size: "small",
                   children: "转存云盘"
                 }
@@ -25054,7 +25518,7 @@ jsxRuntimeExports.jsx(
                 {
                   type: "link",
                   icon: jsxRuntimeExports.jsx(SortAscendingOutlined, {}),
-                  onClick: (e) => handleSort(e, record),
+                  onClick: (e2) => handleSort(e2, record),
                   size: "small",
                   children: "排序"
                 }
@@ -25064,7 +25528,7 @@ jsxRuntimeExports.jsx(
                 {
                   type: "link",
                   icon: jsxRuntimeExports.jsx(DeleteOutlined, {}),
-                  onClick: (e) => handleDelete(e, record),
+                  onClick: (e2) => handleDelete(e2, record),
                   size: "small",
                   children: "删除"
                 }
@@ -25074,7 +25538,7 @@ jsxRuntimeExports.jsx(
                 {
                   type: "link",
                   icon: jsxRuntimeExports.jsx(DownloadOutlined, {}),
-                  onClick: (e) => handleDownload(e, record),
+                  onClick: (e2) => handleDownload(e2, record),
                   size: "small",
                   children: "下载"
                 }
@@ -25421,7 +25885,7 @@ jsxRuntimeExports.jsxs(Tag, { color: "orange", style: { margin: 0 }, children: [
               privileges.push(...res.privileges);
               songs2.push(...res.songs);
             }
-            const songsMap = Object.fromEntries(songs2.map((s) => [s.id, s]));
+            const songsMap = Object.fromEntries(songs2.map((s2) => [s2.id, s2]));
             const songList22 = [];
             privileges.forEach((p) => {
               const otherInfo = allConfigMap[p.id] || {};
@@ -25567,7 +26031,7 @@ dt: formatDuration$1(0),
             dataIndex: "name",
             key: "name",
             width: 200,
-            sorter: (a, b) => a.name?.localeCompare(b.name),
+            sorter: (a2, b) => a2.name?.localeCompare(b.name),
             sortDirections: ["ascend", "descend"],
             render: (text2, record) => jsxRuntimeExports.jsxs("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
 jsxRuntimeExports.jsx(
@@ -25589,7 +26053,7 @@ jsxRuntimeExports.jsx("div", { children: text2 }),
             dataIndex: "artists",
             key: "artists",
             width: 180,
-            sorter: (a, b) => a.artists?.localeCompare(b.artists),
+            sorter: (a2, b) => a2.artists?.localeCompare(b.artists),
             sortDirections: ["ascend", "descend"],
             ellipsis: true
           },
@@ -25598,7 +26062,7 @@ jsxRuntimeExports.jsx("div", { children: text2 }),
             dataIndex: "album",
             key: "album",
             width: 160,
-            sorter: (a, b) => a.album?.localeCompare(b.album),
+            sorter: (a2, b) => a2.album?.localeCompare(b.album),
             sortDirections: ["ascend", "descend"],
             defaultSortOrder: "descend",
             ellipsis: true
@@ -25608,7 +26072,7 @@ jsxRuntimeExports.jsx("div", { children: text2 }),
             dataIndex: "dt",
             key: "dt",
             width: 80,
-            sorter: (a, b) => a.dt?.localeCompare(b.dt),
+            sorter: (a2, b) => a2.dt?.localeCompare(b.dt),
             sortDirections: ["ascend", "descend"]
           },
           {
@@ -25650,9 +26114,9 @@ jsxRuntimeExports.jsx("div", { children: text2 }),
         ];
         const handleTableChange = (pagination, filters, sorter) => {
           setFilteredSongList((songList22) => {
-            return songList22.sort((a, b) => {
+            return songList22.sort((a2, b) => {
               const order = sorter.order === "ascend" ? 1 : -1;
-              return order * a[sorter.columnKey]?.localeCompare(b[sorter.columnKey]);
+              return order * a2[sorter.columnKey]?.localeCompare(b[sorter.columnKey]);
             });
           });
         };
@@ -25823,7 +26287,7 @@ jsxRuntimeExports.jsx(
                     max: 6,
                     value: concurrency,
                     style: { width: 80 },
-                    onChange: (e) => setConcurrency(Number(e.target.value)),
+                    onChange: (e2) => setConcurrency(Number(e2.target.value)),
                     placeholder: "1-6"
                   }
                 )
@@ -26049,7 +26513,7 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             key: "songInfo",
             width: 350,
             fixed: "left",
-            sorter: (a, b) => a.name?.localeCompare(b.name),
+            sorter: (a2, b) => a2.name?.localeCompare(b.name),
             sortDirections: ["ascend", "descend"],
             render: (_, record) => {
               return jsxRuntimeExports.jsx(SongInfoRender, { record });
@@ -26060,20 +26524,20 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "ar",
             key: "ar",
             width: 150,
-            sorter: (a, b) => {
-              const aName = a.ar?.map((a2) => a2.name).join(", ") || "";
+            sorter: (a2, b) => {
+              const aName = a2.ar?.map((a22) => a22.name).join(", ") || "";
               const bName = b.ar?.map((b2) => b2.name).join(", ") || "";
               return aName.localeCompare(bName);
             },
             sortDirections: ["ascend", "descend"],
-            render: (ar) => ar?.map((a) => a.name).join(", ")
+            render: (ar) => ar?.map((a2) => a2.name).join(", ")
           },
           {
             title: "专辑",
             dataIndex: "al",
             key: "al",
             width: 200,
-            sorter: (a, b) => (a.al?.name || "").localeCompare(b.al?.name || ""),
+            sorter: (a2, b) => (a2.al?.name || "").localeCompare(b.al?.name || ""),
             sortDirections: ["ascend", "descend"],
             render: (al) => al?.name
           },
@@ -26124,7 +26588,7 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "dt",
             key: "dt",
             width: 80,
-            sorter: (a, b) => a.dt - b.dt,
+            sorter: (a2, b) => a2.dt - b.dt,
             sortDirections: ["ascend", "descend"],
             render: (dt) => formatDuration(dt)
           },
@@ -26140,7 +26604,7 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "no",
             key: "no",
             width: 60,
-            sorter: (a, b) => a.no - b.no,
+            sorter: (a2, b) => a2.no - b.no,
             sortDirections: ["ascend", "descend"],
             render: (no) => no || "-"
           },
@@ -26206,7 +26670,7 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "pop",
             key: "pop",
             width: 80,
-            sorter: (a, b) => a.pop - b.pop,
+            sorter: (a2, b) => a2.pop - b.pop,
             sortDirections: ["ascend", "descend"],
             render: (pop) => formatPopularity(pop)
           },
@@ -26222,7 +26686,7 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "publishTime",
             key: "publishTime",
             width: 120,
-            sorter: (a, b) => a.publishTime - b.publishTime,
+            sorter: (a2, b) => a2.publishTime - b.publishTime,
             sortDirections: ["ascend", "descend"],
             render: (time) => time ? dayjs(time).format("YYYY-MM-DD") : "-"
           },
@@ -26231,8 +26695,8 @@ jsxRuntimeExports.jsx(TabPane, { tab: "上传列表", children: jsxRuntimeExport
             dataIndex: "t",
             key: "t",
             width: 100,
-            render: (t) => {
-              const tag2 = getTypeTag(t);
+            render: (t2) => {
+              const tag2 = getTypeTag(t2);
               return jsxRuntimeExports.jsx(Tag, { color: tag2.color, children: tag2.text });
             }
           },
@@ -26463,7 +26927,7 @@ jsxRuntimeExports.jsx("div", { className: styles$2["id"], title: String(id2 || "
             key: "albumInfo",
             width: 350,
             fixed: "left",
-            sorter: (a, b) => (a.name || "").localeCompare(b.name || ""),
+            sorter: (a2, b) => (a2.name || "").localeCompare(b.name || ""),
             sortDirections: ["ascend", "descend"],
             render: (_, record) => {
               const alias2 = record.alias?.[0] || "";
@@ -26488,7 +26952,7 @@ jsxRuntimeExports.jsx(
                           overflow: "hidden",
                           cursor: "pointer"
                         },
-                        onClick: (e) => e.stopPropagation(),
+                        onClick: (e2) => e2.stopPropagation(),
                         children: record.picUrl ? jsxRuntimeExports.jsx(
                           Image,
                           {
@@ -26587,8 +27051,8 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "artists",
             key: "artists",
             width: 150,
-            sorter: (a, b) => {
-              const aName = a.artists?.map((a2) => a2.name).join(", ") || a.artist?.name || "";
+            sorter: (a2, b) => {
+              const aName = a2.artists?.map((a22) => a22.name).join(", ") || a2.artist?.name || "";
               const bName = b.artists?.map((b2) => b2.name).join(", ") || b.artist?.name || "";
               return aName.localeCompare(bName);
             },
@@ -26603,7 +27067,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             key: "size",
             width: 100,
             align: "center",
-            sorter: (a, b) => (a.size || 0) - (b.size || 0),
+            sorter: (a2, b) => (a2.size || 0) - (b.size || 0),
             sortDirections: ["ascend", "descend"],
             render: (size2) => jsxRuntimeExports.jsx(Tag, { color: "#c20c0c", children: size2 || 0 })
           },
@@ -26612,7 +27076,7 @@ jsxRuntimeExports.jsx(Typography.Text, { copyable: true, style: { fontSize: "12p
             dataIndex: "publishTime",
             key: "publishTime",
             width: 120,
-            sorter: (a, b) => (a.publishTime || 0) - (b.publishTime || 0),
+            sorter: (a2, b) => (a2.publishTime || 0) - (b.publishTime || 0),
             sortDirections: ["ascend", "descend"],
             render: (time) => time ? dayjs(time).format("YYYY-MM-DD") : "-"
           },
@@ -27669,7 +28133,7 @@ jsxRuntimeExports.jsx(
               placeholder: "请输入专辑Id",
               addonBefore: "专辑Id",
               value: albumId,
-              onChange: (e) => setAlbumId(e.target.value)
+              onChange: (e2) => setAlbumId(e2.target.value)
             }
           ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetAlbumSongList, children: "获取专辑歌曲列表" }),
@@ -27800,7 +28264,7 @@ jsxRuntimeExports.jsx(
               placeholder: "请输入歌手Id",
               addonBefore: "歌手Id",
               value: artistId,
-              onChange: (e) => setArtistId(e.target.value)
+              onChange: (e2) => setArtistId(e2.target.value)
             }
           ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetArtistTopSongList, children: "获取歌手热门歌曲列表" }),
@@ -27840,8 +28304,8 @@ jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetArtistAllSo
           try {
             console.log("fileList", fileList);
             if (!fileList.length) return msgError$1("请选择文件");
-            for (let i = 0; i < fileList.length; i++) {
-              const file = fileList[i];
+            for (let i2 = 0; i2 < fileList.length; i2++) {
+              const file = fileList[i2];
               const res = await uploadLocalSong(file);
               console.log("res", res);
               console.log(JSON.stringify(res, null, 2));
@@ -27867,7 +28331,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "limit",
                 style: { width: 100 },
                 value: pageData.limit,
-                onChange: (e) => setPageData({ ...pageData, limit: Number(e.target.value) })
+                onChange: (e2) => setPageData({ ...pageData, limit: Number(e2.target.value) })
               }
             ),
 jsxRuntimeExports.jsx(
@@ -27876,7 +28340,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "offset",
                 style: { width: 100 },
                 value: pageData.offset,
-                onChange: (e) => setPageData({ ...pageData, offset: Number(e.target.value) })
+                onChange: (e2) => setPageData({ ...pageData, offset: Number(e2.target.value) })
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetCloudData, children: "获取云盘数据" })
@@ -27888,7 +28352,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌曲Id",
                 addonBefore: "歌曲Id",
                 value: songId,
-                onChange: (e) => setSongId(e.target.value)
+                onChange: (e2) => setSongId(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleDeleteCloudSong, children: "删除云盘歌曲" })
@@ -27918,7 +28382,7 @@ jsxRuntimeExports.jsx(
                 addonBefore: "歌曲Id",
                 placeholder: "请输入网易云音乐歌曲Id",
                 value: neteaseMusicSongId,
-                onChange: (e) => setNeteaseMusicSongId(e.target.value)
+                onChange: (e2) => setNeteaseMusicSongId(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleNeteaseMusicToCloud, children: "测试网易云音乐转存云盘" })
@@ -27933,7 +28397,7 @@ jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleNeteaseMusicTo
               Input,
               {
                 value: value2,
-                onChange: (e) => onChange(e.target.value),
+                onChange: (e2) => onChange(e2.target.value),
                 ...otherProps
               }
             );
@@ -28078,8 +28542,8 @@ jsxRuntimeExports.jsx(Tooltip, { title: "下载文件名称格式占位符为【
             const file = fileList[0].originFileObj;
             setFlacPicture(file);
             const reader = new FileReader();
-            reader.onload = (e) => {
-              setPicturePreview(e.target.result);
+            reader.onload = (e2) => {
+              setPicturePreview(e2.target.result);
             };
             reader.readAsDataURL(file);
           } else {
@@ -28193,7 +28657,7 @@ jsxRuntimeExports.jsx(
               {
                 placeholder: "请输入标签值",
                 value: flacTagValue,
-                onChange: (e) => setFlacTagValue(e.target.value),
+                onChange: (e2) => setFlacTagValue(e2.target.value),
                 style: { width: 200 }
               }
             ),
@@ -28226,6 +28690,235 @@ jsxRuntimeExports.jsx(
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleEmbedFlacPicture, children: "嵌入图片" })
           ] }) }),
 jsxRuntimeExports.jsx(Form.Item, { label: "文件操作", children: jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleDownloadFlacFile, children: "下载最新文件" }) })
+        ] });
+      };
+      const MP3Tab = () => {
+        const [mp3File, setMp3File] = useState(null);
+        const [mp3TagName, setMp3TagName] = useState("all");
+        const [mp3TagValue, setMp3TagValue] = useState("");
+        const [mp3Picture, setMp3Picture] = useState(null);
+        const [picturePreview, setPicturePreview] = useState(null);
+        const [mp3Tags, setMp3Tags] = useState({});
+        const [mp3FileList, setMp3FileList] = useState([]);
+        const [pictureFileList, setPictureFileList] = useState([]);
+        const buildCoverUrlFromTags = (tags) => {
+          const picture = tags?.picture?.at?.(-1);
+          if (!picture?.data) return null;
+          const mime = picture.format || "image/jpeg";
+          const blob = new Blob([picture.data], { type: mime });
+          return URL.createObjectURL(blob);
+        };
+        const loadMp3Tags = async (file) => {
+          if (!file) return;
+          try {
+            if (mp3Tags.cover) {
+              URL.revokeObjectURL(mp3Tags.cover);
+            }
+            const tags = await readAllMp3Tag(file);
+            const cover2 = buildCoverUrlFromTags(tags);
+            setMp3Tags({
+              ...tags,
+              cover: cover2
+            });
+            console.log("MP3 标签:", tags);
+          } catch (error) {
+            console.error("读取 MP3 标签失败:", error);
+            msgError$1("读取 MP3 标签失败");
+          }
+        };
+        useEffect(() => {
+          if (mp3File) {
+            loadMp3Tags(mp3File);
+          }
+        }, [mp3File]);
+        const handleMp3FileChange = ({ fileList }) => {
+          setMp3FileList(fileList);
+          if (fileList.length > 0 && fileList[0].originFileObj) {
+            const file = fileList[0].originFileObj;
+            setMp3File(file);
+          } else {
+            if (mp3Tags.cover) {
+              URL.revokeObjectURL(mp3Tags.cover);
+            }
+            setMp3File(null);
+            setMp3Tags({});
+          }
+        };
+        const handlePictureChange = ({ fileList }) => {
+          setPictureFileList(fileList);
+          if (fileList.length > 0 && fileList[0].originFileObj) {
+            const file = fileList[0].originFileObj;
+            setMp3Picture(file);
+            const reader = new FileReader();
+            reader.onload = (e2) => {
+              setPicturePreview(e2.target.result);
+            };
+            reader.readAsDataURL(file);
+          } else {
+            setMp3Picture(null);
+            setPicturePreview(null);
+          }
+        };
+        const handleReadMp3Tag = async () => {
+          try {
+            if (!mp3File) return msgError$1("请选择文件");
+            if (mp3TagName === "all") {
+              const res = await readAllMp3Tag(mp3File);
+              const cover2 = buildCoverUrlFromTags(res);
+              if (mp3Tags.cover) URL.revokeObjectURL(mp3Tags.cover);
+              setMp3Tags({
+                ...res,
+                cover: cover2
+              });
+              msgSuccess("读取所有标签成功，请查看下方信息");
+              console.log("res", res);
+            } else {
+              const res = await readMp3Tag(mp3File, mp3TagName);
+              msgSuccess(`读取标签 ${MP3_TAGS[mp3TagName] || mp3TagName} 成功: ${res || "无值"}`);
+              console.log("res", res);
+            }
+          } catch (error) {
+            console.log("error", error);
+            msgError$1("读取标签失败");
+          }
+        };
+        const handleWriteMp3Tag = async () => {
+          try {
+            if (!mp3File) return msgError$1("请选择文件");
+            if (mp3TagName === "all") return msgError$1("请选择具体标签");
+            if (!mp3TagValue.trim()) return msgError$1("请输入标签值");
+            const res = await writeMp3Tag(mp3File, mp3TagName, mp3TagValue);
+            console.log("res", res);
+            setMp3File(res);
+            msgSuccess("写入标签成功");
+          } catch (error) {
+            console.log("error", error);
+            msgError$1("写入标签失败");
+          }
+        };
+        const handleRemoveMp3Tag = async () => {
+          try {
+            if (!mp3File) return msgError$1("请选择文件");
+            if (mp3TagName === "all") return msgError$1("请选择具体标签");
+            const res = await removeMp3Tag(mp3File, mp3TagName);
+            console.log("res", res);
+            setMp3File(res);
+            setMp3TagValue("");
+            msgSuccess("移除标签成功");
+          } catch (error) {
+            console.log("error", error);
+            msgError$1("移除标签失败");
+          }
+        };
+        const handleEmbedMp3Picture = async () => {
+          try {
+            if (!mp3File) return msgError$1("请选择文件");
+            if (!mp3Picture) return msgError$1("请选择图片");
+            const res = await embedMp3Picture(mp3File, mp3Picture);
+            console.log("res", res);
+            setMp3File(res);
+            msgSuccess("嵌入图片成功");
+          } catch (error) {
+            console.log("error", error);
+            msgError$1("嵌入图片失败");
+          }
+        };
+        const handleDownloadMp3File = async () => {
+          try {
+            if (!mp3File) return msgError$1("请选择文件");
+            downloadFileWithBlob(mp3File, "test.mp3");
+            msgSuccess("文件下载成功");
+          } catch (error) {
+            console.log("error", error);
+            msgError$1("文件下载失败");
+          }
+        };
+        return jsxRuntimeExports.jsxs(Form, { children: [
+jsxRuntimeExports.jsx(Form.Item, { label: "MP3 文件", children: jsxRuntimeExports.jsx(
+            Upload,
+            {
+              fileList: mp3FileList,
+              accept: ".mp3,audio/mpeg",
+              maxCount: 1,
+              beforeUpload: () => false,
+              onChange: handleMp3FileChange,
+              children: jsxRuntimeExports.jsx(MyButton, { icon: jsxRuntimeExports.jsx(UploadOutlined, {}), children: "选择 MP3 文件" })
+            }
+          ) }),
+          Object.keys(mp3Tags).length > 0 && jsxRuntimeExports.jsx(Form.Item, { label: "MP3 标签信息", children: jsxRuntimeExports.jsx(Card, { size: "small", children: jsxRuntimeExports.jsx(Descriptions, { column: 2, size: "small", children: Object.entries(mp3Tags).filter(([key]) => key !== "picture").map(([key, value2]) => jsxRuntimeExports.jsx(
+            Descriptions.Item,
+            {
+              label: MP3_TAGS[key] || key.toUpperCase(),
+              children: key === "cover" && value2 ? jsxRuntimeExports.jsx(
+                Image,
+                {
+                  src: value2,
+                  alt: "封面",
+                  width: 100,
+                  height: 100,
+                  style: { objectFit: "cover", borderRadius: 4 },
+                  preview: true
+                }
+              ) : key === "cover" ? "无封面" : value2
+            },
+            key
+          )) }) }) }),
+jsxRuntimeExports.jsx(Form.Item, { label: "标签操作", children: jsxRuntimeExports.jsxs(Space, { wrap: true, children: [
+jsxRuntimeExports.jsx(
+              Select,
+              {
+                style: { width: 150 },
+                options: [
+                  { label: "全部", value: "all" },
+                  ...Object.entries(MP3_TAGS).map(([key, value2]) => ({
+                    label: value2,
+                    value: key
+                  }))
+                ],
+                value: mp3TagName,
+                onChange: (value2) => setMp3TagName(value2)
+              }
+            ),
+jsxRuntimeExports.jsx(
+              Input.TextArea,
+              {
+                placeholder: "请输入标签值（支持换行）",
+                value: mp3TagValue,
+                onChange: (e2) => setMp3TagValue(e2.target.value),
+                autoSize: { minRows: 1, maxRows: 6 },
+                style: { width: 320, whiteSpace: "pre-wrap" }
+              }
+            ),
+jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleReadMp3Tag, children: "读取标签" }),
+jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleWriteMp3Tag, children: "写入标签" }),
+jsxRuntimeExports.jsx(MyButton, { danger: true, onClick: handleRemoveMp3Tag, children: "移除标签" })
+          ] }) }),
+jsxRuntimeExports.jsx(Form.Item, { label: "封面图片", children: jsxRuntimeExports.jsxs(Space, { wrap: true, children: [
+jsxRuntimeExports.jsx(
+              Upload,
+              {
+                fileList: pictureFileList,
+                accept: ".jpg,.png,.jpeg",
+                maxCount: 1,
+                beforeUpload: () => false,
+                onChange: handlePictureChange,
+                children: jsxRuntimeExports.jsx(MyButton, { icon: jsxRuntimeExports.jsx(PictureOutlined, {}), children: "选择图片" })
+              }
+            ),
+            picturePreview && jsxRuntimeExports.jsx(
+              Image,
+              {
+                src: picturePreview,
+                alt: "封面预览",
+                width: 100,
+                height: 100,
+                style: { objectFit: "cover", borderRadius: 4 },
+                preview: true
+              }
+            ),
+jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleEmbedMp3Picture, children: "嵌入图片" })
+          ] }) }),
+jsxRuntimeExports.jsx(Form.Item, { label: "文件操作", children: jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleDownloadMp3File, children: "下载最新文件" }) })
         ] });
       };
       const { Item: Item$1 } = Descriptions;
@@ -28549,7 +29242,7 @@ jsxRuntimeExports.jsx(
               {
                 placeholder: "请输入歌单名称",
                 value: songListName,
-                onChange: (e) => setSongListName(e.target.value)
+                onChange: (e2) => setSongListName(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleCreateSongList, children: "新建歌单" })
@@ -28561,7 +29254,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌单Id",
                 addonBefore: "歌单id",
                 value: addInfo.playlistId,
-                onChange: (e) => setAddInfo({ ...addInfo, playlistId: e.target.value })
+                onChange: (e2) => setAddInfo({ ...addInfo, playlistId: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(
@@ -28570,7 +29263,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌曲Id",
                 addonBefore: "歌曲id",
                 value: addInfo.songId,
-                onChange: (e) => setAddInfo({ ...addInfo, songId: e.target.value })
+                onChange: (e2) => setAddInfo({ ...addInfo, songId: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleAddSong, children: "添加歌曲" })
@@ -28582,7 +29275,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入用户Id",
                 addonBefore: "用户id",
                 value: userId,
-                onChange: (e) => setUserId(e.target.value)
+                onChange: (e2) => setUserId(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetPlaylistList, children: "获取用户歌单列表" })
@@ -28594,7 +29287,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌单Id",
                 addonBefore: "歌单Id",
                 value: playlistId,
-                onChange: (e) => setPlaylistId(e.target.value)
+                onChange: (e2) => setPlaylistId(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetPlaylist, children: "获取歌单详情" }),
@@ -28680,7 +29373,7 @@ jsxRuntimeExports.jsx(
                 {
                   placeholder: "请输入搜索关键词",
                   value: searchKeyword,
-                  onChange: (e) => setSearchKeyword(e.target.value)
+                  onChange: (e2) => setSearchKeyword(e2.target.value)
                 }
               )
             ] }),
@@ -28694,7 +29387,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌手名称",
                 addonBefore: "歌手名称",
                 value: searchValue,
-                onChange: (e) => setSearchValue(e.target.value)
+                onChange: (e2) => setSearchValue(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleSearchArtist, children: "搜索歌手信息" })
@@ -29003,7 +29696,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌曲Id",
                 addonBefore: "歌曲Id",
                 value: songId,
-                onChange: (e) => setSongId(e.target.value)
+                onChange: (e2) => setSongId(e2.target.value)
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleGetSongUrl, children: "获取歌曲URL" }),
@@ -29018,7 +29711,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌曲Id",
                 addonBefore: "歌曲Id",
                 value: commentData.songId,
-                onChange: (e) => setCommentData({ ...commentData, songId: e.target.value })
+                onChange: (e2) => setCommentData({ ...commentData, songId: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(
@@ -29035,14 +29728,14 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入用户Id",
                 addonBefore: "用户Id",
                 value: commentData.userId,
-                onChange: (e) => setCommentData({ ...commentData, userId: e.target.value })
+                onChange: (e2) => setCommentData({ ...commentData, userId: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsxs(
               Radio.Group,
               {
                 value: commentData.orderType,
-                onChange: (e) => setCommentData({ ...commentData, orderType: e.target.value }),
+                onChange: (e2) => setCommentData({ ...commentData, orderType: e2.target.value }),
                 optionType: "button",
                 children: [
 jsxRuntimeExports.jsx(Radio, { value: 0, children: "时间正序" }),
@@ -29071,7 +29764,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入歌曲Id",
                 addonBefore: "歌曲Id",
                 value: checkInData.songId,
-                onChange: (e) => setCheckInData({ ...checkInData, songId: e.target.value })
+                onChange: (e2) => setCheckInData({ ...checkInData, songId: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(
@@ -29081,7 +29774,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入打卡次数",
                 addonBefore: "打卡次数",
                 value: checkInData.checkInCount,
-                onChange: (e) => setCheckInData({ ...checkInData, checkInCount: e.target.value })
+                onChange: (e2) => setCheckInData({ ...checkInData, checkInCount: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(
@@ -29091,7 +29784,7 @@ jsxRuntimeExports.jsx(
                 placeholder: "请输入间隔时间",
                 addonBefore: "间隔时间",
                 value: checkInData.intervalTime,
-                onChange: (e) => setCheckInData({ ...checkInData, intervalTime: e.target.value })
+                onChange: (e2) => setCheckInData({ ...checkInData, intervalTime: e2.target.value })
               }
             ),
 jsxRuntimeExports.jsx(MyButton, { type: "primary", onClick: handleListenSongCheckIn, children: "听歌打卡" }),
@@ -29505,6 +30198,11 @@ jsxRuntimeExports.jsx(
             children: jsxRuntimeExports.jsx(FlacTab, {})
           },
           {
+            key: "mp3",
+            label: "MP3",
+            children: jsxRuntimeExports.jsx(MP3Tab, {})
+          },
+          {
             key: "setting",
             label: "设置",
             children: jsxRuntimeExports.jsx(SettingTab, {})
@@ -29775,9 +30473,9 @@ components: {
         if (hasRequiredInteropRequireDefault) return interopRequireDefault.exports;
         hasRequiredInteropRequireDefault = 1;
         (function(module) {
-          function _interopRequireDefault(e) {
-            return e && e.__esModule ? e : {
-              "default": e
+          function _interopRequireDefault(e2) {
+            return e2 && e2.__esModule ? e2 : {
+              "default": e2
             };
           }
           module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -29821,13 +30519,13 @@ prev_page: "上一页",
         if (hasRequired_typeof) return _typeof.exports;
         hasRequired_typeof = 1;
         (function(module) {
-          function _typeof2(o) {
+          function _typeof2(o2) {
             "@babel/helpers - typeof";
-            return module.exports = _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o2) {
-              return typeof o2;
-            } : function(o2) {
-              return o2 && "function" == typeof Symbol && o2.constructor === Symbol && o2 !== Symbol.prototype ? "symbol" : typeof o2;
-            }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof2(o);
+            return module.exports = _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+              return typeof o3;
+            } : function(o3) {
+              return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+            }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof2(o2);
           }
           module.exports = _typeof2, module.exports.__esModule = true, module.exports["default"] = module.exports;
         })(_typeof);
@@ -29840,15 +30538,15 @@ prev_page: "上一页",
         hasRequiredToPrimitive = 1;
         (function(module) {
           var _typeof2 = require_typeof()["default"];
-          function toPrimitive2(t, r) {
-            if ("object" != _typeof2(t) || !t) return t;
-            var e = t[Symbol.toPrimitive];
-            if (void 0 !== e) {
-              var i = e.call(t, r || "default");
-              if ("object" != _typeof2(i)) return i;
+          function toPrimitive2(t2, r2) {
+            if ("object" != _typeof2(t2) || !t2) return t2;
+            var e2 = t2[Symbol.toPrimitive];
+            if (void 0 !== e2) {
+              var i2 = e2.call(t2, r2 || "default");
+              if ("object" != _typeof2(i2)) return i2;
               throw new TypeError("@@toPrimitive must return a primitive value.");
             }
-            return ("string" === r ? String : Number)(t);
+            return ("string" === r2 ? String : Number)(t2);
           }
           module.exports = toPrimitive2, module.exports.__esModule = true, module.exports["default"] = module.exports;
         })(toPrimitive);
@@ -29861,9 +30559,9 @@ prev_page: "上一页",
         (function(module) {
           var _typeof2 = require_typeof()["default"];
           var toPrimitive2 = requireToPrimitive();
-          function toPropertyKey2(t) {
-            var i = toPrimitive2(t, "string");
-            return "symbol" == _typeof2(i) ? i : i + "";
+          function toPropertyKey2(t2) {
+            var i2 = toPrimitive2(t2, "string");
+            return "symbol" == _typeof2(i2) ? i2 : i2 + "";
           }
           module.exports = toPropertyKey2, module.exports.__esModule = true, module.exports["default"] = module.exports;
         })(toPropertyKey);
@@ -29875,13 +30573,13 @@ prev_page: "上一页",
         hasRequiredDefineProperty = 1;
         (function(module) {
           var toPropertyKey2 = requireToPropertyKey();
-          function _defineProperty(e, r, t) {
-            return (r = toPropertyKey2(r)) in e ? Object.defineProperty(e, r, {
-              value: t,
+          function _defineProperty(e2, r2, t2) {
+            return (r2 = toPropertyKey2(r2)) in e2 ? Object.defineProperty(e2, r2, {
+              value: t2,
               enumerable: true,
               configurable: true,
               writable: true
-            }) : e[r] = t, e;
+            }) : e2[r2] = t2, e2;
           }
           module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
         })(defineProperty);
@@ -29893,26 +30591,26 @@ prev_page: "上一页",
         hasRequiredObjectSpread2 = 1;
         (function(module) {
           var defineProperty2 = requireDefineProperty();
-          function ownKeys(e, r) {
-            var t = Object.keys(e);
+          function ownKeys(e2, r2) {
+            var t2 = Object.keys(e2);
             if (Object.getOwnPropertySymbols) {
-              var o = Object.getOwnPropertySymbols(e);
-              r && (o = o.filter(function(r2) {
-                return Object.getOwnPropertyDescriptor(e, r2).enumerable;
-              })), t.push.apply(t, o);
+              var o2 = Object.getOwnPropertySymbols(e2);
+              r2 && (o2 = o2.filter(function(r3) {
+                return Object.getOwnPropertyDescriptor(e2, r3).enumerable;
+              })), t2.push.apply(t2, o2);
             }
-            return t;
+            return t2;
           }
-          function _objectSpread2(e) {
-            for (var r = 1; r < arguments.length; r++) {
-              var t = null != arguments[r] ? arguments[r] : {};
-              r % 2 ? ownKeys(Object(t), true).forEach(function(r2) {
-                defineProperty2(e, r2, t[r2]);
-              }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r2) {
-                Object.defineProperty(e, r2, Object.getOwnPropertyDescriptor(t, r2));
+          function _objectSpread2(e2) {
+            for (var r2 = 1; r2 < arguments.length; r2++) {
+              var t2 = null != arguments[r2] ? arguments[r2] : {};
+              r2 % 2 ? ownKeys(Object(t2), true).forEach(function(r3) {
+                defineProperty2(e2, r3, t2[r3]);
+              }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys(Object(t2)).forEach(function(r3) {
+                Object.defineProperty(e2, r3, Object.getOwnPropertyDescriptor(t2, r3));
               });
             }
-            return e;
+            return e2;
           }
           module.exports = _objectSpread2, module.exports.__esModule = true, module.exports["default"] = module.exports;
         })(objectSpread2);
@@ -30236,7 +30934,7 @@ jsxRuntimeExports.jsx(require$$0.StrictMode, { children: jsxRuntimeExports.jsx(C
   };
 }));
 
-System.register("./MpegParser-3s0uV7VE-gpC5rqab.js", ['./__monkey.entry-D122fOYS.js', './AbstractID3Parser-3I3-EllX-CBKdve6q.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-swanxnrC-DBybTDiS.js'], (function (exports, module) {
+System.register("./MpegParser-B5rdoYLh-DVezUQvh.js", ['./__monkey.entry-msKzkR8h.js', './AbstractID3Parser-tBi3_HIt-f66qKGxV.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js'], (function (exports, module) {
   'use strict';
   var EndOfStreamError, initDebug, getBitAllignedNumber, INT16_BE, Uint8ArrayType, StringType, stripNulls, isBitSet$1, makeUnexpectedFileContentError, UINT32_BE, UINT16_BE, UINT8, AbstractID3Parser;
   return {
@@ -30831,7 +31529,7 @@ async readXingInfoHeader() {
   };
 }));
 
-System.register("./AsfParser-CHf-FRXj-BLlGYq7e.js", ['./__monkey.entry-D122fOYS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./AsfParser-SIBzyqWu-BRPg8S-2.js", ['./__monkey.entry-msKzkR8h.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, initDebug, TrackType, UINT32_LE, UINT64_LE, uint8ArrayToHex, hexToUint8Array, makeUnexpectedFileContentError, getBit, UINT16_LE, stripNulls, decodeString, StringType, AttachedPictureType;
   return {
@@ -31338,7 +32036,7 @@ streamPropertiesObject: null
   };
 }));
 
-System.register("./DsdiffParser-7wc5EY1Y-DoGjFcGp.js", ['./__monkey.entry-D122fOYS.js', './ID3v2Parser-swanxnrC-DBybTDiS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./DsdiffParser-BW4ltQqQ-Bl1VPZy4.js", ['./__monkey.entry-msKzkR8h.js', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, FourCcToken, initDebug, Uint8ArrayType, fromBuffer, UINT32_LE, UINT16_BE, UINT8, UINT32_BE, StringType, INT64_BE, makeUnexpectedFileContentError, ID3v2Parser;
   return {
@@ -31512,7 +32210,7 @@ chunkSize: INT64_BE.get(buf, off + 4)
   };
 }));
 
-System.register("./AiffParser-WwqSk4Of-CGpFlK9l.js", ['./__monkey.entry-D122fOYS.js', './ID3v2Parser-swanxnrC-DBybTDiS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./AiffParser-_5m4dqWC-CQhOHMhG.js", ['./__monkey.entry-msKzkR8h.js', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, FourCcToken, initDebug, EndOfStreamError, Uint8ArrayType, fromBuffer, StringType, UINT32_BE, makeUnexpectedFileContentError, UINT16_BE, UINT8, ID3v2Parser;
   return {
@@ -31683,7 +32381,7 @@ case "ANNO":
   };
 }));
 
-System.register("./DsfParser-BfIrpRcq-DTKdcrjR.js", ['./__monkey.entry-D122fOYS.js', './AbstractID3Parser-3I3-EllX-CBKdve6q.js', './ID3v2Parser-swanxnrC-DBybTDiS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./DsfParser-BKHYy_Ww-C4l4ho2H.js", ['./__monkey.entry-msKzkR8h.js', './AbstractID3Parser-tBi3_HIt-f66qKGxV.js', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var initDebug, UINT64_LE, FourCcToken, makeUnexpectedFileContentError, INT64_LE, INT32_LE, AbstractID3Parser, ID3v2Parser;
   return {
@@ -31781,7 +32479,7 @@ System.register("./DsfParser-BfIrpRcq-DTKdcrjR.js", ['./__monkey.entry-D122fOYS.
   };
 }));
 
-System.register("./FlacParser-DpY42fDv-C2TyF8sN.js", ['./__monkey.entry-D122fOYS.js', './VorbisParser-CQVudArt-CZgqyJvU.js', './AbstractID3Parser-3I3-EllX-CBKdve6q.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-swanxnrC-DBybTDiS.js'], (function (exports, module) {
+System.register("./FlacParser-CwReiQDF-DDbFdnQD.js", ['./__monkey.entry-msKzkR8h.js', './VorbisParser-CcewNbxL-DeZrD4l-.js', './AbstractID3Parser-tBi3_HIt-f66qKGxV.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js'], (function (exports, module) {
   'use strict';
   var FourCcToken, initDebug, Uint8ArrayType, makeUnexpectedFileContentError, UINT24_BE, getBitAllignedNumber, getBit, UINT16_BE, VorbisParser, VorbisDecoder, VorbisPictureToken, AbstractID3Parser;
   return {
@@ -31933,7 +32631,7 @@ fileMD5: new Uint8ArrayType(16).get(buf, off + 18)
   };
 }));
 
-System.register("./MatroskaParser-vHNbamuD-CVi14DtY.js", ['./__monkey.entry-D122fOYS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./MatroskaParser-BYBqQp4o-BlZq3WZ-.js", ['./__monkey.entry-msKzkR8h.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, initDebug, TargetType, TrackType, EndOfStreamError, UINT8, Float64_BE, Float32_BE, StringType, makeUnexpectedFileContentError, UINT64_BE;
   return {
@@ -32540,7 +33238,7 @@ case 475249515:
   };
 }));
 
-System.register("./MP4Parser-DGXj3j1W-BT-9DL8S.js", ['./__monkey.entry-D122fOYS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./MP4Parser-BzZukf3J-CcQM-gw0.js", ['./__monkey.entry-msKzkR8h.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, StringType, initDebug, UINT32_BE, Token, Uint8ArrayType, uint8ArrayToHex, uint8ArrayToString, UINT16_BE, UINT8, Genres, TrackType, INT32_BE, INT24_BE, INT8, UINT24_BE, makeUnexpectedFileContentError, FourCcToken, UINT64_BE, INT16_BE;
   return {
@@ -33371,7 +34069,7 @@ parseSoundSampleDescription(sampleDescription) {
   };
 }));
 
-System.register("./MusepackParser-BZlUP-dI-v58HDgkH.js", ['./__monkey.entry-D122fOYS.js', './AbstractID3Parser-3I3-EllX-CBKdve6q.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-swanxnrC-DBybTDiS.js'], (function (exports, module) {
+System.register("./MusepackParser-BNEyCqVq-B0I2OlsG.js", ['./__monkey.entry-msKzkR8h.js', './AbstractID3Parser-tBi3_HIt-f66qKGxV.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js'], (function (exports, module) {
   'use strict';
   var StringType, initDebug, makeUnexpectedFileContentError, BasicParser, FourCcToken, APEv2Parser, UINT8, isBitSet$1, UINT32_LE, UINT16_LE, getBitAllignedNumber, AbstractID3Parser;
   return {
@@ -33648,7 +34346,7 @@ lastFrameLength: UINT32_LE.get(buf, off + 20) >>> 20 & 2047,
   };
 }));
 
-System.register("./AbstractID3Parser-3I3-EllX-CBKdve6q.js", ['./__monkey.entry-D122fOYS.js', './ID3v2Parser-swanxnrC-DBybTDiS.js'], (function (exports, module) {
+System.register("./AbstractID3Parser-tBi3_HIt-f66qKGxV.js", ['./__monkey.entry-msKzkR8h.js', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js'], (function (exports, module) {
   'use strict';
   var BasicParser, ID3v2Header, EndOfStreamError, initDebug, ID3v1Parser, ID3v2Parser;
   return {
@@ -33712,7 +34410,7 @@ System.register("./AbstractID3Parser-3I3-EllX-CBKdve6q.js", ['./__monkey.entry-D
   };
 }));
 
-System.register("./OggParser-DM3CTSxa-CoCwH8Z1.js", ['./__monkey.entry-D122fOYS.js', './VorbisParser-CQVudArt-CZgqyJvU.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./OggParser-vTY7mv7q-COx0zg1B.js", ['./__monkey.entry-msKzkR8h.js', './VorbisParser-CcewNbxL-DeZrD4l-.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, initDebug, Uint8ArrayType, EndOfStreamError, makeUnexpectedFileContentError, StringType, UINT8, UINT24_BE, UINT16_BE, INT32_LE, trimRightNull, UINT16_LE, UINT32_LE, getBit, FourCcToken, UINT64_LE, VorbisParser;
   return {
@@ -33987,7 +34685,7 @@ absoluteGranulePosition: Number(UINT64_LE.get(buf, off + 6)),
   };
 }));
 
-System.register("./VorbisParser-CQVudArt-CZgqyJvU.js", ['./__monkey.entry-D122fOYS.js'], (function (exports, module) {
+System.register("./VorbisParser-CcewNbxL-DeZrD4l-.js", ['./__monkey.entry-msKzkR8h.js'], (function (exports, module) {
   'use strict';
   var initDebug, UINT32_LE, AttachedPictureType, UINT32_BE, StringType, makeUnexpectedFileContentError, UINT8;
   return {
@@ -34203,7 +34901,7 @@ async parseUserCommentList(pageData, offset) {
   };
 }));
 
-System.register("./WavPackParser-DmG7oqui-BxH30fAt.js", ['./__monkey.entry-D122fOYS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./WavPackParser-DjIv98eF-D5dkKsV4.js", ['./__monkey.entry-msKzkR8h.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, APEv2Parser, FourCcToken, initDebug, UINT24_LE, UINT8, uint8ArrayToHex, UINT32_LE, Uint8ArrayType, UINT16_LE, makeUnexpectedFileContentError;
   return {
@@ -34383,7 +35081,7 @@ async parseMetadataSubBlock(header, remainingLength) {
   };
 }));
 
-System.register("./WaveParser-C6D8sCtT-ZpwuMhyW.js", ['./__monkey.entry-D122fOYS.js', './ID3v2Parser-swanxnrC-DBybTDiS.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
+System.register("./WaveParser-Mn0F8ace-DcjkiAJ4.js", ['./__monkey.entry-msKzkR8h.js', './ID3v2Parser-86oZtGWc-Cq1hJFzd.js', 'react', 'antd', 'react-dom', 'node-forge', '@ant-design/icons'], (function (exports, module) {
   'use strict';
   var BasicParser, initDebug, EndOfStreamError, FourCcToken, Uint8ArrayType, fromBuffer, StringType, stripNulls, UINT32_LE, makeUnexpectedFileContentError, UINT16_LE, ID3v2Parser;
   return {
@@ -34656,7 +35354,7 @@ case "ID3 ": {
   };
 }));
 
-System.register("./ID3v2Parser-swanxnrC-DBybTDiS.js", ['./__monkey.entry-D122fOYS.js'], (function (exports, module) {
+System.register("./ID3v2Parser-86oZtGWc-Cq1hJFzd.js", ['./__monkey.entry-msKzkR8h.js'], (function (exports, module) {
   'use strict';
   var getBit, ID3v2Header, ExtendedHeader, Uint8ArrayType, UINT32SYNCSAFE, UINT32_BE, UINT24_BE, TextEncodingToken, initDebug, decodeString, findZero, UINT8, TextHeader, SyncTextHeader, AttachedPictureType, makeUnexpectedFileContentError, Genres;
   return {
